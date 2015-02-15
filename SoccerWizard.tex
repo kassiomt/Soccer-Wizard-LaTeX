@@ -1,0 +1,203 @@
+
+% TESE/DISSERTAÇÃO FORMATADA CONFORME NORMAS DO PROGRAMA DE PÓS GRADUAÇÃO EM ENGENHARIA MECÂNICA DA UNIVERSIDADE                                                    FEDERAL DE UBERLÂNDIA
+ 
+%OBS: As figuras deste projeto estão apontadas para --> C:/usuarios/moises/doutorado/latex/figuras
+%     portanto, PARA TESTAR ESTE TEMPLATE COLOQUE O ARQUIVO latex NO PATH ACIMA!
+ 
+ 
+% ******************************************* PREÂMBULO ************************************************************
+
+\documentclass[a4paper,12pt]{report} %Classe do documento [letterpaper ou a4paper seleciona o tamanho de página,                                              10pt,11pt ou 12pt seleciona o tamanho de fonte básica (a partir do qual todos os                                        tamanhos relativos são calculados em proporção e que é também usado para o                                              tamanho "normal" de texto)]
+                                   % report - imprime apenas a frente da folha (importante para correcoes e copias                                           para bancada de defesa)
+                                   % book - imprime frente e verso da folha (usado para impressao da versao final 
+                                   %        conforme norma da FEMEC)
+%\documentclass[a4paper,12pt]{book}
+\usepackage[latin1]{inputenc} % permite usar acentos e ç em vez de \c c ou \~ etc
+\usepackage[T1]{fontenc} % Lê a codificação de fonte T1 (font encoding default é 0T1), permite a separação silábica                                correta
+%\usepackage{helvet}          % Família de Fonte Helvética
+\usepackage{ae}             % Família de Fonte "Almost European" para usar fontes outline e não bitmap nos pdf's                                      gerados (melhor aparência)
+%\usepackage{arial}          % Família de Fonte "Arial", experimente no lugar de ae
+\usepackage{lmodern}        % Família de Fonte "Latin Modern", experimente no lugar de ae
+%\usepackage{times}          % Família de Fonte "Times New", experimente no lugar de ae
+%\usepackage[utf8]{inputenc}  % acentuação em UTF8 (comente as linhas de inputenc, fontenc e ae)
+                              % Caso tenha problemas ao usar UTF-8, experimente \usepackage{ucs}
+\usepackage[brazil]{babel}    % dá suporte para os termos na língua portuguesa do Brasil, hiphenização em portugues
+\usepackage{indentfirst}      % Faz o primeiro parágrafo de cada capítulo (pois o padrão do LATEX é não fazer                                         % o primeiro parágrafo)
+\usepackage{graphicx} % para conseguir colocar figuras (png, jpg, gif, bmp)
+\usepackage{fancyhdr} % customizar cabeçalhos e rodapes
+%\usepackage{wasysym}% habilita simbolos matematicos extras
+%\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
+\usepackage{ccaption} % Para formatar as legendas das figuras e tabelas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\usepackage{pifont}
+\usepackage{textcomp}      % \texttrademark
+%\usepackage{nomencl}    % glossario
+\usepackage{url}  % relacionado a quebra de linha
+\usepackage{multirow}  % permite mais de duas colunas
+\usepackage[round]{natbib}  % citações tipo  nome-ano
+\usepackage{setspace} % usar espaço simples, duplo ou 1,5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%usepackage{a4wide}   %  correta formatação da página em A4
+\usepackage{makeidx}           % índice remissivo
+\usepackage[sf,sl,outermarks]{titlesec} %formatação do /section
+\usepackage{amssymb}  % pacote com simbolos diversos
+\usepackage[top=3.0 cm,left=2.6 cm,right=1.9 cm,bottom=1.6 cm]{geometry} %Formata as margens do textos
+%\usepackage{latexsym}
+\usepackage{amstext} % permite escrever textos dentro de fórmulas
+\usepackage{amsmath} 
+\usepackage[pdfpagelabels]{hyperref}
+
+
+      %%%%%%%%%%%%%%%% Formata o /section (Depende do pacote \usepackage{titlesec})  %%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\chapter}[display] % o display mostra o titulo do capitulo em nova linha
+{\bfseries\Large\filcenter\sffamily\vspace{0.7cm}}{{CAPÍTULO} {\Roman{chapter}}} % Formata a palavra "Capitulo": {estilo da fonte(negrito), altura, centralizado, tipo de fonte, espaço vertical abaixo do padrão}{{TEXTO} - escreve "TEXTO" %{\Roman{chapter}}- %Define se %o numero do capitulo será escrito em algarismos romanos ou não
+{67pt}{\normalsize} % Formata o titulo do capitulo: {--pt} - distancia entre a palavra %"CAPÍTULO" e o título do capítulo e {normalsize} - tamanho da fonte do título do capítulo
+% Obs: tanto a palavra "Capitulo" quanto o titulo do Capitulo foram colocadas em negrito %pelo comando /bfseries anterior
+
+%{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\normalsize}
+%{\normalfont\Large\filcenter\sffamily}{\chaptertitlename\ \thechapter} % Formata a palavra "Capitulo" {fonte, altura, centralizado, tipo de fonte}{\chaptertitlename\ - escreve capitulo \thechapter - escreve o numero do capitulo}
+
+\titleformat{\section}
+{\bfseries\normalsize\sffamily\vspace{0.1cm}}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\it\normalsize\sffamily}{\thesubsection}{1em}{}
+
+%\titleformat{\subsubsection}
+%{\italic\normalsize\sffamily}{\thesubsubsection}{1em}{}
+
+%\titleformat{\paragraph}[runin]
+%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+
+%\titleformat{\subparagraph}[runin]
+%{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+
+
+                      %%%%%%%%%%%%%%%%%%%% Fim do Formata o /section  %%%%%%%%%%%%%%%%%%%%%%
+                      
+                      
+
+              %%%%%%%%% Formata cabeçalho e rodapé (Depende do pacote \usepackage{fancyhdr})  %%%%%%%%
+
+%\pagestyle{headings} % Coloca tanto numero da pagina como nome do capitulo no cabecalho (ou rodape, conf. escolha dos                          parametros \lhead{}, \chead{} etc)
+%\setlength{\headheight}{1.5 cm}
+\addtolength{\headheight}{2.0pt} %interfere na altura do numero da pagina
+\pagestyle{myheadings} % Coloca numero da pagina no cabecalho (ou rodape, conf. escolha dos parametros \lhead{},                                 \chead{} etc)
+\markright{} % Coloque o texto que desejar entre as chaves {} que ele aparece no cabecalho ao lado da pagina
+\lhead{}
+\chead{}
+\rhead{\thepage} %Número da página no cabeçalho do lado direito
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+                                %%%%%%%%% Fim do Formata cabeçalho e rodapé   %%%%%%%%
+                                
+                                
+         %%%%%%%%% Formata legenda das figuras e tabelas (Depende do pacote \usepackage{ccaption})  %%%%%%%%
+
+\captionnamefont{\sffamily} % Formata o numero da legenda das tabelas/figuras. Neste caso, está com o mesmo tipo de fonte do texto
+\captiontitlefont{\sffamily} % Formata o texto da legenda das tabelas/figuras. Neste caso, está com o mesmo tipo de fonte do texto
+\captiondelim{ -- } % Formata o delimitador entre o numero e o texto da legenda das tabelas/figuras. Neste caso, está com o simbolo " - " em vez do " : "(default)
+\captionstyle{\raggedright} %Força o texto da legenda ficar alinhado à esquerda
+\hangcaption % A segunda e posteriores linhas das legendas das tabelas/figuras serão tabuladas a partir do fim do numero da tabela/figura
+
+
+                           %%%%%%%%% Fim do Formata legenda das figuras e tabelas   %%%%%%%%
+                           
+                           
+
+% tamanho do parágrafo (com 10 espaços conf. a norma da FEMEC)
+\setlength{\parindent}{10ex}
+
+\newcommand{\reg}[1]{#1$^{\tiny{\circledR}}$} % usado para colocar o simbolo de marca registrada. Usa o pacote \usepackage{amssymb}. Para colocar o simbolo de marca registrada use o comando \reg{}.
+
+% Caso uma palavra seja hifenizada errada, acrescente-a corretamente à lista abaixo
+
+\hyphenchar\font=-1 %Para não hifenizar nada
+\hyphenation{a-ce-le-ra-ção a-ce-le-ra-ções a-de-qua-das a-de-qua-da-men-te a-li-men-ta-ção ana-lysis apparatus a-pro-xi-ma-da-men-te au-to-ma-ti-cally bi-bli-o-grá-fi-ca ca-li-bra-tion ca-pa-ci-tân-cia ca-pa-ci-to-res ca-rac-te-rís-ti-ca ca-rac-te-rís-ti-cas ca-rac-te-ri-zan-do co-la-bo-ra-ram co-lhe-do-ra com-pa-ra-ti-vo cons-tan-te cons-tru-ção cons-tru-ti-vas cor-res-pon-den-te des-cre-ve di-fe-ren-tes di-men-sio-na-men-to e-qui-va-len-te es-co-lhi-das es-co-lhi-do  es-ta-be-le-ci-do es-tu-fa ex-pe-ri-ên-cia ex-pe-ri-men-tos fa-ri-nhas ge-ne-ro-si-da-de mo-de-lo mo-de-los mo-le-cu-lar hewlett  li-ga-ção li-ne-a-ri-za-ção li-te-ra-tu-ra lo-ca-li-za-da ne-ces-si-da-de pa-râ-me-tros pre-en-chi-dos pro-ble-mas pro-ce-di-men-to pro-ducts qua-li-da-de re-fe-ren-te re-la-xa-ção re-la-ti-vo res-pec-ti-va-men-te se-me-lhan-tes sen-sing se-pa-ra-das subs-ti-tu-í-do tem-pe-ra-tu-ra u-mi-di-fi-ca-ção va-lo-res ve-te-ri-ná-rias} %Obriga palavras separadas erroneamente pelo Latex a serem separadas conforme digitado aqui
+
+% Lista de arquivos a serem processados (Aqui voce escolhe quais capitulos quer processados para PDF)
+%\includeonly{dataREFmoi}
+%\includeonly{dataRBmoi, dataREFmoi}
+%\includeonly{dataCONmoi}
+%\includeonly{dataAFER}
+%\includeonly{dataCALIB}
+%\includeonly{dataCALIB, dataANEX}
+%\includeonly{dataINTmoi, dataRBmoi, dataCONmoi}
+%\includeonly{dataCONmoi, dataCALIB, dataREFmoi}
+%\includeonly{dataCAPA, dataROSTO, dataRES, dataINTmoi,}
+\includeonly{C.Capa, C.Rosto, C.Epigrafe, C.Agradecimentos, C.Resumo, C.Simbolos, C.Introducao, C.FundamentacaoTeorica, bibliografia}%, dataRBmoi,  dataCONmoi, dataCALIB, dataAFER, dataCONCLUSOES, dataREFmoi, dataANEX}
+
+%\makeindex % indice remissivo
+
+
+% ******************************************* FIM DO PREÂMBULO *******************************************************
+
+\begin{document}
+
+%%% Formata fonte e espaçamento
+
+\normalfont  %Uso normal da fonte
+
+% Tamanhos de fonte a escolher
+%\tiny
+%\scriptsize 
+%\footnotesize 
+%\small 
+\normalsize  %(default)
+%\large 
+%\Large 
+%\LARGE 
+%\huge 
+%\Huge 
+
+%\onehalfspacing %espaçamento 1.5
+%\doublespacing %espaçamento 2
+
+\sffamily % tipo de fonte do texto: arial
+
+
+\pagenumbering{roman} % numerar as paginas em algarismos romanos
+
+% Ordem em que os arquivos serão colocados (ESTES SERÃO INSERIDOS ANTES DO SUMÁRIO)
+
+\onehalfspacing %espaçamento 1.5 
+\include{C.Capa} %Insere a capa  
+\include{C.Rosto} %Insere a folha de rosto
+\doublespacing %espaçamento 2
+\include{C.Epigrafe} %Insere a epígrafe
+\include{C.Agradecimentos} %Insere os agradecimentos
+\include{C.Resumo} %Insere o resumo
+
+% Lista de figuras (gerada automaticamente)
+%\addcontentsline{toc}{chapter}{LISTA DE FIGURAS} %Adiciona a lista de figuras no sumario
+\listoffigures
+
+% Lista de tabelas (gerada automaticamente)
+%\addcontentsline{toc}{chapter}{LISTA DE TABELAS}   %Adiciona a lista de tabelas no sumario
+\listoftables
+
+% Lista de simbolos
+\include{C.Simbolos} %Insere a lista de simbolos
+
+\def\contentsname{SUMÁRIO} % Define o titulo dado ao sumário
+
+\tableofcontents % Cria o sumário. IMPORTANTE: So os "\include" colocados apos esta linha serão relacionados no sumario
+
+\pagenumbering{arabic} % numerar as paginas em algarismos arabicos (ou romanos)
+% Ordem em que os arquivos serão colocados e incluídos para montagem automática do sumário
+
+\include{C.Introducao}
+\include{C.FundamentacaoTeorica}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\include{dataCONmoi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\include{dataCALIB}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\include{dataAFER}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\include{dataCONCLUSOES}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\include{dataREFmoi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\include{dataANEX}
+
+\nocite{*}
+\bibliography{bibliografia}{}
+\bibliographystyle{plainnat}
+
+\end{document}

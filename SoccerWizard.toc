@@ -1,0 +1,12 @@
+\select@language {brazil}
+\contentsline {chapter}{\numberline {1}INTRODU\c C\~AO}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objetivos}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Justificativa}{4}{section.1.2}
+\contentsline {chapter}{\numberline {2}FUNDAMENTA\c C\~AO TE\'ORICA}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Redes Neurais Artificiais}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}McCulloch-Pitts}{6}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Bias}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Separabilidade Linear}{8}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Representa\c c\~ao dos dados}{9}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Aprendizado de Hebb}{10}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.6}T\'ecnica de aprendizado}{11}{subsection.2.1.6}

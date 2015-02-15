@@ -1,0 +1,319 @@
+
+%                                           Fundamentação Teórica
+
+
+\chapter{FUNDAMENTAÇÃO TEÓRICA} \label{Fund.Teorica}
+\thispagestyle{empty} %Oculta o numero da primeira pagina do capitulo
+
+
+
+Este capítulo trata de alguns assuntos importantes para a compreensão do trabalho, tais como: Redes Neurais Artificiais, Perceptrons, Adaline, Madaline, Regra Delta, funções de ativação, camadas intermediárias, algoritmos de treinamento, Backpropagation, programação orientada a objetos e Java.
+
+\vspace{3ex}
+\section{Redes Neurais Artificiais} \label{Fund.Redes.Neurais}
+
+Toda a base para a realização desse trabalho se encontra no uso uma rede neural artificial (RNA), adequada para a realização do reconhecimento de padrões entre condições anteriores às partidas e o resultado das mesmas. 
+Uma RNA é um sistema de processamento de informações que possui algumas características em comum com redes neurais biológicas. O desenvolvimento da teoria de redes neurais artificiais ocorreu a partir de generalizações matemáticas de modelos de percepção humana. LAURENE FAUSETT. Para isso, algumas hipóteses são levadas em conta: Assume-se que o processamento de informações ocorre em vários elementos simples chamados neurônios; Sinais são passados entre neurônios através de uma conexão; Cada conexão possui um peso associado, o qual, em redes neurais artificiais típicas, multiplicam o sinal transmitido; Cada neurônio possui uma função de ativação, a qual determina o sinal de saída com base na soma dos sinais de entrada. Um modelo completo de um neurônio, com base nas hipóteses acima, está mostrado na \autoref{neuronioCompleto}.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=350pt, height=175pt]{D:/PFC/LaTex/SoccerWizard/figuras/modelo_de_neuronio.jpg}
+		\caption{Modelo completo de um neurônio \citep{Haykin99}}
+	  \label{neuronioCompleto}
+\end{figure}
+
+\vspace{3ex}
+\subsection{McCulloch-Pitts} \label{McCulloch}
+
+
+O primeiro modelo de neurônio artificial foi concebido por Warren McCulloth e Walter Pitts \citep{McCulloth43}. Algumas das regras de funcionamento desses neurônios são aplicadas ainda hoje nas redes neurais modernas. 
+Podemos descrever as regras que permeiam o funcionamento dos mesmos com base nas seguintes definições:
+\begin{itemize}
+	\item A ativação do neurônio é binária. Ou seja, para cada situação de entrada existem apenas duas saídas, ativado ou desativado;
+	\item	Os neurônios são conectados diretamente por ligações, que possuem seu respectivo peso único;
+	\item	Uma ligação é excitatória se seu peso é positivo, e inibitória se seu peso é negativo. Todas conexões excitatórias possuem o mesmo peso;
+	\item	Cada neurônio possui um valor limiar, e sua ativação é função da soma dos pesos de entrada (excitatórios e inibitórios). A ativação ocorre quando a soma dos pesos ultrapassa o valor limiar;
+	\item A definição do limiar ocorre de forma que qualquer entrada não inibitória diferente de zero faça com que o neurônio não seja ativado;
+	\item	É necessário um passo temporal para que o sinal passe por um link da conexão.
+\end{itemize}
+Um modelo completo de um neurônio, segundo as definições acima, é mostrado na \autoref{neuronioMcCulloth}.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/SoccerWizard/figuras/McCulloch-Pitts.jpg}
+		\caption{Neurônio de McCulloch-Pitts \citep{Fausett94}}
+	  \label{neuronioMcCulloth}
+\end{figure}
+
+
+A função de ativação (degrau) desse neurônio é dado segunda a \autoref{ativacaoMcCulloth}, onde Yin é a soma das entradas de cada um dos neurônios, conforme \autoref{entradaMcCulloth}. O limiar do neurônio é dado pela \autoref{limiarMcCulloth}.
+
+\begin{equation} \label{ativacaoMcCulloth}
+f(y_\textit{in})=\begin{cases}
+1 & \text{se } Y_\textit{in} > \theta \cr
+0 & \text{se } Y_\textit{in} \leq \theta
+\end{cases}
+\end{equation}
+
+\begin{equation} \label{entradaMcCulloth}
+Y_\textit{in} = n \cdot w + m \cdot p
+\end{equation}
+
+\begin{equation} \label{limiarMcCulloth}
+\theta = n \cdot w - p
+\end{equation}
+
+\vspace{3ex}
+\subsection{Bias} \label{Bias}
+
+
+O uso de um limiar para definir a ativação do neurônio pode ser substituído pelo uso de um bias. O bias age exatamente como o peso de uma conexão cuja entrada é sempre 1 \citep{Fausett94}, conforme mostrado na \autoref{neuronioBias}.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/SoccerWizard/figuras/Bias.jpg}
+		\caption{Bias "b" em uma RNA}
+	  \label{neuronioBias}
+\end{figure}
+
+O uso do bias ou do limiar são equivalentes. Sua importância se mostra durante a análise da separabilidade linear de um problema, conforme mostrado na \autoref{SeparabilidadeLinear}, e durante a análise de convergência do erro, não tratada nesse trabalho.
+
+A diferença de aplicação entre as duas técnicas é dada pela função de ativação do neurônio, que com o uso do bias fica escrita conforme a \autoref{ativacaoBias}.
+
+\begin{equation} \label{ativacaoBias}
+f(y_\textit{in})=\begin{cases}
+1 & \text{se } Y_\textit{in} > 0 \cr
+0 & \text{se } Y_\textit{in} \leq 0
+\end{cases}
+\end{equation}
+
+
+\vspace{3ex}
+\subsection{Separabilidade Linear} \label{SeparabilidadeLinear}
+
+
+Para uma determinada rede, a resposta está confinada entre dois valores (1 ou 0, sim ou não, -1 ou 1, etc...). Existe uma fronteira, chamada \emph{fronteira de decisão} \autoref{fronteiraDecisaoOU} que delimitada as regiões em que a resposta assume um ou outro valor.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=200pt, height=200pt]{D:/PFC/LaTex/SoccerWizard/figuras/fronteiraDecisaoXOR.jpg}
+		\caption{Fronteira e Regiões de decisão para a função lógica \emph{OU} \citep{Fausett94}}
+	  \label{fronteiraDecisaoOU}
+\end{figure}
+
+A \autoref{fronteiraDecisao} mostra a relação que determina essa fronteira para funções de ativação do tipo degrau. Dependendo do número de entradas na rede, essa equação pode representar uma linha, um plano ou um hiperplano.
+
+\begin{equation} \label{fronteiraDecisao}
+b + \sum_i x_i \cdot w_i = 0
+\end{equation}
+
+Diz-se que um problema é linearmente separável caso existam pesos (e bias) suficientes para que todos vetores de entrada do conjunto de treinamento sejam separados pela fronteira de decisão em dois grupos, de forma que os vetores cujas saídas sejam positivas fiquem todos em um grupo, e os vetores com saídas negativas fiquem em outro. Essas duas regiões são geralmente chamadas de \emph{regiões de decisão} (\autoref{fronteiraDecisaoOU}).
+
+\cite{Minsky69} mostraram que problemas não linearmente separáveis, são impossíveis de serem resolvidos por redes de apenas uma camada. É possível demonstrar também que redes de várias camadas, com funções de ativação lineares, também são incapazes de resolver tais problemas.
+
+A inclusão de um bias pode transformar um problema linearmente inseparável (e portanto incapaz de ser resolvido com os métodos já apresentados) em um problema que pode ser resolvido. Isso é possível graças a adição de uma nova conexão de entrada, que será usada como valor constante para o bias. Essa nova conexão aumenta o conjunto de entradas, fornecendo mais um grau de liberdade para a rede.
+
+\vspace{3ex}
+\subsection{Representação dos dados} \label{RepresentaçãoDados}
+
+
+No início dos estudos de redes neurais, a representação de dados se dava na forma binária, ou seja, utilizando 1 para reforço positivo e 0 para reforço negativo. Essa representação inicial não é, de modo geral, recomendada.
+
+A forma bipolar é uma alternativa bastante eficiente. Essa representação utiliza 1 para reforço positivo e -1 para reforço negativo. Assim como a inclusão de um bias, a simples mudança da representação de dados para a forma bipolar pode transformar um problema sem solução em um problema que pode ser resolvido.
+
+Caso o problema proposto requeira da rede uma generalização dos dados de entrada, o uso da forma bipolar é altamente indicado. A representação bipolar permite que dados não disponíveis sejam adotados com valor 0 de entrada, não fornecendo assim reforço positivo ou negativo.
+
+Ao contrário do que acontece na forma binária, a representação bipolar também é mais eficiente do ponto de vista do treinamento. Por exemplo, em uma rede treinada pelo método de Hebb (\autoref{AprendizadoHebb}), para conjuntos de sinais entrada cujo resultado da rede seja negativo (0 para binário ou -1 para bipolar), o uso da primeira representação impossibilita completamente um aprendizado da rede.
+
+
+\vspace{3ex}
+\subsection{Aprendizado de Hebb} \label{AprendizadoHebb}
+
+
+Das regras de treinamento de redes neurais, a regra de Hebb é a mais antiga, mais simples e mais conhecida de todas. Hebb propôs seu método de treinamento tendo como base um contexto neurobiológico. \cite{Stent73} e  \cite{Changeux76} reescreveram o pensamento de Hebb de uma forma mais simples e concisa, como se segue:
+
+\begin{itemize}
+	\item Se dois neurônios em ambos os lados de uma sinapse (conexão) são ativados simultaneamente (i.e. de forma síncrona), então a força dessa sinapse é seletivamente aumentada.
+	\item Se dois neurônios em ambos lados de uma sinapse são ativados de forma assíncrona, então essa sinapse é seletivamente enfraquecida ou eliminada.
+\end{itemize}
+
+A afirmação original de Hebb não incluía a segunda parte. Da mesma forma, ela também comentava apenas a respeito de neurônios sendo ativados ao mesmo tempo.
+
+\cite{McClelland88} estenderam a regra de Hebb para que o reforço positivo da sinapse também ocorra caso os neurônios sejam ambos desativados simultaneamente. Podemos, então, complementar o pensamento anterior:
+
+\begin{itemize}
+	\item Se dois neurônios em ambos os lados de uma sinapse são DESATIVADOS simultaneamente, então a força dessa sinapse é seletivamente aumentada.
+\end{itemize}
+
+Estamos considerando inicialmente redes de apenas uma camada, onde cada conexão possui, em cada lado, apenas um neurônio de entrada e um neurônio de saída. O valor do neurônio de entrada X é multiplicado pelo peso W dessa conexão para se obter o valor do neurônio de saída Y. Seguindo essa nomenclatura e representando os dados na forma bipolar, podemos representar a atualização do peso pela regra de Hebb segundo a \autoref{HebbPesos}.
+
+\begin{equation} \label{HebbPesos}
+\Delta w_{ij} = x_i \cdot y_i
+\end{equation}
+
+Se utilizarmos a representação binária, essa equação não distingue conexões que possuem uma entrada "positiva" e uma saída "negativa" de conexões onde tanto a entrada quanto a saída são "negativas". Essa é uma das vantagens mais facilmente observáveis da utilização de dados bipolares (ao invés de binários) para a representação dos dados.
+
+
+\vspace{3ex}
+\subsection{Técnica de aprendizado} \label{TecnicaAprendizado}
+
+
+Existem várias técnicas de implementação das regras de aprendizado existentes. A técnica abordada aqui nada mais é do que uma das formas mais simples e genéricas de se aplicar a regra de Hebb. O entendimento dessa técnica é crucial para a posterior compreensão das outras técnicas aplicadas nesse trabalho, que podem ser tomadas como simples variações mais elaboradas desta.
+
+O aprendizado é dado na forma iterativa e segue o seguinte algoritmo:
+
+\begin{enumerate}
+	\item Os pesos de todas conexões são inicializados com o valor 0.
+	\item Para todos os conjuntos de entradas e saídas, repetem-se os passos 3-4.
+	\setlength{\itemindent}{+.5in}
+	\item Para cada conexão, calculamos a variação do seu respectivo peso pela equação 6.
+	\item Cada peso é atualizado conforme calculado no passo 3.
+\end{enumerate}
+
+Para esclarecer um pouco mais o algoritmo acima mostrado, segue um exemplo de sua aplicação em uma rede real com representação bipolar, onde usaremos como parâmetros de entrada a função lógica E. Buscaremos com essa rede descobrir os valores dos pesos das conexões que determinam a fronteira de decisão dessa função.
+
+A função lógica E retorna um valor "positivo" apenas se ambas as entradas possuírem também um valor "positivo". Assim sendo, montaremos a tabela verdade dessa função conforme a \autoref{tabverdadeE}. A representação gráfica dessa rede está mostrada na \autoref{redeNeuralE}.
+
+\begin{table}[htbp]
+\caption{Tabela Verdade para a função lógica E}
+\setlength{\tabcolsep}{24pt}
+\begin{center}
+\begin{tabular}{c c c c c}
+\multicolumn{3}{c}{Entradas} & & Saída \\
+Bias & $X_1$ & $X_2$ & & Y \\
+1 & 1 & 1 & & 1 \\
+1 & 1 & -1 & & -1 \\
+1 & -1 & 1 & & -1 \\
+1 & -1 & -1 & & -1
+\end{tabular}
+\end{center}
+\label{tabverdadeE}
+\end{table}
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/SoccerWizard/figuras/redeNeuralE.jpg}
+		\caption{RNA para a função lógica E}
+	  \label{redeNeuralE}
+\end{figure}
+
+Iniciamos o treinamento conforme o passo 1 do algoritmo. Fazemos então os valores de $w_0=0, w_1=0$ e $w_2=0$.
+
+Utilizaremos o primeiro par de entradas (1 ,1). Assim, calculamos o valor da variação dos pesos conforme a \autoref{HebbPesos}. O resultado é mostrado na \autoref{pesosPrimeiroPar}.
+
+\begin{table}[h]
+\caption{Variação dos pesos para o primeiro par de entradas}
+\setlength{\tabcolsep}{18pt}
+\begin{center}
+\begin{tabular}{*{8}{c}}
+\multicolumn{3}{c}{Entrada} & \multicolumn{2}{c}{Saída desejada} & \multicolumn{3}{c}{Variação dos pesos ($\Delta w$)} \\
+1 & $X_1$ & $X_2$ & \multicolumn{2}{c}{Y} & $\Delta w_0$ & $\Delta w_1$ & $\Delta w_2$ \\
+1 & 1 & 1 & \multicolumn{2}{c}{1} & 1 & 1 & 1 \\
+\end{tabular}
+\end{center}
+\label{pesosPrimeiroPar}
+\end{table}
+
+Na sequência, atualizamos os pesos com os resultados da \autoref{resultadosPrimeiroPar}.
+
+\begin{equation} \label{resultadosPrimeiroPar}
+\begin{cases}
+w_0=0+\Delta w_0 = 1 \cr
+w_1=0+\Delta w_1 = 1 \cr
+w_2=0+\Delta w_2 = 1
+\end{cases}
+\end{equation}
+
+Repetimos o procedimento para o segundo par de entradas (1, -1). Assim, calculamos o valor da variação dos pesos conforme a \autoref{HebbPesos}. O resultado é mostrado na \autoref{pesosSegundoPar}.
+
+\begin{table}[h]
+\caption{Variação dos pesos para o segundo par de entradas}
+\setlength{\tabcolsep}{18pt}
+\begin{center}
+\begin{tabular}{*{8}{c}}
+\multicolumn{3}{c}{Entrada} & \multicolumn{2}{c}{Saída desejada} & \multicolumn{3}{c}{Variação dos pesos ($\Delta w$)} \\
+1 & $X_1$ & $X_2$ & \multicolumn{2}{c}{Y} & $\Delta w_0$ & $\Delta w_1$ & $\Delta w_2$ \\
+1 & 1 & -1 & \multicolumn{2}{c}{-1} & -1 & -1 & 1 \\
+\end{tabular}
+\end{center}
+\label{pesosSegundoPar}
+\end{table}
+
+Na sequência, atualizamos os pesos com os resultados da \autoref{resultadosSegundoPar}.
+
+\begin{equation} \label{resultadosSegundoPar}
+\begin{cases}
+w_0=1+\Delta w_0 = 0 \cr
+w_1=1+\Delta w_1 = 0 \cr
+w_2=1+\Delta w_2 = 2
+\end{cases}
+\end{equation}
+
+Repetimos o procedimento para o terceiro par de entradas (-1, 1). Calculamos o valor da variação dos pesos conforme a \autoref{HebbPesos}. O resultado é mostrado na \autoref{pesosTerceiroPar}.
+
+\begin{table}[h]
+\caption{Variação dos pesos para o terceiro par de entradas}
+\setlength{\tabcolsep}{18pt}
+\begin{center}
+\begin{tabular}{*{8}{c}}
+\multicolumn{3}{c}{Entrada} & \multicolumn{2}{c}{Saída desejada} & \multicolumn{3}{c}{Variação dos pesos ($\Delta w$)} \\
+1 & $X_1$ & $X_2$ & \multicolumn{2}{c}{Y} & $\Delta w_0$ & $\Delta w_1$ & $\Delta w_2$ \\
+1 & -1 & 1 & \multicolumn{2}{c}{-1} & -1 & 1 & -1 \\
+\end{tabular}
+\end{center}
+\label{pesosTerceiroPar}
+\end{table}
+
+Na sequência, atualizamos os pesos com os resultados da \autoref{resultadosTerceiroPar}.
+
+\begin{equation} \label{resultadosTerceiroPar}
+\begin{cases}
+w_0=0+\Delta w_0 = -1 \cr
+w_1=0+\Delta w_1 = 1 \cr
+w_2=2+\Delta w_2 = 1
+\end{cases}
+\end{equation}
+
+Repetimos uma última vez o procedimento para o quarto par de entradas (-1, -1). Calculamos o valor da variação dos pesos conforme a \autoref{HebbPesos}. O resultado é mostrado na \autoref{pesosQuartoPar}.
+
+\begin{table}[h]
+\caption{Variação dos pesos para o quarto par de entradas}
+\setlength{\tabcolsep}{18pt}
+\begin{center}
+\begin{tabular}{*{8}{c}}
+\multicolumn{3}{c}{Entrada} & \multicolumn{2}{c}{Saída desejada} & \multicolumn{3}{c}{Variação dos pesos ($\Delta w$)} \\
+1 & $X_1$ & $X_2$ & \multicolumn{2}{c}{Y} & $\Delta w_0$ & $\Delta w_1$ & $\Delta w_2$ \\
+1 & -1 & -1 & \multicolumn{2}{c}{-1} & -1 & 1 & 1 \\
+\end{tabular}
+\end{center}
+\label{pesosQuartoPar}
+\end{table}
+
+Na sequência, atualizamos os pesos com os resultados da \autoref{resultadosQuartoPar}.
+
+\begin{equation} \label{resultadosQuartoPar}
+\begin{cases}
+w_0=-1+\Delta w_0 = -2 \cr
+w_1=1+\Delta w_1 = 2 \cr
+w_2=1+\Delta w_2 = 2
+\end{cases}
+\end{equation}
+
+Terminamos assim o treinamento e a rede resultante é mostrada na \autoref{EResolvida}.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/SoccerWizard/figuras/redeEresolvida.jpg}
+		\caption{RNA resolvida para a função lógica \emph{E}}
+	  \label{EResolvida}
+\end{figure}
+
+
+
+
+
+
+
+
+
+

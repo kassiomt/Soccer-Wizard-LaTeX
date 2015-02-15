@@ -1,0 +1,59 @@
+\select@language {brazil}
+\contentsline {chapter}{\numberline {1}INTRODU\c C\~AO}{1}
+\contentsline {chapter}{\numberline {2}REVIS\~AO BIBLIOGR\'AFICA}{5}
+\contentsline {section}{\numberline {2.1}Classifica\c c\~ao dos m\'etodos de medi\c c\~ao de umidade de sementes}{5}
+\contentsline {section}{\numberline {2.2}O princ\IeC {\'\i }pio capacitivo: conceitos e defini\c c\~oes}{8}
+\contentsline {subsection}{\numberline {2.2.1}A capacit\^ancia}{8}
+\contentsline {subsection}{\numberline {2.2.2}A polariza\c c\~ao}{10}
+\contentsline {subsection}{\numberline {2.2.3}A freq\"u\^encia de relaxa\c c\~ao}{11}
+\contentsline {subsection}{\numberline {2.2.4}A permissividade el\'etrica complexa relativa~$\epsilon $}{13}
+\contentsline {section}{\numberline {2.3}A \'agua em sementes: formas, for\c cas e o fen\^omeno da sor\c c\~ao}{14}
+\contentsline {section}{\numberline {2.4}Natureza da varia\c c\~ao das propriedades diel\'etricas de sementes}{17}
+\contentsline {subsection}{\numberline {2.4.1}Depend\^encia do teor de umidade}{17}
+\contentsline {subsection}{\numberline {2.4.2}Depend\^encia da freq\"u\^encia}{22}
+\contentsline {subsection}{\numberline {2.4.3}Depend\^encia da temperatura}{27}
+\contentsline {subsection}{\numberline {2.4.4}Depend\^encia da densidade volum\'etrica da mistura ar-gr\~ao}{28}
+\contentsline {section}{\numberline {2.5}O Sensor Capacitivo: caracter\IeC {\'\i }sticas construtivas}{33}
+\contentsline {chapter}{\numberline {3}DESENVOLVIMENTO E CONSTRU\c C\~AO DO SISTEMA DE MEDI\c C\~AO DE UMIDADE (S.M.U.)}{42}
+\contentsline {section}{\numberline {3.1}Requisitos de Constru\c c\~ao}{42}
+\contentsline {section}{\numberline {3.2}O Sistema de Medi\c c\~ao de Umidade (S.M.U.)}{43}
+\contentsline {section}{\numberline {3.3}Constru\c c\~ao Mec\^anica do Sensor (Cuba Sensora)}{45}
+\contentsline {section}{\numberline {3.4}Circuito El\'etrico e sua Fun\c c\~ao de Transfer\^encia}{47}
+\contentsline {subsection}{\numberline {3.4.1}Determina\c c\~ao da freq\"u\^encia de trabalho do circuito}{52}
+\contentsline {subsection}{\numberline {3.4.2}Simula\c c\~ao da resposta em freq\"u\^encia para o circuito utilizado}{53}
+\contentsline {subsection}{\numberline {3.4.3}Resposta em freq\"u\^encia do sensor para milho seco e milho \'umido}{57}
+\contentsline {subsection}{\numberline {3.4.4}S\IeC {\'\i }ntese dos resultados obtidos}{61}
+\contentsline {section}{\numberline {3.5}Constru\c c\~ao do circuito eletr\^onico do sensor}{61}
+\contentsline {section}{\numberline {3.6}M\'odulos do S.M.U. e testes preliminares}{64}
+\contentsline {subsection}{\numberline {3.6.1}Escolha dos m\'odulos constituintes do S.M.U.}{64}
+\contentsline {subsection}{\numberline {3.6.2}Aferi\c c\~ao da placa A/D do Controlador L\'ogico Program\'avel}{65}
+\contentsline {subsection}{\numberline {3.6.3}Determina\c c\~ao da tens\~ao $U_{vazio}$ para sensor vazio}{67}
+\contentsline {chapter}{\numberline {4}CALIBRA\c C\~AO DO SENSOR DE UMIDADE}{68}
+\contentsline {section}{\numberline {4.1}Estudo da influ\^encia da temperatura e densidade de uma amostra de sementes sobre a tens\~ao de sa\IeC {\'\i }da $U$ do sensor de umidade}{68}
+\contentsline {section}{\numberline {4.2}Pr\'e-teste para determina\c c\~ao da metodologia de umidifica\c c\~ao das amostras de sementes}{73}
+\contentsline {section}{\numberline {4.3}Procedimento experimental para umidifica\c c\~ao das sementes atrav\'es do embebimento com \'agua}{76}
+\contentsline {section}{\numberline {4.4}Procedimento experimental para calibra\c c\~ao e resultados alcan\c cados}{77}
+\contentsline {subsection}{\numberline {4.4.1}Calibra\c c\~ao \`a temperatura 24~$^{o}C$}{79}
+\contentsline {subsection}{\numberline {4.4.2}Determina\c c\~ao da varia\c c\~ao de $U$ para a faixa de temperatura de $10$ a $45~^{o}C$}{81}
+\contentsline {section}{\numberline {4.5}Discuss\~ao sobre os resultados obtidos do procedimento de calibra\c c\~ao do sensor de umidade}{84}
+\contentsline {subsection}{\numberline {4.5.1}Calibra\c c\~ao \`a temperatura 24~$^oC$}{85}
+\contentsline {subsection}{\numberline {4.5.2}Efeito da temperatura na calibra\c c\~ao a 24~$^oC$}{91}
+\contentsline {subsection}{\numberline {4.5.3}Efeito da densidade (varia\c c\~ao do $P_{ap}$) na calibra\c c\~ao a 24~$^oC$}{92}
+\contentsline {section}{\numberline {4.6}Implementa\c c\~ao do programa de controle do S.M.U.}{95}
+\contentsline {subsection}{\numberline {4.6.1}Corre\c c\~ao autom\'atica de $U$ em fun\c c\~ao da temperatura}{95}
+\contentsline {subsection}{\numberline {4.6.2}Sele\c c\~ao da curva de calibra\c c\~ao}{98}
+\contentsline {section}{\numberline {4.7}Atendimento aos Requisitos de Constru\c c\~ao}{98}
+\contentsline {section}{\numberline {4.8}Constata\c c\~oes principais}{101}
+\contentsline {chapter}{\numberline {5}AFERI\c C\~AO DO SISTEMA DE MEDI\c C\~AO DE UMIDADE (S.M.U.)}{104}
+\contentsline {section}{\numberline {5.1}Procedimento Experimental}{104}
+\contentsline {section}{\numberline {5.2}Resultados}{106}
+\contentsline {section}{\numberline {5.3}Discuss\~ao sobre os erros observados na aferi\c c\~ao}{108}
+\contentsline {chapter}{\numberline {6}CONCLUS\~OES E TRABALHOS FUTUROS}{113}
+\contentsline {section}{\numberline {6.1}Conclus\~oes}{113}
+\contentsline {section}{\numberline {6.2}Trabalhos futuros}{114}
+\contentsline {chapter}{\numberline {7}REFER\^ENCIA BIBLIOGR\'AFICA}{116}
+\contentsline {chapter}{\numberline {8}AP\^ENDICES E ANEXOS}{122}
+\contentsline {section}{\numberline {8.1}AP\^ENDICE I - TABELAS}{122}
+\contentsline {section}{\numberline {8.2}AP\^ENDICE II - EQUA\c C\~OES DE REGRESS\~AO}{127}
+\contentsline {section}{\numberline {8.3}AP\^ENDICE III - PROGRAMAS EM MATLAB}{128}
+\contentsline {section}{\numberline {8.4}ANEXO I - PROGRAMA \textit {LADDER} DE CONTROLE DO S.M.U.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }{146}

@@ -1,0 +1,118 @@
+\begin{thebibliography}{19}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[ALPERT et~al.(1990)ALPERT, WOYAK, SHROBE, e ARROWOOD]{Alpert90}
+S.~R. ALPERT, S.~W. WOYAK, H.~J. SHROBE, and L.~F. ARROWOOD.
+\newblock Guest editor's introduction: Object-oriented programming in ai.
+\newblock \emph{IEEE Expert: Intelligent Systems and Their Applications},
+  5:\penalty0 6--7, 12 1990.
+
+\bibitem[ASLAN e INCEOGLU(2007)]{Aslan07}
+B.~G. ASLAN and M.~M. INCEOGLU.
+\newblock A comparative study on neural network based soccer result prediction.
+\newblock In \emph{Seventh International Conference on Intelligent Systems
+  Design and Applications}. IEE Computer Society, 2007.
+
+\bibitem[BISHOP(1995)]{Bishop95}
+C.~M. BISHOP.
+\newblock \emph{Neural Networks for Pattern Recognition}.
+\newblock Clarendon Press, 1995.
+
+\bibitem[CHANGEUX e DANCHIN(1976)]{Changeux76}
+J.~P. CHANGEUX and A.~DANCHIN.
+\newblock Selective stabilization of developing synapses as a mechanism for the
+  specification of neuronal networks.
+\newblock \emph{Nature}, 264:\penalty0 705--712, 1976.
+
+\bibitem[CHENG et~al.(2003)CHENG, CUI, FAN, ZHOU, e LU]{Cheng03}
+T.~CHENG, D.~CUI, Z.~FAN, J.~ZHOU, and S.~LU.
+\newblock A new model to forecast the results of matches based on hybrid neural
+  networks in the soccer rating system.
+\newblock In \emph{Fifth International Conference on Computational Intelligence
+  and Multimedia Application}. IEE Computer Society, 2003.
+
+\bibitem[DA~COSTA(2005)]{DaCosta05}
+L.~P. DA~COSTA.
+\newblock \emph{Atlas do esporte no Brasil: Atlas do esporte, educa\c{c}\~{a}o
+  f\'{i}sica e atividades de sa\'{u}de e lazer no Brasil}.
+\newblock Shape Editora e Promo\c{c}\~{o}es Ltda., 2005.
+
+\bibitem[ELO e SLOAN(2008)]{Elo08}
+A.~E. ELO and S.~SLOAN.
+\newblock \emph{The Rating of Chess Players, Past and Present}.
+\newblock Ishi Press International, 2008.
+
+\bibitem[FAUSSET(1994)]{Fausett94}
+L.~V. FAUSSET.
+\newblock \emph{Fundamentals of Neural Networks: Architectures, Algorithms, and
+  Applications}.
+\newblock Prentice-Hall, 1994.
+
+\bibitem[FLITMAN(2006)]{Flitman04}
+A.~M. FLITMAN.
+\newblock Towards probabilistic footy tipping: a hybrid approach utilising
+  genetically defined neural networks and linear programming.
+\newblock \emph{Computers \& Operations Research}, 33:\penalty0 2003--2022, 7
+  2006.
+
+\bibitem[HAYKIN(1999{\natexlab{a}})]{Haykin99}
+S.~S. HAYKIN.
+\newblock \emph{Neural Networks: A Comprehensive Foundation}.
+\newblock Prentice Hall, second edition, 1999{\natexlab{a}}.
+
+\bibitem[HAYKIN(1999{\natexlab{b}})]{Haykin99b}
+S.~S. HAYKIN.
+\newblock \emph{Neural Networks and Learning Machines}.
+\newblock Prentice Hall, third edition, 1999{\natexlab{b}}.
+
+\bibitem[McCLELLAND e RUMELHART(1988)]{McClelland88}
+J.~L. McCLELLAND and D.~E. RUMELHART.
+\newblock \emph{Explorations in Parallel Distributed Processing}.
+\newblock Cambridge, MA: MIT Press, 1988.
+
+\bibitem[MCCULLOTH e PITTS(1943)]{McCulloth43}
+W.~S. MCCULLOTH and W.~PITTS.
+\newblock A logical calculus of the ideas immanent in nervous activity.
+\newblock \emph{Bulletin of Mathematical Biophysics}, 5:\penalty0 115--133,
+  1943.
+
+\bibitem[MEHREZ e HU(1995)]{MEHREZ95}
+A.~MEHREZ and M.~Y. HU.
+\newblock Predictors of the outcome of a soccer game - a normative analysis
+  illustrated for the israeli soccer league.
+\newblock \emph{Zeitschrift f\"{u}r Operations Research}, 42:\penalty0
+  361--372, 10 1995.
+
+\bibitem[MINSKY e PAPERT(1969)]{Minsky69}
+W.~T. MINSKY and S.~A. PAPERT.
+\newblock \emph{Perceptrons, Expanded Edition}.
+\newblock Cambridge, MA: MIT Press, 1969.
+
+\bibitem[PURUCKER(1996)]{Purucker96}
+M.~C. PURUCKER.
+\newblock Neural network quarterbacking: How different training methods perform
+  in calling the games.
+\newblock \emph{Potentials, IEEE}, 15:\penalty0 9--15, 8 1996.
+
+\bibitem[SILVA et~al.(2002)SILVA, GARCIA, e SALIBY]{Silva02}
+C.~F. SILVA, E.~S. GARCIA, and E.~SALIBY.
+\newblock Soccer championship analysis using monte carlo simulation.
+\newblock In \emph{2002 Winter Simulation Conference}, volume 1-2, pages
+  2011--2016, 2002.
+
+\bibitem[STENT(1973)]{Stent73}
+G.~S. STENT.
+\newblock A physiological mechanism for hebb's postulate of learning.
+\newblock \emph{Proceedings of the National Academy of Science of the U.S.A.},
+  70:\penalty0 997--1001, 1973.
+
+\bibitem[WATSON(2008)]{Watson08}
+M.~WATSON.
+\newblock \emph{Practical Artificial Intelligence Programming With Java}.
+\newblock Mark Watson, third edition, 2008.
+
+\end{thebibliography}
