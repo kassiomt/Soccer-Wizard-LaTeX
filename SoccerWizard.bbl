@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,12 @@ B.~G. ASLAN and M.~M. INCEOGLU.
 \newblock A comparative study on neural network based soccer result prediction.
 \newblock In \emph{Seventh International Conference on Intelligent Systems
   Design and Applications}. IEE Computer Society, 2007.
+
+\bibitem[BAUM e HAUSSLER(1988)]{Baum88}
+E.B. BAUM and D.~HAUSSLER.
+\newblock What size net gives valid generalization?
+\newblock Technical report, Computer Research Laboratory, University of
+  California, 1988.
 
 \bibitem[BISHOP(1995)]{Bishop95}
 C.~M. BISHOP.
@@ -96,6 +102,13 @@ A.~MEHREZ and M.~Y. HU.
 W.~T. MINSKY and S.~A. PAPERT.
 \newblock \emph{Perceptrons, Expanded Edition}.
 \newblock Cambridge, MA: MIT Press, 1969.
+
+\bibitem[NGUYEN e WIDROW(1990)]{Nguyen90}
+D.~NGUYEN and B.~WIDROW.
+\newblock Improving the learning speed of two-layer neural networks by choosing
+  initial values of the adaptive weights.
+\newblock In \emph{International Joint Conference on Neural Networks},
+  volume~3, pages 21--26, 1990.
 
 \bibitem[PURUCKER(1996)]{Purucker96}
 M.~C. PURUCKER.

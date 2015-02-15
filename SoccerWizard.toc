@@ -23,3 +23,29 @@
 \contentsline {subsection}{\numberline {2.2.1}Java}{27}{subsection.2.2.1}
 \contentsline {section}{\numberline {2.3}Futebol}{28}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Campeonato Brasileiro de Futebol}{28}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}MATERIAIS E M\'ETODOS}{30}{chapter.3}
+\contentsline {section}{\numberline {3.1}Desenvolvimento do programa}{30}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}IDEs}{30}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Plugins}{31}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Sistema de Controle de Vers\~ao}{32}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Organiza\c c\~ao de Classes e Pacotes}{32}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Base de dados}{34}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Organiza\c c\~ao}{34}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Par\^ametros de entrada}{36}{subsection.3.2.2}
+\contentsline {subsubsection}{Primeira representa\c c\~ao (simples)}{36}{subsubsection*.11}
+\contentsline {subsubsection}{Segunda representa\c c\~ao (completa)}{37}{subsubsection*.12}
+\contentsline {subsection}{\numberline {3.2.3}Normaliza\c c\~ao dos dados}{39}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Par\^ametros de treinamento}{40}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Quantidade de padr\~oes de entrada}{40}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Representa\c c\~ao do dados}{41}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Aleatoriedade dos par\^ametros de entrada}{41}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Fun\c c\~ao de ativa\c c\~ao}{42}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Inicializa\c c\~ao de pesos e bias}{43}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}Taxa de aprendizado}{44}{subsection.3.3.6}
+\contentsline {subsection}{\numberline {3.3.7}Quantidade de neur\^onios intermedi\'arios}{44}{subsection.3.3.7}
+\contentsline {subsection}{\numberline {3.3.8}Dura\c c\~ao do treinamento}{45}{subsection.3.3.8}
+\contentsline {subsection}{\numberline {3.3.9}Remo\c c\~ao de padr\~oes de entrada n\~ao representativos}{46}{subsection.3.3.9}
+\contentsline {section}{\numberline {3.4}Estrat\'egias de an\'alise p\'os processamento}{47}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Determina\c c\~ao do resultado}{47}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Valida\c c\~ao de resultados}{48}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Interface Gr\'afica do Usu\'ario}{50}{section.3.5}

@@ -1,0 +1,557 @@
+
+%                                           Materiais e Métodos
+
+
+\chapter{MATERIAIS E MÉTODOS} \label{materiaisEMetodos}
+\thispagestyle{empty} %Oculta o numero da primeira pagina do capitulo
+
+
+Neste capítulo será apresentado todo o material (software) utilizado e o desenvolvimento do projeto, que foi dividido em cinco partes. A primeira foi o desenvolvimento do programa de computador responsável por executar a RNA. A segunda parte consiste da criação do banco de dados a ser utilizado para treinar e rodar a RNA. Na terceira parte temos as escolhas relativas ao funcionamento da RNA em si. A quarta parte consiste nas estratégias utilizadas para se analisar o resultado fornecido pela RNA. Por fim, na quinta parte temos a criação de uma Interface Gráfica do Utilizador (Graphical User Interface - GUI) para melhor utilização e experimentação do programa.
+
+\vspace{3ex}
+\section{Desenvolvimento do programa} \label{desenvolvimentoPrograma}
+
+Para a criação do programa, foi escolhida a linguagem de Programação Orientada a Objetos (POO) Java. A aplicação desenvolvida foi nomeada Soccer Wizard e será assim referenciada na sequencia desse trabalho.
+
+\vspace{3ex}
+\subsection{IDEs} \label{IDEs}
+
+
+Existem diversos Ambientes de Desenvolvimento Integrado (Integrated Development Environment - IDE) especializados em Java, que são programas utilizados para a criação de códigos, que visam facilitar o desenvolvimento de aplicações.
+
+Para esse trabalho foram escolhidas duas IDEs. Eclipse, desenvolvido pela Eclipse Foundation, e Netbeans, desenvolvido pela Oracle Corporation. Ambas foram usadas em conjunto para desenvolver partes distintas do código com funções diferentes entre si.
+
+O Eclipse (\autoref{eclipseLogo}) foi escolhido devido à prévia experiência pessoal, às facilidades e comodidades apresentadas durante a escrita do código, e à extensa gama de plugins existentes.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=100pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/eclipse.png}
+		\caption{Eclipse Logo}
+	  \label{eclipseLogo}
+\end{figure}
+
+O Netbeans (\autoref{netbeansLogo}) foi escolhido por fornecer uma ferramenta de desenvolvimento de GUIs muito versátil, completa e fácil de utilizar. Sem tal ferramenta seria praticamente impossível criar uma GUI completa, utilizável e visualmente agradável.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=100pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/netbeans.jpg}
+		\caption{Netbeans Logo}
+	  \label{netbeansLogo}
+\end{figure}
+
+\vspace{3ex}
+\subsection{Plugins} \label{Plugins}
+
+
+Apesar de ambas IDEs serem bastante completas, alguns complementos foram necessários. Os plugins utilizados no projeto são citados a seguir.
+
+Testar e debugar o código escrito é tarefa fundamental em qualquer desenvolvimento de software. Para essa função foi utilizado o JUnit. O JUnit é um framework de código aberto, criado por Erich Gamma e Kent Beck, com suporte à criação de testes automatizados na linguagem de programação Java.
+
+O recurso de importações de dados de arquivos gerados no Excel também se mostrou essencial. Isso se deve ao fato de que o banco de dados a ser utilizado na rede neural artificial seria montado em uma planilha Excel. Para isso, foi utilizado o Java Excel API. Essa API (Interface de Programação de Aplicações) permite ao usuário de Java ler, escrever e modificar dados de planilhas Excel dinamicamente.
+
+Para que o código gerasse os gráficos necessários, também foi necessário um complemento à IDE. O framework de código aberto JFreeChart foi escolhido. Seu intuito é facilitar a exibição de gráficos de alta qualidade em aplicações Java.
+
+\vspace{3ex}
+\subsection{Sistema de Controle de Versão} \label{Git}
+
+
+Visando também uma evolução saudável do código foi utilizado um sistema controle de versão. Como o programa se tratava de um software a ser desenvolvido em várias etapas e consequentemente possuindo diversas versões ao longo de seu desenvolvimento, tal sistema de versionamento é essencial para que informações não se percam e que a evolução do código seja bem controlada. Pela facilidade de uso, velocidade, gratuidade e experiência prévia do usuário, foi escolhido o sistema de versionamento GitHub (\autoref{githubLogo}).
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=100pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/github.png}
+		\caption{GitHub Logo}
+	  \label{githubLogo}
+\end{figure}
+
+
+
+\vspace{3ex}
+\subsection{Organização de Classes e Pacotes} \label{classesPacotes}
+
+Para se criar o programa, aproveitou-se das vantagens e facilidades oferecidas pela linguagem POO Java. Dessa forma, buscou-se uma estrutura que representasse entidades em forma de objetos encapsulados em blocos modularizados.
+
+Tal organização visou a montagem de uma base sólida, onde possíveis pequenos erros em trechos escondidos de código não passassem desapercebidos e se propagassem ao longo do desenvolvimento, prejudicando o programa como um todo.
+
+Da mesma forma, tal organização facilita o desenvolvimento da aplicação, pois módulos já completos podem ser reaproveitados em trechos futuros do código.
+Assim, com o projeto terminado, a estrutura de pacotes e classes ficou como mostrado na \autoref{estruturaClasses}.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=200pt, height=300pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/EstruturaClassesPacotes.jpg}
+		\caption{Estruturação de Pacotes e Classes no Soccer Wizard}
+	  \label{estruturaClasses}
+\end{figure}
+
+Cada um dos 5 pacotes finais possuem as classes responsáveis por um pedaço da aplicação correspondente.
+
+No pacote \say{kassio.soccer\_wizard} temos a classe principal, que é responsável por todo funcionamento do programa.
+
+O pacote \say{initializer} é responsável pela importação dos dados do excel e pela correta configuração dos padrões de entrada para uso do programa. Ou seja, inicializa os dados que serão usados no programa.
+
+O pacote \say{parameters} é responsável por incorporar na execução do programa os parâmetros informados pelo usuário.
+
+O pacote \say{resolvers} compreende o algoritmo em si da RNA. Realiza todas as contas e fornece todos os resultados com base nos dados obtidos do \say{initializer} e do \say{parameters}.
+
+Já o pacote \say{SoccerGUI} compreende a GUI do programa e todo o código que envolva a mesma.
+
+
+
+\vspace{3ex}
+\section{Base de dados} \label{baseDados}
+
+Um banco de dados é necessário para que a rede neural obtenha os dados utilizados durante o seu treinamento e execução. Para criar esse banco de dados foi escolhido o editor de planilhas Microsoft Office Excel. Tal editor foi escolhido pelo seu grande e difundido uso, pela facilidade de criação e edição de aplicações, pela possibilidade de integração dos dados com Java, pelos diversos recursos de ajuda online e pela experiência prévia do usuário com o mesmo.
+
+
+\vspace{3ex}
+\subsection{Organização} \label{organizacao}
+
+Para formular um banco de dados de fácil entendimento e boa manutenabilidade ficou decidido que o mesmo seria organizado da seguinte maneira:
+
+\begin{itemize}
+	\item Uma aba da planilha é destinada para os resultados não tratados de todos os jogos do campeonato, denominada \say{Resultados} (\autoref{abaResultados}).
+	\item Uma aba da planilha é destinada para auxiliar a composição das fórmulas utilizadas nas demais planilhas, denominada \say{Referências} (\autoref{abaReferencias}).
+	\item Cada um dos times do campeonato possui sua própria aba, com seus resultados históricos importados automaticamente da aba de resultados (\autoref{abaTimes}).
+	\item Em cada aba de time, é destinada uma linha da planilha para cada rodada do campeonato. Nessa linha são apresentados o histórico do time pré-rodada e o resultado da mesma.
+\end{itemize}
+
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=400pt, height=150pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Resultados.jpg}
+		\caption{Trecho da aba \protect\say{Resultados}}
+	  \label{abaResultados}
+\end{figure}
+
+Essa organização traz diversas vantagens.
+
+Com a concentração dos resultados em apenas uma aba, podemos facilmente verificar a consistência do banco de dados, encontrar um resultado específico, checar possíveis falhas de informação no banco de dados, assim como verificar visualmente de forma rápida se os resultados importados pelo Soccer Wizard estão corretos.
+
+Outra vantagem de existir apenas uma aba com os resultados das partidas é a facilidade de criação de novos bancos de dados de campeonatos diferentes, que não necessariamente possuem a mesma quantidade de times ou rodadas.
+
+Nesse ponto se torna de grande valia a aba \say{Referências}. Nela, as referências para as células de \say{Resultados} ficam organizadas de forma ordenada e organizada, de forma que as células das abas dos times não precisem ser alteradas quando um novo banco de dados (outro campeonato, por exemplo) é inserido. Dessa forma, o banco de dados se torna robusto e versátil, pois as células mais importantes e detalhistas (as que são importadas para uso do Soccer Wizard) nunca precisam ser alteradas.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=400pt, height=150pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Referencias.jpg}
+		\caption{Trecho da aba \protect\say{Referências}}
+	  \label{abaReferencias}
+\end{figure}
+
+Por fim, a organização dos times de forma que cada um possua sua aba e que cada linha represente uma rodada é invariavelmente necessária quando pensamos na integração necessária com o Soccer Wizard. Tal disposição dos dados facilita a busca das informações de forma automática e iterativa, principalmente quando se definem números para os times, para serem usados no lugar de seus nomes. O uso de números facilita a busca dos times em loops de código e garante de forma simples que as informações sejam buscadas nas abas corretas.
+
+
+\vspace{3ex}
+\subsection{Parâmetros de entrada} \label{ParametrosEntrada}
+
+Buscando encontrar a melhor forma de representar os dados para a rede neural funcionar, decidiu-se testar duas formas distintas. A primeira, mais simples, considera apenas o fator campo, e foi inspirada pela publicação \say{A Comparative Study on Neural Network based Soccer Result Prediction}, de Burak Galip Aslan e Mustafa Murat Inceoglu \citep{Aslan07}. A segunda leva em conta uma maior quantidade de parâmetros, que foram escolhidos por se acreditar que suas informações eram relevantes para a determinação do resultado da partida.
+
+
+\vspace{3ex}
+\subsubsection{Primeira representação (simples)} \label{representaçãoSimples}
+
+Buscando uma forma mais simples e concisa de se representar as condições de entrada da rede neural artificial, chegou-se a representação da \autoref{abaTimes}. Aqui, existem apenas duas condições:
+
+\begin{itemize}
+	\item Taxa de aproveitamento em casa do time mandante.
+	\item Taxa de aproveitamento fora de casa do time visitante.
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=400pt, height=150pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/times.jpg}
+		\caption{Trecho de uma aba de \protect\say{time}, mostrando a primeira representação de dados}
+	  \label{abaTimes}
+\end{figure}
+
+A taxa de aproveitamento em casa/fora de casa é provavelmente o fator mais relevante dentre os que serão citados na segunda representação. Por isso, foi escolhido como foco nessa primeira representação.
+
+Para se calcular a taxa de aproveitamento utiliza-se o seguinte racional:
+
+\begin{itemize}
+	\item Todos times começam o campeonato com taxas iguais a 0.
+	\item Após uma vitória em casa/fora a taxa de aproveitamento em casa/fora é acrescida de uma unidade.
+	\item Após um empate em casa/fora a taxa de aproveitamento em casa/fora não é alterada.
+	\item Após uma derrota em casa/fora a taxa de aproveitamento em casa/fora é reduzida em uma unidade.
+\end{itemize}
+
+Essa primeira forma de representação reduz drasticamente a quantidade de cálculos necessários para se treinar a rede neural artificial, se comparada com a segunda representação (apresentada a seguir). Da mesma forma a análise das informações é bem mais simples e direta, pois o número de entradas utilizadas no Soccer Wizard é de apenas duas, uma para o time mandante do jogo e uma para o time visitante.
+
+Nessa representação, se perde o fator histórico recente. A taxa de aproveitamento é construída ao longo de todo o campeonato, desde seu início. Dessa forma, a análise deixa de ser prioritariamente sobre o retrospecto recente dos times e passa a ser mais abrangente temporalmente. Ou seja, resultados de rodadas muito antigos e de rodadas muito recentes tem igual peso sobre a taxa de aprendizagem.
+
+Dessa forma focamos mais na estabilidade e constância do time ao longo do campeonato ao invés de seu momento atual.
+
+
+
+\vspace{3ex}
+\subsubsection{Segunda representação (completa)} \label{representaçãoCompleta}
+
+A segunda forma de se representar os dados para análise levou em conta fatores que geralmente são utilizados para fazer análises de performance e aproveitamento dos times. Tais informações são constantemente exibidas juntamente com as estatísticas do campeonato em sites e jornais esportivos. As informações escolhidas foram:
+
+\begin{itemize}
+	\item Aproveitamento de pontos dos últimos 5 jogos.
+	\item Mando de campo.
+	\item Aproveitamento de pontos dos últimos 3 jogos dentro/fora de casa.
+	\item Média de gols marcados nos últimos 5 jogos.
+	\item Média de gols sofridos nos últimos 5 jogos.
+	\item Classificação do time no campeonato.
+\end{itemize}
+
+O aproveitamento de pontos dos últimos 5 jogos foi escolhido pois representa o momento atual do time. Uma sequência de bons resultados pode representar um bom momento do time, uma reação ou um momento de decisão do campeonato onde resultados são necessários. Uma análise análoga pode ser feita para resultados ruins.
+
+Mando de campo representa se o time irá jogar em casa ou fora de casa. Tal fator é vastamente reconhecido como sendo influente no resultado de uma partida.
+
+Seguindo a ideia do mando de campo, o aproveitamento de pontos dos últimos 3 jogos dentro/fora de casa mostra o retrospecto recente do time jogando em casa ou fora de casa. Caso o jogo seja em casa, utiliza-se o retrospecto dos jogos correspondentes. Da mesma forma se faz com jogos fora de casa. 
+
+O resultado de uma partida é definido pela quantidade de gols marcados por ambos os times. Assim, a média de gols marcados e sofridos por ambos os times também é um indicador influente sobre o resultado da partida.
+
+A classificação do campeonato entra como um fator menos momentâneo e mais abrangente temporalmente, pois indica a eficiência do time desde o início do campeonato. Contudo, da mesma forma, é influente sobre o resultado das partidas, visto que times mais bem classificados exibem resultados melhores ao longo do campeonato.
+
+É importante ressaltar que nenhum fator atua sozinho. Todos foram escolhidos pois acredita-se que cada um desempenha um papel importante na determinação do resultado de uma partida. Por mais que um indicador qualquer aponte tendência de vitória, a rede neural artificial irá tratar e analisar todo o conjunto de dados na busca pela predição correta do resultado da partida.
+
+Por se tratar de um campeonato longo em que os times passam por períodos de alta e baixa eficiência, uma análise dos dados em um período mais curto e recente é mais fiel ao momento atual de cada time e, assim, pode representar melhor as chances do mesmo em um próximo confronto.
+
+Outro ponto de destaque é o fato que cada um dos fatores citados é utilizado duas vezes. Uma para o time mandante da partida e outra para o time visitante, formando assim um conjunto de doze informações que serão usadas como entrada (input) do Soccer Wizard.
+
+Um ponto negativo dessa forma de representação se encontra na quantidade de informações de entrada (12, ao invés de 2, como na representação anterior). Tal número dificulta a análise dos resultados e a correlação de determinada informação com a capacidade da rede de realizar a predição correta.
+
+
+\vspace{3ex}
+\subsection{Normalização dos dados} \label{normalizacaoDados}
+
+Conforme mostrado no capítulo de Fundamentação Teórica, os algoritmos utilizados em redes neurais artificiais geralmente possuem como entrada valores bivalentes (bipolares ou binários). O algoritmo de backpropagation utilizado nesse trabalho segue a mesma tendência binária, entradas com valor 1 para reforço positivo e com valor -1 para reforço negativo. Contudo, o backpropagation também aceita entradas intermediárias entre -1 e 1, para reforços que não são totalmente positivos e nem totalmente negativos.
+
+Dessa forma, foi necessária uma normalização dos dados de forma que o Soccer Wizard fosse capaz de tratar as informações encontradas no banco de dados.
+
+	Para realizar a normalização, definimos um valor máximo e mínimo, representando o maior reforço positivo e o maior reforço negativo respectivamente. O maior reforço positivo recebe o valor 1. O maior reforço negativo recebe o valor -1. Para quaisquer valores entre o máximo e o mínimo, encontramos o valor normalizado correspondente ao realizar uma regressão linear através da reta que passa pelos valores máximo e mínimo.
+	
+As informações da primeira e segunda representação são normalizadas segundo a \autoref{tabelaNormalizacao}, onde também pode ser visto um exemplo.
+
+
+\begin{table}[htbp]
+\caption{Normalização dos dados de entrada}
+\begin{center}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{cccc|c|c|}
+\cline{5-6}
+\multicolumn{4}{c}{} & \multicolumn{2}{|c|}{Exemplo} \\ \hline
+\multicolumn{1}{|c|}{Entrada} & \multicolumn{1}{c|}{Valor mínimo (-1)} & \multicolumn{1}{c|}{Valor máximo (1)} &  & Resultado & Valor Normalizado \\ \cline{1-3} \cline{5-6} 
+\multicolumn{1}{|c|}{Aproveitamento últimos 5 jogos} & \multicolumn{1}{c|}{0 pontos} & \multicolumn{1}{c|}{15 pontos} &  & 10 pontos & 0.33 \\ \cline{1-3} \cline{5-6} 
+\multicolumn{1}{|c|}{Mando de campo} & \multicolumn{1}{c|}{Fora} & \multicolumn{1}{c|}{Casa} &  & Casa & 1 \\ \cline{1-3} \cline{5-6} 
+\multicolumn{1}{|c|}{Aproveitamento últimos 3 jogos dentro/fora} & \multicolumn{1}{c|}{0 pontos} & \multicolumn{1}{c|}{9 pontos} &  & 3 pontos & -0.33 \\ \cline{1-3} \cline{5-6} 
+\multicolumn{1}{|c|}{Média de gols marcados 5 jogos} & \multicolumn{1}{c|}{0 gols} & \multicolumn{1}{c|}{3 gols} &  & 2.25 gols & 0.5 \\ \cline{1-3} \cline{5-6} 
+\multicolumn{1}{|c|}{Média de gols sofridos 5 jogos} & \multicolumn{1}{c|}{3 gols} & \multicolumn{1}{c|}{0 gols} &  & 1.5 gols  & 0 \\ \cline{1-3} \cline{5-6} 
+\multicolumn{1}{|c|}{Classificação do time} & \multicolumn{1}{c|}{Último} & \multicolumn{1}{c|}{Primeiro} &  & Oitavo & 0.2 (total de 20 times) \\ \cline{1-3} \cline{5-6}
+\multicolumn{1}{|c|}{Taxa de aproveitamento casa/fora} & \multicolumn{1}{c|}{-(Número de rodadas/2)} & \multicolumn{1}{c|}{+(Número de rodadas/2)} &  & 2 & 0.1 (total de 20 rodadas) \\ \hline
+\end{tabular}}
+\end{center}
+\label{tabelaNormalizacao}
+\end{table}
+
+
+
+\vspace{3ex}
+\section{Parâmetros de treinamento} \label{ParametrosTreinamento}
+
+Uma RNA precisa de várias informações para realizar sua tarefa de forma ideal. Desde dados de entrada até parâmetros de controle de loop, são diversas as variáveis que influenciam no correto funcionamento da RNA. A escolha dessas informações, a coerência dos dados de entrada e parâmetros adaptados para a aplicação que se está utilizando são fatores fundamentais para o sucesso do projeto.
+
+
+\vspace{3ex}
+\subsection{Quantidade de padrões de entrada}
+
+Em 1989, \citeauthor{Baum88} chegaram em uma relação que exprime a exatidão esperada da aplicação, $e$, de acordo com o número de padrões de entrada disponíveis, $P$, e o número de pesos a serem treinados, $W$. Tal relação está mostrada na \autoref{exatidaoAplicacao}.
+
+\begin{equation} \label{exatidaoAplicacao}
+W/P = e
+\end{equation}
+
+Para exemplificar, uma RNA com 20 pesos ($W = 20$) precisará de 200 padrões de entrada ($P = 200$) para que se tenha segurança que irá classificar 90\% ($e = 0,1$) dos padrões de entrada corretamente.
+
+É bom lembrar que essa relação é apenas uma referência, pois o resultado real da rede depende de inúmeros outros fatores. Além disso, o problema real está em fazer com que a RNA classifique corretamente padrões alheios ao conjunto de treinamento.
+
+Como o conjunto de neurônios de entrada e saída do Soccer Wizard é relativamente extenso, utilizamos um campeonato inteiro para treinamento, ou seja, 620 padrões de entrada. Da mesma forma, utilizamos outro campeonato inteiro para testar a eficácia do treinamento realizado. Nesse trabalho utilizamos o Campeonato Brasileiro de 2012 e 2013, respectivamente.
+
+Essa escolha visa melhorar a eficiência do treinamento, tendo como referência a relação da equação 22. Além disso, o uso de campeonatos de diferentes anos mostra a capacidade da rede de reconhecer padrões alheios ao conjunto de dados de entrada.
+
+
+\vspace{3ex}
+\subsection{Representação do dados}
+
+As formas binária e bipolar são as mais comuns para se representar os dados em uma RNA. Contudo, como já foi dito, a forma bipolar possui limitações que podem fazer com que a rede não reconheça certos tipos de padrões ou que faça com que o treinamento gaste mais iterações para ser realizado.
+
+Os dados utilizados nessa aplicação também não são, em sua maioria, discretos. Ou seja, seus valores são variáveis contínuos entre um valor máximo e um valor mínimo. Podemos citar como exemplo a média de gols feitos. Tal valor varia entre +3 e 0, não possuindo intervalos discretos.
+
+Dito isso, a escolha da forma binária se torna clara para o problema apresentado. Além de não apresentar limitações claras, permite que possamos escolher valores contínuos entre -1 e +1, representando respectivamente reforço negativo e positivo. Da mesma forma, podemos representar um reforço neutro (empate, por exemplo) como uma entrada nula, de valor 0.   
+
+
+\vspace{3ex}
+\subsection{Aleatoriedade dos parâmetros de entrada}
+
+Para se treinar a rede, utilizamos os 620 padrões contidos em um campeonato (já excluindo 5 rodadas iniciais e 2 rodadas finais).
+
+Por se tratar de um campeonato longo, podem ocorrer períodos em que haja algum tipo de tendência ou viés. Caso o treinamento fosse executado sequencialmente da primeira para a última rodada (que é forma mais simples de montar o algoritmo), tais tendências poderiam ter um impacto negativo no processo de treinamento, piorando a eficiência do mesmo.
+
+Visando evitar tendências e melhorar como um todo o processo de treinamento, os padrões de entrada foram misturados de forma que o treinamento não fosse feito sequencialmente, mas sim aleatoriamente. Ou seja, a iteração entre as entradas do sistema não obedece nenhuma ondem específica.
+
+Para se embaralhar o conjunto de entradas, foi usada uma função geradora de números pseudo-aleatórios, própria do Java.
+
+
+\vspace{3ex}
+\subsection{Função de ativação}
+
+A função de ativação, que é utilizada para se fornecer o resultado de saída um neurônio em função do seu valor de entrada, deve ter algumas características importantes em uma RNA de backpropagation. Essas características garantem que o treinamento ocorra de forma correta, rápida, eficiente e com menos peso computacional.
+
+Uma função de ativação precisa ser contínua, diferenciável e monotonicamente não decrescente (não pode inverter sua relação de ordem). Esses pontos são necessários para o correto treinamento.
+
+Para rapidez e eficiência do treinamento, é desejado que a função de ativação sature. Por exemplo, se aproximando de valores finitos máximos e mínimos assintóticamente.
+
+Por fim, para redução do peso computacional, uma função com derivada fácil de se computar também é desejada. Geralmente usa-se funções cujos valores das derivadas podem ser expressos em termos da própria função.
+
+Uma função que une todas essas exigências dentro do alcance dos nossos dados (-1, 1), é a Função Sigmoidal Bipolar. Essa função está expressa na \autoref{sigmoidalBipolar}, sua derivada na \autoref{deriSigmoidalBipolar} e sua ilustração está na \autoref{graficoSigmoidalBipolar}.
+
+
+\begin{equation} \label{sigmoidalBipolar}
+f(x) = \frac{2}{1+e^{-x}}-1
+\end{equation}
+
+\begin{equation} \label{deriSigmoidalBipolar}
+f'(x) = \frac{1}{2} \cdot [1+f(x)] \cdot [1-f(x)]
+\end{equation}
+
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/bipolarSigmoidal.jpg}
+		\caption{Função Bipolar Sigmoidal}
+	  \label{graficoSigmoidalBipolar}
+\end{figure}
+
+Por atender todos os requerimentos, a Função Sigmoidal Bipolar é a função de ativação utilizada nesse trabalho.
+
+
+\vspace{3ex}
+\subsection{Inicialização de pesos e bias}
+
+A escolha dos pesos iniciais e bias (que é o peso de uma entrada constante igual a 1), tem fundamental importância quando levamos em conta a velocidade de convergência do erro da RNA.
+
+A atualização dos pesos depende tanto da função de ativação utilizada (Bipolar Sigmoidal) quanto da derivada da mesma. Dessa forma, é conveniente escolher pesos que reduzam as possibilidades de que esses valores sejam nulos, ou aproximadamente nulos. Um procedimento comum é simplesmente inicializar os valores dos pesos entre -0.5 e +0.5 aleatoriamente.
+
+Existem modificações dessa inicialização dos pesos. Em 1990,  \citeauthor{Nguyen90} desenvolveram uma simples modificação que geralmente fornece um aprendizado muito mais rápido. A análise feita por eles é baseada em uma função de ativação bem próxima da função bipolar sigmoidal utilizada nesse trabalho.
+
+Basicamente, a modificação fornecida por eles começa inicializando os pesos da mesma forma: aleatoriamente entre -0.5 e + 0.5. Com esses pesos definidos, utiliza-se o número de neurônios iniciais e intermediários para se encontrar um fator que, juntamente com os pesos aleatórios iniciais, definem quais serão os pesos iniciais definitivos.
+
+A inicialização de pesos de Nguyen e Widrow é utilizada neste trabalho.
+		
+
+\vspace{3ex}
+\subsection{Taxa de aprendizado}
+
+A taxa de aprendizado \say{$\alpha$} é um importante fator durante o treinamento da RNA e a escolha de um valor adequado requer cuidado. Um valor muito pequeno pode fazer com que a rede seja treinada muito lentamente, e de forma oposta, um valor muito grande faz com que o treinamento possa não convergir. 
+
+De acordo com \citep{Hecht-Nielsen90}, um limite superior para seu valor pode ser determinado a partir do maior autovalor da matrix de correlação R (\autoref{correlacao}) dos vetores de entrada $x(p)$, conforme \autoref{limiarAlpha}.
+
+\begin{equation} \label{correlacao}
+R = \frac{1}{P} \cdot \sum^P_{P=1} x(p)^T \cdot x(p)
+\end{equation}
+
+\begin{equation} \label{limiarAlpha}
+\alpha < \frac{maior autovalor de R}{2}
+\end{equation}
+
+Contudo, por simplicidade, é mais comum escolher um valor pequeno ($\alpha<1$) para a taxa de aprendizado. Caso o treinamento não convirja, esse valor deve ser reduzido. Caso o treinamento esteja muito lento, esse valor pode ser aumentado para se tentar obter uma melhor velocidade.
+
+Nesse trabalho foi determinado, experimentalmente, que uma taxa de aprendizado entre $\alpha=0.01$ e $\alpha=0.02$ se mostrou apropriada para a aplicação, fazendo com que houvesse convergência e da mesma forma oferecendo uma boa velocidade de treinamento.
+
+
+\vspace{3ex}
+\subsection{Quantidade de neurônios intermediários}
+
+Se olharmos os resultados da RNA de forma gráfica, podemos determinar sua fronteira de decisão, conforme dito na \autoref{SeparabilidadeLinear}. Isso acontece caso os dados de entrada possam ser delimitados por um número finito de linhas ou planos.
+Dessa forma, é possível construir uma rede com $2P$ NIs que irão aprender perfeitamente $P$ padrões de entrada bipolares. No caso apresentado nesse trabalho, temos 620 padrões de entrada bipolares.
+
+Caso um aprendizado perfeito fosse desejado, devido ao grande número de padrões de entrada aqui utilizados, a RNA teria um número de interconexões e um tempo de treinamento desnecessariamente grandes.
+
+Contudo, o objetivo final da RNA aqui montada não é realizar esse aprendizado perfeito, mas sim saber generalizar e fornecer a resposta mais adequada para quaisquer tipos de padrões entrada (e não apenas os fornecidos para treinamento). Além disso, essa generalização necessária não seria particularmente boa com uma quantidade tão alta de NIs.
+
+De qualquer forma, $2P$ nos dá uma ideia do limite superior de NIs a se considerar.
+
+De forma a buscar o balanço mais adequado entre aprendizado perfeito e generalização, vários testes foram feitos, com diferentes quantidades de NIs. As quantidades mais promissoras foram utilizadas no estudo desse projeto.
+
+
+\vspace{3ex}
+\subsection{Duração do treinamento}
+
+Geralmente, para RNAs usando backpropagation, existem duas condições possíveis para se terminar um treinamento, por valor do erro e por número de iterações.
+
+No programa criado para esse trabalho existem essas duas opções.
+
+Contudo, durante o desenvolvimento do mesmo, observou-se que terminar o treinamento com base no erro obtido ao final das iterações era pouco eficiente e muitas vezes difícil de se controlar com qualidade. Tal condição reduz a confiabilidade dos resultados da rede, pois é difícil saber se o treinamento foi finalizado quando deveria.
+
+Por sua vez, determinar o fim do treinamento pelo número de iterações realizadas se mostrou muito mais simples, estável e confiável.
+
+O erro médio ao longo das iterações tende a cair quanto mais se treina a rede, com uma tendência de se estabilizar após um certo número de iterações. Além disso, o treinamento pode ser considerado rápido, pois não dura mais do que alguns minutos.
+
+Com esse conjunto de fatores, podemos simplesmente finalizar o treinamento após um número significativamente grande de iterações (10000, por exemplo). Assim teremos uma rede bem treinada (erro praticamente estabilizado) sem grande demora no treinamento e sem dificuldades para analisar qual valor limitador devemos escolher.
+
+
+\vspace{3ex}
+\subsection{Remoção de padrões de entrada não representativos}
+
+O Campeonato Brasileiro de Futebol, assim como qualquer disputa que envolve pessoas e diversos fatores externos, possui resultados inesperados e que fogem ao padrão conhecido. Com isso em mente, fica claro que alguns padrões de entrada utilizados não são confiáveis e representativos do comportamento do restante da amostra.
+
+Apesar disso, não é possível excluir tais padrões indesejados pré-treinamento por não ser possível identifica-los.
+
+Visando contornar esse problema, a seguinte estratégia foi utilizada:
+\begin{enumerate}
+	\item O treinamento ocorre normalmente, com todos padrões de entrada.
+	\item Com a rede treinada, verifica-se quais foram os erros resultantes de cada um dos padrões.
+	\item Os piores resultados (5\% do total) são excluídos do conjunto de treinamento.
+	\item A rede é treinada uma segunda vez, com o novo conjunto de treinamento.
+	\item Com a rede treinada novamente, verifica-se quais foram os erros resultantes de cada um dos padrões.
+	\item Os piores resultados (5\% do total) são excluídos do novo conjunto de treinamento.
+	\item A rede é treinada uma terceira e última vez, com o mais novo conjunto de treinamento.
+\end{enumerate}
+
+Dessa forma os padrões de entrada que mais se afastaram do comportamento da amostra são excluídos. O treinamento final da rede, portanto, não inclui tais padrões de entrada indesejados.
+
+A decisão de se excluir 10\% dos resultados, assim como a separação dessa operação em duas etapas de 5\% cada, foi puramente experimental. Várias quantidades de exclusão diferentes e várias formas de se realizar esse procedimento foram testadas. A estratégia apresentada foi a que se mostrou mais efetiva no resultado final da RNA.
+
+
+\vspace{3ex}
+\section{Estratégias de análise pós processamento}
+
+Após o treinamento, a RNA nos fornece um conjunto de pesos das conexões.  Com os pesos determinados, executamos a rede fornecendo novos dados de entrada. O resultado então pode ser entendido como o valor de saída dos neurônios da última camada. Para se retirar alguma informação válida desse conjunto de dados de saída é preciso entende-lo e analisa-lo.
+
+O resultado da RNA consiste em um conjunto de três neurônios (representando vitória, empate e derrota), onde cada um pode ter seu valor entre -1 e 1. A partir desses valores, determinamos qual foi o resultado fornecido pela rede. As estratégias utilizadas nesse trabalho para determinar esses resultados e a validade dos mesmos estão explicadas na sequência.
+
+
+\vspace{3ex}
+\subsection{Determinação do resultado} \label{determinacaoResultado}
+
+A configuração de três neurônios de saída, representando cada um vitória, empate e derrota, nos permite analisar a resposta da rede para cada possível resultado independentemente dos outros. Ou seja, podemos entender o resultado de cada neurônio de saída como a possibilidade que tal resultado correspondente venha a ocorrer dado certo conjunto de entradas.
+
+Nos neurônios de entrada, ao se configurar reforços positivos como +1 e reforços negativos como -1, determinamos que os resultados de saída serão analisados da mesma forma. Assim, quanto mais próximo de +1 for o resultado do neurônio de saída, maior será o reforço positivo do mesmo. Por exemplo, caso o neurônio representante de vitória tenha resposta +0.93 (próximo de +1) e o neurônio representante de derrota tenha resposta -0.81 (próximo de -1), entendemos que para esse conjunto de entradas, existe um reforço muito positivo para que o resultado seja vitória e um reforço muito negativo para que o resultado seja derrota.
+
+Como os neurônios são independentes entre si, a rede pode fornecer conjuntos de saída de todas formas possíveis, o que pode dificultar a análise dos resultados. Alguns exemplos que podem gerar confusão na hora de analisar os resultados estão mostrados na \autoref{possiveisSaidas}.
+
+\begin{table}[htbp]
+\caption{Possíveis resultados dos neurônios de saída}
+\setlength{\tabcolsep}{18pt}
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c|c|}
+\cline{2-8} & \multicolumn{7}{c|}{Conjunto de respostas} \\ \hline
+\multicolumn{1}{|c|}{Neurônio} & 1    & 2    & 3    & 4    & 5    & 6     & 7      \\ \hline
+\multicolumn{1}{|c|}{Vitória}  & 0    & -0,5 & 0,93 & -1   & 0,97 & -0,12 & -0,99  \\ \hline
+\multicolumn{1}{|c|}{Empate}   & 0,1  & -0,7 & 0,92 & 0,03 & -0,5 & 0,01  & -0,95  \\ \hline
+\multicolumn{1}{|c|}{Derrota}  & 0,05 & -0,8 & 0,91 & 0,02 & 1    & -0,13 & -0,999 \\ \hline
+\end{tabular}
+\end{center}
+\label{possiveisSaidas}
+\end{table}
+
+Como mostrado na \autoref{possiveisSaidas}, podem existir respostas onde a simples análise da magnitude do reforço dos neurônios não seja suficiente para se determinar o resultado da rede. Resultados onde todos os reforços sejam negativos ou positivos, ou simplesmente todos reforços sejam muito parecidos entre si podem levar a um mal entendimento do resultado da mesma.
+
+Contudo, cada conjunto de saída deve fornecer uma, e somente uma, resposta para o conjunto de entradas analisado. Apesar do valor do neurônio indicar a magnitude do reforço para tal resultado, e do fato de que cada neurônio ser independente dos demais, podemos estabelecer uma relação entre eles. Independentemente dos valores, sempre haverá um neurônio com resultado maior que os demais, e por menor que seja seu reforço, ainda será maior que os outros.
+
+Para se determinar o resultado da rede, decidiu-se então, a partir dessa análise, que o maior resultado seria tomado como a resposta final da rede, independentemente do valor do neurônio. Ou seja, o neurônio de saída com maior valor determinará se o resultado será vitória, empate ou derrota.
+
+
+\vspace{3ex}
+\subsection{Validação de resultados}
+
+Apesar da estratégia de determinação do resultado mostrada na \autoref{determinacaoResultado} ser eficiente, ainda não é suficiente para uma predição dos resultados otimizada. Com isso, uma segunda estratégia foi adotada, complementar à primeira.
+
+Nessa estratégia, buscamos validar os resultados obtidos inicialmente, excluindo resultados não entendidos como confiáveis.
+
+Para se chegar em uma estratégia eficiente, utilizamos um racional aqui chamado de \say{probabilidade do resultado}. Esse racional é calculado para cada neurônio de saída de acordo com a \autoref{probabilidadeResultado}.
+
+
+\begin{equation} \label{probabilidadeResultado}
+P_i = \frac{1+n_i}{(1+n_1)+(1+n_2)+(1+n_3)}
+\end{equation}
+
+Na \autoref{probabilidadeResultado}, $P_i$ é a probabilidade do resultado do neurônio $i$. Já $n_1$, $n_2$ e $n_3$ são os resultados dos 3 neurônios de saída. Soma-se 1 no resultado de cada neurônio para que todos valores sejam necessariamente positivos.
+
+Durante a aplicação da rede, a probabilidade do resultado de cada um dos neurônios de cada um dos padrões de entrada é calculada. Da mesma forma, calcula-se a média e o desvio padrão das probabilidades de cada um dos 3 neurônios de saída ao longo de todos padrões de entrada. Com esses valores podemos determinar a confiabilidade dos resultados.
+
+Para que um resultado seja considerado válido ele deve passar por duas condições, mostradas na \autoref{condicaoUm} e na \autoref{condicaoDois}, cujas variáveis são explicadas na sequência.
+
+\begin{equation} \label{condicaoUm}
+P_M \geq P_L
+\end{equation}
+
+\begin{equation} \label{condicaoDois}
+P_M \geq \bar{P_i}+\sigma_L \cdot \sigma_i
+\end{equation}
+
+$P_M$ é a probabilidade do neurônio com maior valor de saída.
+$P_L$ é a probabilidade limiar, determinada pelo usuário.
+$\bar{P_i}$ é a média das probabilidades do neurônio i ao longo de todos padrões de entrada.
+$\sigma_L$ é o desvio padrão limiar, determinado pelo usuário.
+$\sigma_i$ é o desvio padrão das probabilidades do neurônio i ao longo de todos padrões de entrada.
+
+A condição mostrada na \autoref{condicaoUm} determina se a probabilidade do neurônio analisado está acima de determinado valor $P_L$ fornecido pelo usuário. Essa condição visa excluir resultados onde não exista uma clara definição de qual neurônio possui maior reforço positivo.
+
+A condição mostrada na \autoref{condicaoDois} visa eliminar resultados tendenciados pela RNA. Muitas vezes as condições de treinamento favorecem um ou outro neurônio, fornecendo para o mesmo, valores de saída maiores (em média). Essa condição confere a média e o desvio padrão da probabilidade do neurônio ao longo de todos padrões de entrada utilizados na aplicação. Um resultado só é considerado válido se sua probabilidade for maior que a probabilidade média acrescida de uma quantidade $\sigma_L$(determinada pelo usuário) de desvios padrão.
+
+Caso um resultado se aplique às duas condições acima, o mesmo é aceito como válido.
+
+
+\vspace{3ex}
+\section{Interface Gráfica do Usuário}
+
+Ao se criar um programa, a forma de se executá-lo pode ser, por vezes, bastante complexa e pouco intuitiva para quem não participou do desenvolvimento do mesmo. Dessa forma, a criação de uma GUI se faz necessária para o bom uso do programa e visualização de seus resultados.
+
+Nesse projeto, a interface gráfica ficou dividida em uma janela com duas abas, correspondentes à parte de teste da RNA e da execução em si do Soccer Wizard. Uma visualização da janela, com foco na aba de testes está mostrada na \autoref{GUIxor}.
+
+\begin{figure}[htbp]
+	\centering
+		\resizebox{\columnwidth}{!}{%
+	  \includegraphics[angle=0]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIxor.jpg}}
+		\caption{Aba de testes da GUI}
+	  \label{GUIxor}
+\end{figure}
+
+A função da GUI é fornecer todos comandos necessários para a execução do programa, permitir a entrada dos parâmetros utilizados e mostrar ao usuário todas as informações pertinentes a respeito da execução do mesmo.
+
+Os componentes da GUI inclusos na aba de execução do Soccer Wizard (\autoref{GUIsw}) estão explicados na sequência.
+
+\begin{figure}[htbp]
+	\centering
+		\resizebox{\columnwidth}{!}{%
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIsw.jpg}}
+		\caption{Aba Soccer Wizard da GUI}
+	  \label{GUIsw}
+\end{figure}
+
+\begin{enumerate}
+	\item Taxa de aprendizado utilizada no treinamento.
+	\item Número máximo de iterações executadas durante o treinamento.
+	\item Limiar do erro médio, abaixo do qual o treinamento é terminado.
+	\item Número de rodadas utilizadas no treinamento.
+	\item Número de times utilizados no treinamento (que jogam em cada uma das rodadas).
+	\item Número de neurônios na camada intermediária (NI).
+	\item Número de rodadas utilizadas na execução da RNA.
+	\item Número de times utilizados na execução da RNA (que jogam em cada uma das rodadas).
+	\item Parâmetro de usuário \say{Probabilidade Limiar} $P_L$.
+	\item Parâmetro de usuário \say{Desvio Padrão Limiar} $?_L$.
+	\item Procura e carrega no programa o campeonato desejado para treinamento.
+	\item Carrega os dados informados nos campos 1 a 6 no programa.
+	\item Executa o treinamento da RNA.
+	\item Procura e carrega no programa o campeonato desejado para execução da RNA treinada.
+	\item Carrega os dados informados nos campos 7 a 9 no programa.
+	\item Executa a RNA treinada.
+	\item Apresenta os valores do erro máximo, médio e mínimo, dentre todos padrões de entrada da última iteração do treinamento.
+	\item Apresenta o número de iterações executadas no treinamento.
+	\item Apresenta a taxa de acerto dentre resultados de vitória, empate e derrota.
+	\item Apresenta a taxa de acerto incluindo todos resultados.
+	\item Apresenta graficamente a evolução dos erros ao longo das iterações de treinamento.
+\end{enumerate}
+
+%
+%
+%
+%
+%
+%
+%
