@@ -13,3 +13,13 @@
 \contentsline {subsection}{\numberline {2.1.6}Perceptron}{15}{subsection.2.1.6}
 \contentsline {subsubsection}{T\'ecnica de aprendizado}{17}{subsubsection*.7}
 \contentsline {subsection}{\numberline {2.1.7}Adaline}{17}{subsection.2.1.7}
+\contentsline {subsubsection}{T\'ecnica de aprendizado}{19}{subsubsection*.8}
+\contentsline {subsection}{\numberline {2.1.8}Redes Multicamadas}{20}{subsection.2.1.8}
+\contentsline {subsection}{\numberline {2.1.9}Madaline}{20}{subsection.2.1.9}
+\contentsline {subsection}{\numberline {2.1.10}Backpropagation}{21}{subsection.2.1.10}
+\contentsline {subsubsection}{Treinamento e Aplica\c c\~ao}{22}{subsubsection*.9}
+\contentsline {subsubsection}{T\'ecnica de Aprendizado}{23}{subsubsection*.10}
+\contentsline {section}{\numberline {2.2}Programa\c c\~ao Orientada a Objetos}{26}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Java}{27}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Futebol}{28}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Campeonato Brasileiro de Futebol}{28}{subsection.2.3.1}

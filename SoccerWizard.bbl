@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -62,12 +62,17 @@ A.~M. FLITMAN.
 \bibitem[HAYKIN(1999{\natexlab{a}})]{Haykin99}
 S.~S. HAYKIN.
 \newblock \emph{Neural Networks: A Comprehensive Foundation}.
-\newblock Prentice Hall, second edition, 1999{\natexlab{a}}.
+\newblock Prentice Hall, 1999{\natexlab{a}}.
 
 \bibitem[HAYKIN(1999{\natexlab{b}})]{Haykin99b}
 S.~S. HAYKIN.
 \newblock \emph{Neural Networks and Learning Machines}.
-\newblock Prentice Hall, third edition, 1999{\natexlab{b}}.
+\newblock Prentice Hall, 1999{\natexlab{b}}.
+
+\bibitem[HECHT-NIELSEN(1990)]{Hecht-Nielsen90}
+R.~HECHT-NIELSEN.
+\newblock \emph{Neurocomputing}.
+\newblock Addison-Wesley Publishing Company, 1990.
 
 \bibitem[McCLELLAND e RUMELHART(1988)]{McClelland88}
 J.~L. McCLELLAND and D.~E. RUMELHART.
@@ -118,6 +123,12 @@ G.~S. STENT.
 \bibitem[WATSON(2008)]{Watson08}
 M.~WATSON.
 \newblock \emph{Practical Artificial Intelligence Programming With Java}.
-\newblock Mark Watson, third edition, 2008.
+\newblock Mark Watson, 2008.
+
+\bibitem[WIDROW e HOFF~Jr.(1960)]{Widrow60}
+B.~WIDROW and M.~E. HOFF~Jr.
+\newblock Adaptive switching circuits.
+\newblock In \emph{IRE WESCON Convention Record}, volume~4, pages 96--104,
+  1960.
 
 \end{thebibliography}

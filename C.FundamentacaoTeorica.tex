@@ -49,7 +49,7 @@ Um modelo completo de um neurônio, segundo as definições acima, é mostrado na \a
 A função de ativação (degrau) desse neurônio é dado segunda a \autoref{ativacaoMcCulloth}, onde Yin é a soma das entradas de cada um dos neurônios, conforme \autoref{entradaMcCulloth}. O limiar do neurônio é dado pela \autoref{limiarMcCulloth}.
 
 \begin{equation} \label{ativacaoMcCulloth}
-f(y_\textit{in})=\begin{cases}
+f(y_\textit{in}) = \begin{cases}
 1 & \text{se } Y_{in} > \theta \cr
 0 & \text{se } Y_{in} \leq \theta
 \end{cases}
@@ -72,7 +72,7 @@ O uso de um limiar para definir a ativação do neurônio pode ser substituído pelo
 \begin{figure}[htbp]
 	\centering
 	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Bias.jpg}
-		\caption{Bias "b" em uma RNA}
+		\caption{Bias \protect\say{b} em uma RNA}
 	  \label{neuronioBias}
 \end{figure}
 
@@ -81,7 +81,7 @@ O uso do bias ou do limiar são equivalentes. Sua importância se mostra durante a
 A diferença de aplicação entre as duas técnicas é dada pela função de ativação do neurônio, que com o uso do bias fica escrita conforme a \autoref{ativacaoBias}.
 
 \begin{equation} \label{ativacaoBias}
-f(y_\textit{in})=\begin{cases}
+f(y_\textit{in}) = \begin{cases}
 1 & \text{se } Y_{in} > 0 \cr
 0 & \text{se } Y_{in} \leq 0
 \end{cases}
@@ -151,7 +151,7 @@ Estamos considerando inicialmente redes de apenas uma camada, onde cada conexão 
 \Delta w_{ij} = x_i \cdot y_i
 \end{equation}
 
-Se utilizarmos a representação binária, essa equação não distingue conexões que possuem uma entrada "positiva" e uma saída "negativa" de conexões onde tanto a entrada quanto a saída são "negativas". Essa é uma das vantagens mais facilmente observáveis da utilização de dados bipolares (ao invés de binários) para a representação dos dados.
+Se utilizarmos a representação binária, essa equação não distingue conexões que possuem uma entrada \say{positiva} e uma saída \say{negativa} de conexões onde tanto a entrada quanto a saída são \say{negativas}. Essa é uma das vantagens mais facilmente observáveis da utilização de dados bipolares (ao invés de binários) para a representação dos dados.
 
 
 \vspace{3ex}
@@ -172,7 +172,7 @@ O aprendizado é dado na forma iterativa e segue o seguinte algoritmo:
 
 Para esclarecer um pouco mais o algoritmo acima mostrado, segue um exemplo de sua aplicação em uma rede real com representação bipolar, onde usaremos como parâmetros de entrada a função lógica E. Buscaremos com essa rede descobrir os valores dos pesos das conexões que determinam a fronteira de decisão dessa função.
 
-A função lógica E retorna um valor "positivo" apenas se ambas as entradas possuírem também um valor "positivo". Assim sendo, montaremos a tabela verdade dessa função conforme a \autoref{tabverdadeE}. A representação gráfica dessa rede está mostrada na \autoref{redeNeuralE}.
+A função lógica E retorna um valor \say{positivo} apenas se ambas as entradas possuírem também um valor \say{positivo}. Assim sendo, montaremos a tabela verdade dessa função conforme a \autoref{tabverdadeE}. A representação gráfica dessa rede está mostrada na \autoref{redeNeuralE}.
 
 \begin{table}[htbp]
 \caption{Tabela Verdade para a função lógica E}
@@ -218,9 +218,9 @@ Na sequência, atualizamos os pesos com os resultados da \autoref{resultadosPrime
 
 \begin{equation} \label{resultadosPrimeiroPar}
 \begin{cases}
-w_0=0+\Delta w_0 = 1 \cr
-w_1=0+\Delta w_1 = 1 \cr
-w_2=0+\Delta w_2 = 1
+w_0 = 0+\Delta w_0 = 1 \cr
+w_1 = 0+\Delta w_1 = 1 \cr
+w_2 = 0+\Delta w_2 = 1
 \end{cases}
 \end{equation}
 
@@ -243,9 +243,9 @@ Na sequência, atualizamos os pesos com os resultados da \autoref{resultadosSegun
 
 \begin{equation} \label{resultadosSegundoPar}
 \begin{cases}
-w_0=1+\Delta w_0 = 0 \cr
-w_1=1+\Delta w_1 = 0 \cr
-w_2=1+\Delta w_2 = 2
+w_0 = 1+\Delta w_0 = 0 \cr
+w_1 = 1+\Delta w_1 = 0 \cr
+w_2 = 1+\Delta w_2 = 2
 \end{cases}
 \end{equation}
 
@@ -268,9 +268,9 @@ Na sequência, atualizamos os pesos com os resultados da \autoref{resultadosTerce
 
 \begin{equation} \label{resultadosTerceiroPar}
 \begin{cases}
-w_0=0+\Delta w_0 = -1 \cr
-w_1=0+\Delta w_1 = 1 \cr
-w_2=2+\Delta w_2 = 1
+w_0 = 0+\Delta w_0 = -1 \cr
+w_1 = 0+\Delta w_1 = 1 \cr
+w_2 = 2+\Delta w_2 = 1
 \end{cases}
 \end{equation}
 
@@ -293,9 +293,9 @@ Na sequência, atualizamos os pesos com os resultados da \autoref{resultadosQuart
 
 \begin{equation} \label{resultadosQuartoPar}
 \begin{cases}
-w_0=-1+\Delta w_0 = -2 \cr
-w_1=1+\Delta w_1 = 2 \cr
-w_2=1+\Delta w_2 = 2
+w_0 = -1+\Delta w_0 = -2 \cr
+w_1 = 1+\Delta w_1 = 2 \cr
+w_2 = 1+\Delta w_2 = 2
 \end{cases}
 \end{equation}
 
@@ -342,7 +342,7 @@ Y_{in} = \sum_i x_i \cdot w_i
 \end{equation}
 
 \begin{equation} \label{funcaoAtivacaoPerceptron}
-f(Y_{in})=\begin{cases}
+f(Y_{in}) = \begin{cases}
 1 & \text{se } Y_{in} > \theta \cr
 0 & \text{se } -\theta \leq Y_{in} \leq \theta \cr
 -1 & \text{se } Y_{in} < \theta \cr
@@ -362,7 +362,7 @@ Observando a função de ativação de saída, que retorna valores de -1, 0 ou 1, e a
 	\item Apenas conexões de entrada com valores diferentes de 0 possuem seus pesos atualizados.
 	\item Padrões de entrada que não produzem erro na saída também não têm seus pesos atualizados.
 	\item Como o treinamento ocorre até que os pesos sejam tais que a saída seja correta para quaisquer padrões de entrada, e padrões sem erro não resultam em treinamento da rede, quanto mais treinada a rede estiver, menor será o seu aprendizado.
-	\item O valor do limiar não mais fornece uma equação, delimitando uma fronteira de decisão, mas sim uma inequação, fornecendo uma região de "indecisão", separando a região de respostas positivas e a região de respostas negativas. Dessa forma, o valor do limiar se torna mais significativo para o processo de aprendizagem.
+	\item O valor do limiar não mais fornece uma equação, delimitando uma fronteira de decisão, mas sim uma inequação, fornecendo uma região de \say{indecisão}, separando a região de respostas positivas e a região de respostas negativas. Dessa forma, o valor do limiar se torna mais significativo para o processo de aprendizagem.
 \end{itemize}
 
 O treinamento do perceptron continua até que os pesos das conexões sejam tais que para todos os padrões de entrada a resposta obtida pela rede seja correta. Segundo o teorema de convergência dos perceptrons, caso tais pesos existam, eles serão encontrados em um número finito de passos do treinamento.
@@ -376,21 +376,287 @@ O algoritmo de aprendizado do perceptron está apresentado a seguir. Sua estrutur
 \begin{enumerate}
 	\item Inicializar pesos e bias (podem ser setados em 0, por simplicidade)
 	\item Definir taxa de aprendizado $0<\alpha<1$
-	\item Enquanto a condição de parada não for atingida, repetem-se os passos 3-6
+	\item Enquanto a condição de parada não for atingida, repetem-se os passos 4-7
 	\setlength{\itemindent}{+.5in}
-	\item Para todos os conjuntos de entradas e saídas, repetem-se os passos 4-5
+	\item Para todos os conjuntos de entradas e saídas, repetem-se os passos 5-6
 	\setlength{\itemindent}{+1in}
 	\item Calcula-se o valor da saída de acordo com a \autoref{entradaPerceptron} e a \autoref{funcaoAtivacaoPerceptron}
 	\item Caso a saída calculada seja diferente da saída correta, atualizam-se os pesos de acordo com a \autoref{pesosPerceptron}
 	\setlength{\itemindent}{+0.5in}
-	\item Caso nenhum peso tenha sido alterado no passo 3, pare. Caso contrário, continue
+	\item Caso nenhum peso tenha sido alterado no passo 6, pare. Caso contrário, continue
 \end{enumerate}
 		
 \vspace{3ex}
 \subsection{Adaline} 
 
 
+\cite{Widrow60} apresentaram um novo modelo de redes chamado Adaline, que é uma redução para Adaptive Linear Neuron (Neurônio Linear Adaptativo, em tradução livre). A inovação apresentada por eles se destaca pela regra de treinamento utilizada, a Regra Delta, também conhecida por Regra dos Mínimos Quadrados Médios (LMS) ou Regra de Widrow-Hoff.
+A Regra Delta se mostra como uma inovação diante das opções anteriores à ela devido ao fato de que é capaz de fornecer correções pequenas e variáveis ao longo do treinamento. Seu desenvolvimento se deu com a ideia de que a mudança dos pesos da conexão deve minimizar a diferença entre a saída calculada Yin e o valor alvo t, minimizando o erro ao longo de todos os padrões de entrada. Isso é obtido se reduzindo o erro em cada padrão de entrada, um por vez. Para se atualizar os pesos das ligações usamos a \autoref{pesosAdaline}. Tal equação, assim como nos perceptrons, apresenta um parâmetro chamado de taxa de aprendizado, que é um valor constante determinado antes do início do treinamento.
+
+\begin{equation} \label{entradaAdaline}
+Y_{in} = \sum_i x_i \cdot w_i
+\end{equation}
+
+\begin{equation} \label{pesosAdaline}
+\Delta w_i = \alpha \cdot x_i \cdot (t-Y_{in})
+\end{equation}
+
+Semelhantemente as redes já apresentadas, um Adaline tipicamente usa ativação bipolar para os sinais de entrada e saída, possui pesos ajustáveis nas conexões e também possui bias. Apesar da Regra Delta poder ser utilizada em redes com múltiplas saídas e/ou camadas, um Adaline é um caso especial onde existe apenas uma saída e uma camada.
+
+A arquitetura de uma rede Adaline é mostrada na \autoref{Arquiteturaadaline}.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Adaline.jpg}
+		\caption{Arquitetura de uma Adaline \citep{Fausett94}}
+	  \label{Arquiteturaadaline}
+\end{figure}
 
 
+\vspace{3ex}
+\subsubsection{Técnica de aprendizado} 
 
 
+O algoritmo de aprendizado do Adaline está apresentado a seguir. Sua estrutura não é muito diferente à do perceptron, contudo, possui uma mudança singela: Os pesos aqui são alterados em todos loops de treinamento e o controle de parada se dá por um limiar máximo de alteração dos pesos. Como pode ser visto abaixo.
+
+\begin{enumerate}
+	\item Inicializar pesos e bias (podem ser setados em 0, por simplicidade)
+	\item Definir taxa de aprendizado $0<\alpha<1$
+	\item Enquanto a condição de parada não for atingida, repetem-se os passos 4-7
+	\setlength{\itemindent}{+.5in}
+	\item Para todos os conjuntos de entradas e saídas, repetem-se os passos 5-6
+	\setlength{\itemindent}{+1in}
+	\item Calcula-se o valor da saída de acordo com a \autoref{entradaAdaline}
+	\item Atualizam-se os pesos de acordo com a \autoref{pesosAdaline}
+	\setlength{\itemindent}{+0.5in}
+	\item Caso a maior alteração de peso que ocorreu no passo 6 seja menor que um valor determinado, pare. Caso contrário, continue.
+\end{enumerate}
+
+A taxa de aprendizado deve ser determinada com cuidado. Um valor muito pequeno pode fazer com que a rede seja treinada muito lentamente, e de forma oposta, um valor muito grande pode fazer com que o treinamento não convirja. \cite{Hecht-Nielsen90} chegou a uma equação para limitar o valor da taxa de aprendizado. Porém, é mais comum simplesmente a escolha de um valor inicial pequeno (0,1 por exemplo).
+
+	Um outro ponto importante desse treinamento, se deve ao fato de que a aplicação da rede em situações que a saída deve ser bivalente não pode ser apenas uma repetição de parte do algoritmo de treinamento, pois o mesmo retornaria valores quebrados. Assim, a aplicação do Adaline em tais situações requer uma função de ativação para poder ser usada. Comumente a função degrau é utilizada para tais aplicações.
+
+
+\vspace{3ex}
+\subsection{Redes Multicamadas}
+
+Muitas vezes, uma rede neural de apenas uma camada, como as mostradas até agora, não é capaz de solucionar o problema proposto. Tais limitações foram um dos fatores que reduziram o interesse nas redes neurais artificiais nos anos 70. Para tentar solucionar esses casos, foram desenvolvidas as redes multicamadas (\autoref{redesMulticamadas}). Nesse trabalho serão expostas as redes Madaline e Multilayer Perceptron com BackPropagation, que são extensões multicamadas das redes Adaline e Perceptron, respectivamente.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=400pt, height=225pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redesMulticamadas.jpg}
+		\caption{Arquitetura de uma rede multicamadas com duas camadas intermediárias \citep{Haykin99}}
+	  \label{redesMulticamadas}
+\end{figure}
+
+
+\vspace{3ex}
+\subsection{Madaline}
+
+O uso das redes Adaline em uma configuração multicamadas é possível, e chamado Madaline - Many Adaptive Linear Neurons (Muitos Neurônios Lineares Adaptativos, em tradução livre).
+
+Um modelo simples de uma Madaline pode ser visto na \autoref{arquiteturaMadaline}. Nela, temos dois neurônios de entrada (X1 e X2), duas Adalines resultando dois neurônios intermediários (Z1 e Z2) e uma terceira Adaline, que utiliza os neurônios intermediários (aqui chamados NI) como entradas e resulta a saída Y. Podemos ver que cada uma das três Adalines intermediarias precisam de um bias.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=200pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Madaline.jpg}
+		\caption{Arquitetura de uma Madaline com uma camada intermediária de dois neurônios \citep{Fausett94}}
+	  \label{arquiteturaMadaline}
+\end{figure}
+
+O processo de treinamento de uma Madaline não sofre grandes alterações em relação à sua versão mais simples, de uma camada. Basicamente, a rede é uma combinação de várias Adalines, assim como seu processo de treinamento também é a combinação do processo de treinamento de várias Adalines. Assim sendo, o mesmo algoritmo já mostrado é apenas repetido para cada pedaço da rede multicamadas.
+
+Devemos, entretanto, levar em conta que as entradas do sistema são utilizadas apenas pelas Adalines que resultam a primeira camada intermediária. Por sua vez, a primeira camada intermediária fornece as entradas para as Adalines que resultam a segunda camada intermediária, e assim sucessivamente, até que se chegue na saída do sistema.
+
+
+\vspace{3ex}
+\subsection{Backpropagation}
+
+O uso de perceptrons multicamadas, com a regra de treinamento supervisionado de Backpropagation (retro propagação de erros) ou Regra Delta Generalizada, tem sido amplo e eficaz na resolução de problemas, por vezes complexos, em diversas áreas. Apesar de sua importância atual, não se diz que o Backpropagation possui um criador, pois foi desenvolvido simultaneamente por diversos pesquisadores. Esse método visa reduzir o gradiente do erro quadrático total da saída da rede ao longo do treinamento, ou seja, minimizando o erro da saída calculado pelo sistema.
+
+O algoritmo utilizado nesse trabalho usa a regra de Backpropagation. O objetivo é treinar a rede para alcançar um balanço entre a habilidade de responder corretamente a padrões de entrada (utilizados para treinamento) e a habilidade de responder bem a entradas similares, mas não necessariamente idênticas, às utilizadas no treinamento.
+
+Podemos dizer que o Backpropagation utiliza o melhor de cada um dos modelos de redes neurais já apresentados. Em sua base temos uma arquitetura multicamadas, baseada em Perceptrons (\autoref{arquiteturaBackpropagation}). A regra de treinamento utilizada é a Regra Delta Generalizada, que é uma modificação da Regra Delta. Além disso, possui a retro propagação do erro, que visa uma redução gradual do erro ao longo do treinamento.
+
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=450pt, height=300pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Backpropagation.jpg}
+		\caption{Arquitetura de uma rede Backpropagation com uma camada intermediária de três neurônios. \citep{Fausett94}}
+	  \label{arquiteturaBackpropagation}
+\end{figure}
+
+
+\vspace{3ex}
+\subsubsection{Treinamento e Aplicação}
+
+Treinar uma rede com Backpropagation pode ser uma tarefa lenta mas, uma vez treinada, os resultados da rede são produzidos rapidamente. Para realizar o treinamento temos 3 estágios: Feedforward (Alimentação); Backpropagation (Retro Propagação); Ajuste de Pesos.
+
+Na Alimentação, cada neurônio da primeira camada recebe seu valor de entrada e reproduz seu resultado para todos neurônios da camada seguinte, de acordo com sua função de ativação. Os neurônios das camadas intermediárias seguem o mesmo comportamento, e propagam o resultado da rede através de todas camadas existentes até os neurônios de saída.
+
+Na Retro Propagação, é calculado o erro obtido entre o resultado da etapa de alimentação e o valor correto esperado. Esse erro é então retro propagado para toda a rede de acordo com um fator específico.
+
+No Ajuste de Pesos, o erro que foi retro propagado é então utilizado para se calcular o ajuste que deve ser feito no peso de cada uma das conexões. Com as correções calculadas, todos os pesos das conexões da rede são atualizados simultaneamente.
+	
+A aplicação da rede, por sua vez, se torna tarefa simples após o treinamento. Com os valores finais dos pesos das conexões, basta aplicarmos a primeira etapa do treinamento (Feedforward) com os valores de entrada desejados.
+
+
+\vspace{3ex}
+\subsubsection{Técnica de Aprendizado}
+
+A técnica de aprendizado Backpropagation está apresentada a seguir. Sua estrutura é a mais complexa e avançada presente nesse trabalho. Também é importante citar que o algoritmo mostrado a seguir foi utilizado para se montar a parte prática desse trabalho.
+
+As equações utilizadas no algoritmo mostrado abaixo são descritas a seguir. A nomenclatura utilizada por ser vista na \autoref{arquiteturaBackpropagation}, para uma melhor ilustração de sua representação. Uma explicação do que cada equação representa é dada em sequência.
+
+\begin{equation} \label{back1}
+Y_{in} = \sum_i x_i \cdot w_i
+\end{equation}
+
+\begin{equation} \label{back2}
+Y_{out} = f(Y_{in})
+\end{equation}
+
+\begin{equation} \label{back3}
+\delta_z = (t - Z_{out}) \cdot f'(Z_{in})
+\end{equation}
+
+\begin{equation} \label{back4}
+\Delta w_{yz} = \alpha \cdot Y_{out} \cdot \delta_z
+\end{equation}
+
+\begin{equation} \label{back5}
+\delta_{in} = \sum_i \delta_i \cdot w_i
+\end{equation}
+
+\begin{equation} \label{back6}
+\delta_y = \delta_{in} \cdot f'(Y_{in})
+\end{equation}
+
+\begin{equation} \label{back7}
+\Delta w_{xy} = \alpha \cdot X_{out} \cdot \delta_y
+\end{equation}
+
+\begin{equation} \label{back8}
+w_{novo} = w_{velho} + \Delta w
+\end{equation}
+
+A \autoref{back1} fornece o valor que chega a cada um dos neurônios, sendo o resultado da somatória dos valores fornecidos por cada conexão que \say{chega} no neurônio. O valor fornecido por cada conexão é o resultado do valor de seu neurônio de origem multiplicado pelo peso da conexão.
+
+A \autoref{back2} fornece o valor que \say{sai} de cada neurônio. Tal valor é obtido ao se aplicar a função de ativação utilizada ao valor obtido na \autoref{back1}.
+
+A \autoref{back3} fornece o \say{fator de informação do erro} dos neurônios da última camada. Esse fator é obtido a partir da diferença entre o valor de saída esperado \say{$t$}  e o valor de saída obtido \say{$Z_{out}$}. Tal resultado é então multiplicado pelo valor de entrada do neurônio aplicado à derivada da função de ativação utilizada.
+
+A \autoref{back4} fornece o \say{fator de correção do erro} das conexões que chegam aos neurônios da última camada. Esse valor é obtido através da multiplicação da taxa de aprendizado \say{$\alpha$} com o valor de saída do neurônio anterior da conexão \say{$Y_{out}$} com o fator de informação do erro do neurônio posterior da conexão \say{$\delta_z$}.
+
+A \autoref{back5} fornece o valor retro propagado de erro que \say{chega} ao neurônio intermediário. Esse valor é obtido fazendo a somatória da multiplicação do fator de informação do erro \say{$\delta_i$} com o fator de correção do erro \say{$w_i$} através de todas as conexões posteriores ao neurônio.
+
+A \autoref{back6} fornece o \say{fator de informação do erro} dos neurônios intermediários. Esse fator é obtido a partir da multiplicação do valor retro propagado de erro que \say{chega} ao neurônio \say{$\delta_{in}$} e o valor de entrada do neurônio \say{$Y_{in}$} aplicado à derivada da função de ativação utilizada.
+
+A \autoref{back7} fornece o \say{fator de correção do erro} das conexões que chegam aos neurônios intermediários. Esse valor é obtido através da multiplicação da taxa de aprendizado \say{$\alpha$} com o valor de saída do neurônio anterior da conexão \say{$X_{out}$} com o fator de informação do erro do neurônio posterior da conexão \say{$\delta_y$}.
+
+A \autoref{back8} fornece as diretrizes de atualização dos pesos de cada conexão. O valor do peso atualizado $w_{novo}$ corresponde à soma do peso antigo $w_{velho}$ com o fator de correção do erro da conexão.
+
+Segue o algoritmo:
+	
+	
+\begin{enumerate}
+	\setlength{\parindent}{1in}
+	\item Inicializar pesos e bias
+	\item Enquanto a condição de parada não for atingida, repetem-se os passos 3-10.
+	\setlength{\itemindent}{+.5in}
+	\item Para todos pares de entradas e saídas, repetem-se os passos 4-9
+	\setlength{\itemindent}{+1in}
+	\vspace{2ex}
+	
+	(FeedForward - Alimentação)
+	\item Os neurônios da primeira camada recebem o valor de entrada e os propagam para as camadas intermediárias.
+	\item Os neurônios da segunda camada recebem os valores da camada anterior e calcula-se seus valores de entrada de acordo com a \autoref{back1}.
+	\item A saída dos neurônios da segunda camada é então calculada de acordo com sua função de ativação, conforme a \autoref{back2}.
+	O cálculo segue para todas as camadas intermediárias seguintes até que se compute a saída do sistema.
+	\vspace{2ex}
+	
+	(Backpropagation - Retro Propagação)
+	\item Cada neurônio de saída recebe um fator de informação do erro, calculado de acordo com a \autoref{back3}. Recebe também um fator de correção do erro, calculado de acordo com a \autoref{back4}.
+	\item Cada neurônio intermediário calcula seu valor de entrada do erro retro propagado de acordo com a \autoref{back5}. Tal valor é multiplicado pela derivada de sua função de ativação para obter seu fator de informação de erro, conforme \autoref{back6}. Seu fator de correção do erro é calculado de acordo com a \autoref{back7}.
+	
+	(Ajuste de Pesos)
+	\item Cada conexão tem seu peso atualizado, de acordo com a \autoref{back8}.
+
+	\setlength{\itemindent}{+0.5in}
+	\item Testar condição de parada
+\end{enumerate}
+
+Mais detalhes sobre os parâmetros utilizados e as escolhas que devem ser feitas para o treinamento, dentre eles o número de NIs e a função de ativação utilizada, serão mostrados no capítulo de Materiais e Métodos.
+
+\vspace{3ex}
+\section{Programação Orientada a Objetos} \label{Fund.POO}
+
+Para a realização desse trabalho, foi necessária a criação de um programa de computador capaz de realizar os cálculos determinados pelo algoritmo de Backpropagation. A Programação Orientada a Objetos (POO) foi escolhida como paradigma para se escrever o código. Nela, nos expressamos no código em termos de objetos, suas propriedades, métodos e estados.
+
+Essa forma ou paradigma de programação foi escolhido por fornecer algumas vantagens essenciais necessárias ao longo do desenvolvimento do projeto. Entre elas podemos citar:
+
+\begin{itemize}
+	\item Possui uma base conceitual no campo de estudo da cognição, ou seja, tenta representar o mundo da forma mais real possível. Da mesma forma, a Inteligência Artificial também busca representar a inteligência humana da forma mais real possível. Criando assim um vínculo conceitual entre ambas, o que facilita o desenvolvimento.
+	\item Suas representações são facilmente visíveis no mundo real. Como todas as representações são feitas em forma de objetos, a compreensão dos mesmos se torna mais clara e perceptível, tanto para o programador quanto para um usuário.
+	\item Fácil manutenção. A POO possui a capacidade de encapsulamento dos objetos, tornando-os entidades únicas, com propriedades e funções únicas. O encapsulamento no código reduz drasticamente a chance de que uma parte do sistema interfira no funcionamento de outra, reduzindo assim uma das mais comuns fontes de erros em programas.
+	\item Facilidade de evolução. O encapsulamento fornece também modularidade, facilitando o desenvolvimento do código através de reuso e extensão de componentes (módulos) já existentes.
+\end{itemize}
+
+
+\vspace{3ex}
+\subsection{Java}
+
+Java é uma linguagem de programação desenvolvida pela Sun Microsystems em 1995. Existem atualmente inúmeras aplicações, em incontáveis plataformas, utilizando essa linguagem, que é definida pela sua desenvolvedora da seguinte forma: \say{Java é uma linguagem simples, orientada a objetos, distribuída, interpretada, robusta, segura, independente de arquitetura, portável, de alto desempenho, suportando multithreads e dinâmica.}
+
+Das características citadas acima, podemos destacar algumas vantagens que foram determinantes para que Java fosse escolhida como a linguagem de programação a ser usada nesse trabalho.
+	
+\begin{itemize}
+	\item Simplicidade: Java é considerada uma linguagem simples, com uma sintaxe baseada em C e C++, porém com diversas vantagens e melhorias em relação a essas. 
+	\item Orientada a Objetos: Utiliza o paradigma da POO, o que encaixa com o objetivo do projeto e permite uma analogia do mundo real muito mais clara e perceptível.
+	\item Robusto: Por ser destinada para escrever programas que devem ser confiáveis numa variedade de maneiras, a linguagem Java coloca muita ênfase na verificação precoce de possíveis problemas, em checagens dinâmicas em tempo de execução e na eliminação de situações que são propensas a erros.
+	\item Multithread: Multithreading é um modo de criação de aplicativos com vários segmentos ou processos em execução simultânea. Tal capacidade melhora a capacidade de resposta interativa do sistema e seu comportamento em tempo real, resultando em uma velocidade de execução aprimorada.
+\end{itemize}
+
+
+\vspace{3ex}
+\section{Futebol} \label{Futebol}
+
+O futebol é um esporte de grande popularidade no mundo em geral, e principalmente no Brasil. Trata-se de um esporte coletivo com partidas que duram 90 minutos entre dois times de 11 jogadores cada.
+
+Ele foi escolhido como tema desse trabalho por sua popularidade e por se tratar de um esporte considerado imprevisível.
+
+Contudo, um certo padrão pode ser observado nos times mais vencedores. A quantidade de gols marcados e sofridos, o retrospecto jogando em \say{casa} e \say{fora de casa}, a relação entre número de vitórias, empates e derrotas, entre outros. Nesse trabalho busca-se reconhecer esses padrões e, a partir deles, determinar com certa assertividade o resultado de jogos futuros.
+
+
+\vspace{3ex}
+\subsection{Campeonato Brasileiro de Futebol}
+
+O Brasileirão, como também é conhecido o Campeonato Brasileiro de Futebol, é o principal torneio entre clubes de futebol do Brasil. O torneio foi iniciado em 1971 e ocorre anualmente desde então.
+
+O campeonato historicamente não tinha uma padronização no sistema de disputa, o que gerava mudanças frequentes de regras e de número de participantes. Contudo, a partir de 2003 o sistema de pontos corridos foi adotado e a partir de 2006 o número de times participantes foi reduzido a 20. Esse formato de pontos corridos com 20 times foi determinado como o \say{formato definitivo} pela Confederação Brasileira de Futebol (CBF) e assim vem sendo utilizado ao longo dos anos.
+
+O formato da competição é determinado de forma que durante o decorrer da temporada (de maio a dezembro), cada clube joga duas vezes contra os outros (em um sistema de pontos corridos), uma vez em seu estádio e a outra no de seu adversário, em um total de 38 jogos. As equipes recebem três pontos por vitória e um por empate. Não são atribuídos pontos para derrotas.
+
+As equipes são classificadas pelo total de pontos, depois pelo saldo de gols e, em seguida, pelos gols marcados. Em caso de empate entre dois ou mais clubes, os critérios de desempate são os seguintes: maior número de vitórias; maior saldo de gols; maior número de gols pró; confronto direto; menor número de cartões vermelhos recebidos; menor número de cartões amarelos recebidos.
+
+O Campeonato Brasileiro de Futebol foi escolhido como tema de estudo por algumas de suas características, entre as quais podemos destacar:
+
+\begin{itemize}
+	\item Longa duração. Por se tratar de um campeonato longo, é possível obter uma maior quantidade de informações para serem usadas no treinamento e/ou aplicação da Rede Neural Artificial, resultando em uma aplicação mais eficiente e confiável.
+	\item Pontos corridos. O sistema de classificação em pontos permite uma melhor comparação entre as performances que os times vêm apresentando.
+	\item Duas rodadas. Além de aumentar a quantidade de jogos para análise, a dupla rodada permite adicionarmos mais um parâmetro de entrada, sendo esse a condição de partida \say{em casa} ou \say{fora de casa}.
+	\item Vários Times. A quantidade de times permite diversas opções de confrontos, o que eleva as oportunidades de análise e aprendizado que a Rede Neural realiza.
+	\item Proximidade e familiaridade. Por ser um campeonato de conhecimento geral, com regras simples e conhecidas, e fontes de dados facilmente acessíveis, o Campeonato Brasileiro de Futebol se mostra como um campo de estudo \say{sem mistérios}.
+	\item Sistema de disputa padronizado. Desde 2006 o formato do campeonato é o mesmo, sem previsões de alterações, o que facilita a extensão da abordagem de um ano para o outro e a comparação dos resultados entre anos diferentes.
+\end{itemize}
+
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
