@@ -9,4 +9,7 @@
 \contentsline {subsection}{\numberline {2.1.3}Separabilidade Linear}{8}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Representa\c c\~ao dos dados}{9}{subsection.2.1.4}
 \contentsline {subsection}{\numberline {2.1.5}Aprendizado de Hebb}{10}{subsection.2.1.5}
-\contentsline {subsection}{\numberline {2.1.6}T\'ecnica de aprendizado}{11}{subsection.2.1.6}
+\contentsline {subsubsection}{T\'ecnica de aprendizado}{11}{subsubsection*.6}
+\contentsline {subsection}{\numberline {2.1.6}Perceptron}{15}{subsection.2.1.6}
+\contentsline {subsubsection}{T\'ecnica de aprendizado}{17}{subsubsection*.7}
+\contentsline {subsection}{\numberline {2.1.7}Adaline}{17}{subsection.2.1.7}

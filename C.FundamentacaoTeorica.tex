@@ -17,7 +17,7 @@ Uma RNA é um sistema de processamento de informações que possui algumas caracter
 
 \begin{figure}[htbp]
 	\centering
-	  \includegraphics[angle=0, width=350pt, height=175pt]{D:/PFC/LaTex/SoccerWizard/figuras/modelo_de_neuronio.jpg}
+	  \includegraphics[angle=0, width=350pt, height=175pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/modelo_de_neuronio.jpg}
 		\caption{Modelo completo de um neurônio \citep{Haykin99}}
 	  \label{neuronioCompleto}
 \end{figure}
@@ -40,7 +40,7 @@ Um modelo completo de um neurônio, segundo as definições acima, é mostrado na \a
 
 \begin{figure}[htbp]
 	\centering
-	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/SoccerWizard/figuras/McCulloch-Pitts.jpg}
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/McCulloch-Pitts.jpg}
 		\caption{Neurônio de McCulloch-Pitts \citep{Fausett94}}
 	  \label{neuronioMcCulloth}
 \end{figure}
@@ -50,13 +50,13 @@ A função de ativação (degrau) desse neurônio é dado segunda a \autoref{ativacaoM
 
 \begin{equation} \label{ativacaoMcCulloth}
 f(y_\textit{in})=\begin{cases}
-1 & \text{se } Y_\textit{in} > \theta \cr
-0 & \text{se } Y_\textit{in} \leq \theta
+1 & \text{se } Y_{in} > \theta \cr
+0 & \text{se } Y_{in} \leq \theta
 \end{cases}
 \end{equation}
 
 \begin{equation} \label{entradaMcCulloth}
-Y_\textit{in} = n \cdot w + m \cdot p
+Y_{in} = n \cdot w + m \cdot p
 \end{equation}
 
 \begin{equation} \label{limiarMcCulloth}
@@ -71,7 +71,7 @@ O uso de um limiar para definir a ativação do neurônio pode ser substituído pelo
 
 \begin{figure}[htbp]
 	\centering
-	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/SoccerWizard/figuras/Bias.jpg}
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Bias.jpg}
 		\caption{Bias "b" em uma RNA}
 	  \label{neuronioBias}
 \end{figure}
@@ -82,8 +82,8 @@ A diferença de aplicação entre as duas técnicas é dada pela função de ativação d
 
 \begin{equation} \label{ativacaoBias}
 f(y_\textit{in})=\begin{cases}
-1 & \text{se } Y_\textit{in} > 0 \cr
-0 & \text{se } Y_\textit{in} \leq 0
+1 & \text{se } Y_{in} > 0 \cr
+0 & \text{se } Y_{in} \leq 0
 \end{cases}
 \end{equation}
 
@@ -96,7 +96,7 @@ Para uma determinada rede, a resposta está confinada entre dois valores (1 ou 0,
 
 \begin{figure}[htbp]
 	\centering
-	  \includegraphics[angle=0, width=200pt, height=200pt]{D:/PFC/LaTex/SoccerWizard/figuras/fronteiraDecisaoXOR.jpg}
+	  \includegraphics[angle=0, width=200pt, height=200pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDecisaoXOR.jpg}
 		\caption{Fronteira e Regiões de decisão para a função lógica \emph{OU} \citep{Fausett94}}
 	  \label{fronteiraDecisaoOU}
 \end{figure}
@@ -155,7 +155,7 @@ Se utilizarmos a representação binária, essa equação não distingue conexões que 
 
 
 \vspace{3ex}
-\subsection{Técnica de aprendizado} \label{TecnicaAprendizado}
+\subsubsection{Técnica de aprendizado} \label{TecnicaAprendizado}
 
 
 Existem várias técnicas de implementação das regras de aprendizado existentes. A técnica abordada aqui nada mais é do que uma das formas mais simples e genéricas de se aplicar a regra de Hebb. O entendimento dessa técnica é crucial para a posterior compreensão das outras técnicas aplicadas nesse trabalho, que podem ser tomadas como simples variações mais elaboradas desta.
@@ -192,7 +192,7 @@ Bias & $X_1$ & $X_2$ & & Y \\
 
 \begin{figure}[htbp]
 	\centering
-	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/SoccerWizard/figuras/redeNeuralE.jpg}
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeNeuralE.jpg}
 		\caption{RNA para a função lógica E}
 	  \label{redeNeuralE}
 \end{figure}
@@ -303,14 +303,91 @@ Terminamos assim o treinamento e a rede resultante é mostrada na \autoref{EResol
 
 \begin{figure}[htbp]
 	\centering
-	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/SoccerWizard/figuras/redeEresolvida.jpg}
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeEresolvida.jpg}
 		\caption{RNA resolvida para a função lógica \emph{E}}
 	  \label{EResolvida}
 \end{figure}
 
+Essa configuração de pesos nos fornece uma fronteira de decisão em forma de reta, que pode ser encontrada utilizando a \autoref{equacaoReta}. A equação da reta resultante do exemplo acima é dada pela \autoref{retaResultado} e está mostrada na \autoref{fronteiraDecisaoE}.
 
 
+\begin{equation} \label{equacaoReta}
+1 + X_1 + X_2 = 0
+\end{equation}
 
+\begin{equation} \label{retaResultado}
+X_2 = -X_1 + 1
+\end{equation}
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[angle=0, width=300pt, height=175pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDecisaoE.png}
+		\caption{Fronteira de decisão da função lógica \emph{E}}
+	  \label{fronteiraDecisaoE}
+\end{figure}
+
+Podemos notar que apesar de os pesos terem sido alterados pelo último loop, a equação da reta (e consequentemente a fronteira de decisão) não é alterada após o mesmo. Isso significa que o treinamento já havia encontrado a solução do problema antes do fim do algoritmo. Como será mostrado mais adiante, outras técnicas de treinamento podem continuar indefinidamente, repetindo os vetores de entrada, refazendo os cálculos sem fim. Nesses casos, uma condição de parada deverá ser adotada.
+
+
+\vspace{3ex}
+\subsection{Perceptron} \label{Perceptron}
+
+
+Redes com um modelo de treinamento iterativo e supervisionado foram propostas por Frank Rosenblatt em \citeyear{Rosenblatt62}. Ele as chamou de Perceptrons e elas tiveram um grande impacto nos estudos de redes neurais artificiais. Isso se deve ao fato de que a regra de convergência dos perceptrons é mais poderosa do que sua antecessora, a regra de Hebb. Além disso, sob determinadas condições, é possível provar matematicamente a convergência de seu procedimento de aprendizado iterativo. Basicamente, ela consiste de um simples neurônio com pesos sinápticos e bias ajustáveis.
+
+Um perceptron particularmente simples utilizava valores binários de entrada e saída, contudo a função de ativação do neurônio de saída poderia retornar valores de -1, 0 ou 1 durante o aprendizado. A possibilidade de 3 diferentes valores só ocorre graças ao novo tipo de função de ativação, onde o valor do limiar passou a delimitar uma região intermediária, e não apenas um valor limítrofe entre saídas positivas e negativas. Essa função é descrita pela \autoref{funcaoAtivacaoPerceptron}.
+
+\begin{equation} \label{entradaPerceptron}
+Y_{in} = \sum_i x_i \cdot w_i
+\end{equation}
+
+\begin{equation} \label{funcaoAtivacaoPerceptron}
+f(Y_{in})=\begin{cases}
+1 & \text{se } Y_{in} > \theta \cr
+0 & \text{se } -\theta \leq Y_{in} \leq \theta \cr
+-1 & \text{se } Y_{in} < \theta \cr
+\end{cases}
+\end{equation}
+
+Para se atualizar os pesos das ligações durante o treinamento usamos a equação 11. Tal equação apresenta um novo parâmetro, chamado de taxa de aprendizado, que é um valor constante determinado antes do início do treinamento.
+
+\begin{equation} \label{pesosPerceptron}
+\Delta w_i = \alpha \cdot x_i \cdot t
+\end{equation}
+
+Observando a função de ativação de saída, que retorna valores de -1, 0 ou 1, e a saída real (Target t) que deve ter valores de -1 ou 1, podemos concluir alguns pontos importantes relacionados a esse perceptron.
+
+\begin{itemize}
+	\item A rede não diferencia situações onde, por exemplo, a saída real é -1 e a saída calculada é 0 ou 1. Em ambos os casos os pesos são atualizados, de maneira igual, e o sinal do erro informa se os mesmos devem aumentar ou diminuir.
+	\item Apenas conexões de entrada com valores diferentes de 0 possuem seus pesos atualizados.
+	\item Padrões de entrada que não produzem erro na saída também não têm seus pesos atualizados.
+	\item Como o treinamento ocorre até que os pesos sejam tais que a saída seja correta para quaisquer padrões de entrada, e padrões sem erro não resultam em treinamento da rede, quanto mais treinada a rede estiver, menor será o seu aprendizado.
+	\item O valor do limiar não mais fornece uma equação, delimitando uma fronteira de decisão, mas sim uma inequação, fornecendo uma região de "indecisão", separando a região de respostas positivas e a região de respostas negativas. Dessa forma, o valor do limiar se torna mais significativo para o processo de aprendizagem.
+\end{itemize}
+
+O treinamento do perceptron continua até que os pesos das conexões sejam tais que para todos os padrões de entrada a resposta obtida pela rede seja correta. Segundo o teorema de convergência dos perceptrons, caso tais pesos existam, eles serão encontrados em um número finito de passos do treinamento.
+
+Ao contrário das redes mostradas até agora, no perceptron o uso do limiar e do bias não são equivalentes. Como agora eles possuem funções diferentes, ambos são necessários para que o treinamento funcione corretamente.
+
+\vspace{3ex}
+\subsubsection{Técnica de aprendizado} 
+
+O algoritmo de aprendizado do perceptron está apresentado a seguir. Sua estrutura é semelhante à do treinamento de Hebb, porém já mais avançado e mais parecido com o algoritmo utilizado para a realização desse trabalho.
+\begin{enumerate}
+	\item Inicializar pesos e bias (podem ser setados em 0, por simplicidade)
+	\item Definir taxa de aprendizado $0<\alpha<1$
+	\item Enquanto a condição de parada não for atingida, repetem-se os passos 3-6
+	\setlength{\itemindent}{+.5in}
+	\item Para todos os conjuntos de entradas e saídas, repetem-se os passos 4-5
+	\setlength{\itemindent}{+1in}
+	\item Calcula-se o valor da saída de acordo com a \autoref{entradaPerceptron} e a \autoref{funcaoAtivacaoPerceptron}
+	\item Caso a saída calculada seja diferente da saída correta, atualizam-se os pesos de acordo com a \autoref{pesosPerceptron}
+	\setlength{\itemindent}{+0.5in}
+	\item Caso nenhum peso tenha sido alterado no passo 3, pare. Caso contrário, continue
+\end{enumerate}
+		
+\vspace{3ex}
+\subsection{Adaline} 
 
 
 
