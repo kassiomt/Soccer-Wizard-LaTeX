@@ -1,51 +1,57 @@
 \select@language {brazil}
-\contentsline {chapter}{\numberline {1}INTRODU\c C\~AO}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}Objetivos}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}Justificativa}{4}{section.1.2}
-\contentsline {chapter}{\numberline {2}FUNDAMENTA\c C\~AO TE\'ORICA}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Redes Neurais Artificiais}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}McCulloch-Pitts}{6}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Bias}{7}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Separabilidade Linear}{8}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Representa\c c\~ao dos dados}{9}{subsection.2.1.4}
-\contentsline {subsection}{\numberline {2.1.5}Aprendizado de Hebb}{10}{subsection.2.1.5}
-\contentsline {subsubsection}{T\'ecnica de aprendizado}{11}{subsubsection*.6}
-\contentsline {subsection}{\numberline {2.1.6}Perceptron}{15}{subsection.2.1.6}
-\contentsline {subsubsection}{T\'ecnica de aprendizado}{17}{subsubsection*.7}
+\contentsline {chapter}{\numberline {1}INTRODU\c C\~AO}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objetivos}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Justificativa}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}FUNDAMENTA\c C\~AO TE\'ORICA}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Redes Neurais Artificiais}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}McCulloch-Pitts}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Bias}{6}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Separabilidade Linear}{7}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Representa\c c\~ao dos dados}{8}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Aprendizado de Hebb}{9}{subsection.2.1.5}
+\contentsline {subsubsection}{T\'ecnica de aprendizado}{10}{subsubsection*.6}
+\contentsline {subsection}{\numberline {2.1.6}Perceptron}{14}{subsection.2.1.6}
+\contentsline {subsubsection}{T\'ecnica de aprendizado}{16}{subsubsection*.7}
 \contentsline {subsection}{\numberline {2.1.7}Adaline}{17}{subsection.2.1.7}
-\contentsline {subsubsection}{T\'ecnica de aprendizado}{19}{subsubsection*.8}
-\contentsline {subsection}{\numberline {2.1.8}Redes Multicamadas}{20}{subsection.2.1.8}
-\contentsline {subsection}{\numberline {2.1.9}Madaline}{20}{subsection.2.1.9}
-\contentsline {subsection}{\numberline {2.1.10}Backpropagation}{21}{subsection.2.1.10}
-\contentsline {subsubsection}{Treinamento e Aplica\c c\~ao}{22}{subsubsection*.9}
-\contentsline {subsubsection}{T\'ecnica de Aprendizado}{23}{subsubsection*.10}
-\contentsline {section}{\numberline {2.2}Programa\c c\~ao Orientada a Objetos}{26}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Java}{27}{subsection.2.2.1}
-\contentsline {section}{\numberline {2.3}Futebol}{28}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Campeonato Brasileiro de Futebol}{28}{subsection.2.3.1}
-\contentsline {chapter}{\numberline {3}MATERIAIS E M\'ETODOS}{30}{chapter.3}
-\contentsline {section}{\numberline {3.1}Desenvolvimento do programa}{30}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}IDEs}{30}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Plugins}{31}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Sistema de Controle de Vers\~ao}{32}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Organiza\c c\~ao de Classes e Pacotes}{32}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Base de dados}{34}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Organiza\c c\~ao}{34}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Par\^ametros de entrada}{36}{subsection.3.2.2}
-\contentsline {subsubsection}{Primeira representa\c c\~ao (simples)}{36}{subsubsection*.11}
-\contentsline {subsubsection}{Segunda representa\c c\~ao (completa)}{37}{subsubsection*.12}
-\contentsline {subsection}{\numberline {3.2.3}Normaliza\c c\~ao dos dados}{39}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Par\^ametros de treinamento}{40}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Quantidade de padr\~oes de entrada}{40}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Representa\c c\~ao do dados}{41}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Aleatoriedade dos par\^ametros de entrada}{41}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Fun\c c\~ao de ativa\c c\~ao}{42}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Inicializa\c c\~ao de pesos e bias}{43}{subsection.3.3.5}
-\contentsline {subsection}{\numberline {3.3.6}Taxa de aprendizado}{44}{subsection.3.3.6}
-\contentsline {subsection}{\numberline {3.3.7}Quantidade de neur\^onios intermedi\'arios}{44}{subsection.3.3.7}
-\contentsline {subsection}{\numberline {3.3.8}Dura\c c\~ao do treinamento}{45}{subsection.3.3.8}
-\contentsline {subsection}{\numberline {3.3.9}Remo\c c\~ao de padr\~oes de entrada n\~ao representativos}{46}{subsection.3.3.9}
-\contentsline {section}{\numberline {3.4}Estrat\'egias de an\'alise p\'os processamento}{47}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Determina\c c\~ao do resultado}{47}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Valida\c c\~ao de resultados}{48}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Interface Gr\'afica do Usu\'ario}{50}{section.3.5}
+\contentsline {subsubsection}{T\'ecnica de aprendizado}{17}{subsubsection*.8}
+\contentsline {subsection}{\numberline {2.1.8}Redes Multicamadas}{19}{subsection.2.1.8}
+\contentsline {subsection}{\numberline {2.1.9}Madaline}{19}{subsection.2.1.9}
+\contentsline {subsection}{\numberline {2.1.10}Backpropagation}{20}{subsection.2.1.10}
+\contentsline {subsubsection}{Treinamento e Aplica\c c\~ao}{21}{subsubsection*.9}
+\contentsline {subsubsection}{T\'ecnica de Aprendizado}{22}{subsubsection*.10}
+\contentsline {section}{\numberline {2.2}Programa\c c\~ao Orientada a Objetos}{25}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Java}{26}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Futebol de Campo}{27}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Campeonato Brasileiro de Futebol}{27}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}MATERIAIS E M\'ETODOS}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Desenvolvimento do programa}{29}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}IDEs}{29}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Plugins}{30}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Sistema de Controle de Vers\~ao}{31}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Organiza\c c\~ao de Classes e Pacotes}{31}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Base de dados}{33}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Organiza\c c\~ao}{33}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Par\^ametros de entrada}{35}{subsection.3.2.2}
+\contentsline {subsubsection}{Primeira representa\c c\~ao (simples)}{35}{subsubsection*.11}
+\contentsline {subsubsection}{Segunda representa\c c\~ao (completa)}{36}{subsubsection*.12}
+\contentsline {subsection}{\numberline {3.2.3}Normaliza\c c\~ao dos dados}{38}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Par\^ametros de treinamento}{39}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Quantidade de padr\~oes de entrada}{39}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Representa\c c\~ao do dados}{40}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Aleatoriedade dos par\^ametros de entrada}{40}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Fun\c c\~ao de ativa\c c\~ao}{41}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Inicializa\c c\~ao de pesos e bias}{42}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}Taxa de aprendizado}{43}{subsection.3.3.6}
+\contentsline {subsection}{\numberline {3.3.7}Quantidade de neur\^onios intermedi\'arios}{43}{subsection.3.3.7}
+\contentsline {subsection}{\numberline {3.3.8}Dura\c c\~ao do treinamento}{44}{subsection.3.3.8}
+\contentsline {subsection}{\numberline {3.3.9}Remo\c c\~ao de padr\~oes de entrada n\~ao representativos}{45}{subsection.3.3.9}
+\contentsline {section}{\numberline {3.4}Estrat\'egias de an\'alise p\'os processamento}{46}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Determina\c c\~ao do resultado}{46}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Valida\c c\~ao de resultados}{47}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Interface Gr\'afica do Usu\'ario}{49}{section.3.5}
+\contentsline {chapter}{\numberline {4}RESULTADOS}{52}{chapter.4}
+\contentsline {section}{\numberline {4.1}Par\^ametros de treinamento mais assertivos}{52}{section.4.1}
+\contentsline {section}{\numberline {4.2}Taxas de acerto para 50\% dos resultados v\'alidos}{53}{section.4.2}
+\contentsline {section}{\numberline {4.3}Varia\c c\~oes da quantidade de resultados v\'alidos}{55}{section.4.3}
+\contentsline {section}{\numberline {4.4}Execu\c c\~ao da rede com par\^ametros de treino}{58}{section.4.4}
+\contentsline {chapter}{\numberline {5}CONCLUSAO}{60}{chapter.5}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.8)  15 FEB 2015 21:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.8)  5 MAR 2015 20:06
 entering extended mode
 **SoccerWizard.tex
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\SoccerWizard.tex
@@ -513,30 +513,32 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Simbolos.aux)
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Introducao.aux)
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.FundamentacaoTeorica.aux)
-(D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.MateriaisEMetodos.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 136.
+(D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.MateriaisEMetodos.aux)
+(D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Resultados.aux)
+(D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Conclusao.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 126.
 
 
 ("C:\Program Files\MikTex\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 136.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 126.
 
 ("C:\Program Files\MikTex\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -590,7 +592,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 136.
+Package hyperref Info: Link coloring OFF on input line 126.
 ("C:\Program Files\MikTex\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -599,27 +601,27 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count124
 )
-LaTeX Info: Redefining \ref on input line 136.
-LaTeX Info: Redefining \pageref on input line 136.
-LaTeX Info: Redefining \nameref on input line 136.
+LaTeX Info: Redefining \ref on input line 126.
+LaTeX Info: Redefining \pageref on input line 126.
+LaTeX Info: Redefining \nameref on input line 126.
 
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\SoccerWizard.out)
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\SoccerWizard.out)
 \@outlinefile=\write3
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 157.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 147.
 
 
 ("C:\Program Files\MikTex\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Capa.tex
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/UFUlogo.jpg, id=175, 59.22125pt x 66.
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/UFUlogo.jpg, id=199, 59.22125pt x 66.
 2475pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/UFUlogo.jpg Graphic file (type j
 pg)
  <use D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/UFUlogo.jpg>
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/UFUlogo.jpg u
-sed on input line 22.
+sed on input line 21.
 (pdftex.def)             Requested size: 59.22108pt x 66.24733pt.
 ) [1
 
@@ -627,48 +629,48 @@ sed on input line 22.
 {C:/Users/kassio-chronos/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <D:
 /PFC/LaTex/Soccer-Wizard-LaTeX/figuras/UFUlogo.jpg>]
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Rosto.tex
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 25.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 24.
 ("C:\Program Files\MikTex\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 25.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 24.
 
 ("C:\Program Files\MikTex\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 25.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 24.
 
 
 ("C:\Program Files\MikTex\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 25.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 24.
 
 
 ("C:\Program Files\MikTex\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 25.
+(Font)              <12> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 25.
+(Font)              <8> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 25.
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+(Font)              <6> on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 
 ("C:\Program Files\MikTex\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 
 ("C:\Program Files\MikTex\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -807,37 +809,37 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 
 
 ] (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Agradecimentos.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 9--169
+Underfull \hbox (badness 10000) in paragraph at lines 9--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--169
+Underfull \hbox (badness 10000) in paragraph at lines 9--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--169
+Underfull \hbox (badness 10000) in paragraph at lines 9--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--169
+Underfull \hbox (badness 10000) in paragraph at lines 9--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--169
+Underfull \hbox (badness 10000) in paragraph at lines 9--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--169
+Underfull \hbox (badness 10000) in paragraph at lines 9--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--169
+Underfull \hbox (badness 10000) in paragraph at lines 9--159
 
  []
 
@@ -847,39 +849,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--169
 
 ] (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Resumo.tex
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 21.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 24.
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--22
+Underfull \hbox (badness 10000) in paragraph at lines 15--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--22
+Underfull \hbox (badness 10000) in paragraph at lines 15--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--22
+Underfull \hbox (badness 10000) in paragraph at lines 15--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--22
+Underfull \hbox (badness 10000) in paragraph at lines 15--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--22
+Underfull \hbox (badness 10000) in paragraph at lines 15--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--22
+Underfull \hbox (badness 10000) in paragraph at lines 15--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--25
 
  []
 
@@ -887,42 +889,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--22
 
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 31--170
+Underfull \hbox (badness 10000) in paragraph at lines 34--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--170
+Underfull \hbox (badness 10000) in paragraph at lines 34--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--170
+Underfull \hbox (badness 10000) in paragraph at lines 34--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--170
+Underfull \hbox (badness 10000) in paragraph at lines 34--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--170
+Underfull \hbox (badness 10000) in paragraph at lines 34--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--170
+Underfull \hbox (badness 10000) in paragraph at lines 34--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--170
+Underfull \hbox (badness 10000) in paragraph at lines 34--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--170
+Underfull \hbox (badness 10000) in paragraph at lines 34--160
 
  []
 
@@ -950,22 +952,23 @@ Overfull \hbox (19.42871pt too wide) in paragraph at lines 7--40
 
 ])
 \tf@toc=\write6
- [1]
+ [12]
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Introducao.tex
 Cap\'{\i }tulo 1.
-[2
+[1
+
 
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+lmss on input line 31.
+LaTeX Font Info:    Try loading font information for TS1+lmss on input line 33.
 
  ("C:\Program Files\MikTex\tex\latex\lm\ts1lmss.fd"
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3]) [4]
+) [2]) [3]
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.FundamentacaoTeorica.tex
 Cap\'{\i }tulo 2.
 
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/modelo_de_neuronio.jpg, id=401, 499.8
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/modelo_de_neuronio.jpg, id=450, 499.8
 0411pt x 335.48495pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/modelo_de_neuronio.jpg Graphic f
 ile (type jpg)
@@ -974,12 +977,12 @@ ile (type jpg)
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/modelo_de_neu
 ronio.jpg used on input line 20.
 (pdftex.def)             Requested size: 499.80287pt x 335.48413pt.
- [5
+ [4
 
 
 
 ]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/McCulloch-Pitts.jpg, id=413, 234.1247
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/McCulloch-Pitts.jpg, id=462, 234.1247
 pt x 177.66376pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/McCulloch-Pitts.jpg Graphic file
  (type jpg)
@@ -988,8 +991,8 @@ File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/McCulloch-Pitts.jpg Graphic file
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/McCulloch-Pit
 ts.jpg used on input line 43.
 (pdftex.def)             Requested size: 234.12411pt x 177.66331pt.
- [6 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/modelo_de_neuronio.jpg>]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Bias.jpg, id=429, 313.17pt x 295.1025
+ [5 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/modelo_de_neuronio.jpg>]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Bias.jpg, id=478, 313.17pt x 295.1025
 pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Bias.jpg Graphic file (type jpg)
 
@@ -997,8 +1000,8 @@ File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Bias.jpg Graphic file (type jpg)
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Bias.jpg used
  on input line 74.
 (pdftex.def)             Requested size: 313.16922pt x 295.10176pt.
- [7 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/McCulloch-Pitts.jpg>]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDecisaoXOR.jpg, id=445, 272.
+ [6 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/McCulloch-Pitts.jpg>]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDecisaoXOR.jpg, id=496, 272.
 51813pt x 258.9675pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDecisaoXOR.jpg Graphic 
 file (type jpg)
@@ -1007,9 +1010,9 @@ file (type jpg)
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDeci
 saoXOR.jpg used on input line 99.
 (pdftex.def)             Requested size: 272.51746pt x 258.96684pt.
- [8 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Bias.jpg>] [9 <D:/PFC/LaTex/Socce
-r-Wizard-LaTeX/figuras/fronteiraDecisaoXOR.jpg>] [10] [11]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeNeuralE.jpg, id=493, 229.60782pt 
+ [7 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Bias.jpg>] [8 <D:/PFC/LaTex/Socce
+r-Wizard-LaTeX/figuras/fronteiraDecisaoXOR.jpg>] [9] [10]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeNeuralE.jpg, id=553, 229.60782pt 
 x 165.61874pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeNeuralE.jpg Graphic file (ty
 pe jpg)
@@ -1018,8 +1021,8 @@ Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeNeuralE.j
 pg used on input line 195.
 (pdftex.def)             Requested size: 229.60725pt x 165.61833pt.
 
-[12 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeNeuralE.jpg>] [13]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeEresolvida.jpg, id=519, 225.84375
+[11 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeNeuralE.jpg>] [12]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeEresolvida.jpg, id=579, 225.84375
 pt x 167.12437pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeEresolvida.jpg Graphic file 
 (type jpg)
@@ -1029,7 +1032,7 @@ Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeEresolvid
 a.jpg used on input line 306.
 (pdftex.def)             Requested size: 225.84319pt x 167.12395pt.
 
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDecisaoE.png, id=523, 264.99
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDecisaoE.png, id=583, 264.99
 pt x 264.23718pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDecisaoE.png Graphic fi
 le (type png)
@@ -1038,9 +1041,9 @@ le (type png)
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDeci
 saoE.png used on input line 324.
 (pdftex.def)             Requested size: 264.98935pt x 264.23653pt.
- [14 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeEresolvida.jpg>] [15 <D:/PFC
-/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDecisaoE.png>] [16] [17]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Adaline.jpg, id=566, 231.11343pt x 15
+ [13 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redeEresolvida.jpg>] [14 <D:/PFC
+/LaTex/Soccer-Wizard-LaTeX/figuras/fronteiraDecisaoE.png>] [15] [16]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Adaline.jpg, id=633, 231.11343pt x 15
 2.82094pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Adaline.jpg Graphic file (type j
 pg)
@@ -1048,8 +1051,9 @@ pg)
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Adaline.jpg u
 sed on input line 410.
 (pdftex.def)             Requested size: 231.11287pt x 152.82054pt.
- [18 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Adaline.jpg>] [19]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redesMulticamadas.jpg, id=595, 422.32
+ [17]
+[18 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Adaline.jpg>]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redesMulticamadas.jpg, id=667, 422.32
 782pt x 201.00093pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redesMulticamadas.jpg Graphic fi
 le (type jpg)
@@ -1059,7 +1063,7 @@ Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redesMulticam
 adas.jpg used on input line 447.
 (pdftex.def)             Requested size: 422.32678pt x 201.00043pt.
 
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Madaline.jpg, id=601, 287.57437pt x 2
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Madaline.jpg, id=675, 287.57437pt x 2
 40.9pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Madaline.jpg Graphic file (type 
 jpg)
@@ -1067,9 +1071,9 @@ jpg)
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Madaline.jpg 
 used on input line 462.
 (pdftex.def)             Requested size: 287.57367pt x 240.8994pt.
- [20 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redesMulticamadas.jpg>] [21 <D:/
+ [19 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/redesMulticamadas.jpg>] [20 <D:/
 PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Madaline.jpg>]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Backpropagation.jpg, id=616, 468.2493
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Backpropagation.jpg, id=692, 468.2493
 7pt x 306.39468pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Backpropagation.jpg Graphic file
  (type jpg)
@@ -1078,16 +1082,16 @@ File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Backpropagation.jpg Graphic file
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Backpropagati
 on.jpg used on input line 484.
 (pdftex.def)             Requested size: 468.24821pt x 306.39394pt.
- [22 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Backpropagation.jpg>] [23] [24] 
-[25] [26]
-[27] [28]) [29] (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.MateriaisEMetodos.tex
+ [21 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Backpropagation.jpg>] [22] [23] 
+[24] [25]
+[26] [27]) [28] (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.MateriaisEMetodos.tex
 Cap\'{\i }tulo 3.
-[30
+[29
 
 
 
 ]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/eclipse.png, id=698, 803.0pt x 188.70
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/eclipse.png, id=778, 803.0pt x 188.70
 5pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/eclipse.png Graphic file (type p
 ng)
@@ -1096,7 +1100,7 @@ Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/eclipse.png u
 sed on input line 28.
 (pdftex.def)             Requested size: 802.99805pt x 188.70453pt.
 
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/netbeans.jpg, id=701, 661.72218pt x 1
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/netbeans.jpg, id=781, 661.72218pt x 1
 44.54pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/netbeans.jpg Graphic file (type 
 jpg)
@@ -1104,9 +1108,9 @@ jpg)
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/netbeans.jpg 
 used on input line 37.
 (pdftex.def)             Requested size: 661.72057pt x 144.53963pt.
- [31 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/eclipse.png> <D:/PFC/LaTex/Socce
+ [30 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/eclipse.png> <D:/PFC/LaTex/Socce
 r-Wizard-LaTeX/figuras/netbeans.jpg>]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/github.png, id=708, 582.175pt x 230.8
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/github.png, id=788, 582.175pt x 230.8
 625pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/github.png Graphic file (type pn
 g)
@@ -1114,8 +1118,8 @@ g)
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/github.png us
 ed on input line 62.
 (pdftex.def)             Requested size: 582.17358pt x 230.86192pt.
- [32 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/github.png>]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/EstruturaClassesPacotes.jpg, id=716, 
+ [31 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/github.png>]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/EstruturaClassesPacotes.jpg, id=796, 
 246.1697pt x 356.0803pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/EstruturaClassesPacotes.jpg Grap
 hic file (type jpg)
@@ -1125,8 +1129,8 @@ Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/EstruturaClas
 sesPacotes.jpg used on input line 81.
 (pdftex.def)             Requested size: 246.16908pt x 356.07944pt.
 
-[33 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/EstruturaClassesPacotes.jpg>]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Resultados.jpg, id=724, 616.55344pt x
+[32 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/EstruturaClassesPacotes.jpg>]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Resultados.jpg, id=804, 616.55344pt x
  198.7425pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Resultados.jpg Graphic file (typ
 e jpg)
@@ -1135,8 +1139,8 @@ Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Resultados.jp
 g used on input line 121.
 (pdftex.def)             Requested size: 616.55193pt x 198.742pt.
 
-[34]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Referencias.jpg, id=729, 754.31813pt 
+[33]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Referencias.jpg, id=809, 754.31813pt 
 x 200.24812pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Referencias.jpg Graphic file (ty
 pe jpg)
@@ -1145,9 +1149,9 @@ Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Referencias.j
 pg used on input line 136.
 (pdftex.def)             Requested size: 754.3163pt x 200.24763pt.
 
-[35 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Resultados.jpg> <D:/PFC/LaTex/Soc
+[34 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Resultados.jpg> <D:/PFC/LaTex/Soc
 cer-Wizard-LaTeX/figuras/Referencias.jpg>]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/times.jpg, id=737, 785.18344pt x 210.
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/times.jpg, id=817, 785.18344pt x 210.
 7875pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/times.jpg Graphic file (type jpg
 )
@@ -1155,9 +1159,9 @@ File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/times.jpg Graphic file (type jpg
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/times.jpg use
 d on input line 162.
 (pdftex.def)             Requested size: 785.18153pt x 210.78699pt.
- [36 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/times.jpg>] [37] [38] [39] [40] 
-[41]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/bipolarSigmoidal.jpg, id=774, 247.675
+ [35 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/times.jpg>] [36] [37] [38] [39] 
+[40]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/bipolarSigmoidal.jpg, id=854, 247.675
 31pt x 169.38281pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/bipolarSigmoidal.jpg Graphic fil
 e (type jpg)
@@ -1166,15 +1170,15 @@ e (type jpg)
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/bipolarSigmoi
 dal.jpg used on input line 324.
 (pdftex.def)             Requested size: 247.6747pt x 169.38239pt.
- [42]
-[43 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/bipolarSigmoidal.jpg>] [44]
-[45] [46]
+ [41]
+[42 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/bipolarSigmoidal.jpg>] [43]
+[44] [45]
 Overfull \hbox (23.1714pt too wide) in paragraph at lines 441--448
  [] 
  []
 
-[47] [48] [49]
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIxor.jpg, id=839, 975.645pt x 569.8
+[46] [47] [48]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIxor.jpg, id=919, 975.645pt x 569.8
 7906pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIxor.jpg Graphic file (type jp
 g)
@@ -1183,7 +1187,7 @@ Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIxor.jpg us
 ed on input line 510.
 (pdftex.def)             Requested size: 975.64262pt x 569.87766pt.
 
-<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIsw.jpg, id=841, 937.5828pt x 542.0
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIsw.jpg, id=921, 937.5828pt x 542.0
 25pt>
 File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIsw.jpg Graphic file (type jpg
 )
@@ -1191,16 +1195,124 @@ File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIsw.jpg Graphic file (type jpg
 Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIsw.jpg use
 d on input line 522.
 (pdftex.def)             Requested size: 937.5805pt x 542.02367pt.
- [50 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIxor.jpg>] [51 <D:/PFC/LaTex/S
-occer-Wizard-LaTeX/figuras/GUIsw.jpg>]) [52] (D:\PFC\LaTex\Soccer-Wizard-LaTeX\
-SoccerWizard.bbl
-[53
+ [49 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/GUIxor.jpg>] [50 <D:/PFC/LaTex/S
+occer-Wizard-LaTeX/figuras/GUIsw.jpg>]) [51] (D:\PFC\LaTex\Soccer-Wizard-LaTeX\
+C.Resultados.tex
+Cap\'{\i }tulo 4.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 23.
+("C:\Program Files\MikTex\tex\latex\lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [52
 
 
-] [54])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
- [55]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
+
+] [53] [54]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_001_10000_4.png, id=975, 419.316
+56pt x 250.68657pt>
+File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_001_10000_4.png Graphic fil
+e (type png)
+
+<use D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_001_10000_4.png>
+Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_001_1000
+0_4.png used on input line 107.
+(pdftex.def)             Requested size: 419.31552pt x 250.68594pt.
+
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_001_10000_4.png, id=976, 419.
+31656pt x 250.68657pt>
+File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_001_10000_4.png Graphic 
+file (type png)
+
+<use D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_001_10000_4.png>
+Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_001_1
+0000_4.png used on input line 115.
+(pdftex.def)             Requested size: 419.31552pt x 250.68594pt.
+ [55 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_001_10000_4.png>]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_002_10000_40.png, id=984, 419.31
+656pt x 250.68657pt>
+File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_002_10000_40.png Graphic fi
+le (type png)
+
+<use D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_002_10000_40.png>
+Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_002_1000
+0_40.png used on input line 128.
+(pdftex.def)             Requested size: 419.31552pt x 250.68594pt.
+
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_002_10000_40.png, id=985, 419
+.31656pt x 250.68657pt>
+File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_002_10000_40.png Graphic
+ file (type png)
+
+<use D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_002_10000_40.png>
+Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_002_1
+0000_40.png used on input line 136.
+(pdftex.def)             Requested size: 419.31552pt x 250.68594pt.
+
+Overfull \hbox (0.90468pt too wide) in paragraph at lines 141--142
+[]\T1/lmss/m/n/12 Observando os grá-fi-cos desse se-gundo con-junto de pa-râ-me
+-tros de trei-na-mento, percebe-
+ []
+
+[56 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_001_10000_4.png>]
+[57 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_002_10000_40.png> <D:/PFC/La
+Tex/Soccer-Wizard-LaTeX/figuras/validos_002_10000_40.png>]
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_001_10000_4.png, id=996, 
+414.95026pt x 248.127pt>
+File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_001_10000_4.png Grap
+hic file (type png)
+
+<use D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_001_10000_4.png>
+Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_0
+01_10000_4.png used on input line 155.
+(pdftex.def)             Requested size: 234.73524pt x 140.36617pt.
+
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_validos_001_10000_4.png, id=99
+7, 414.95026pt x 247.52475pt>
+File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_validos_001_10000_4.png G
+raphic file (type png)
+
+<use D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_validos_001_10000_4.png>
+Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_valido
+s_001_10000_4.png used on input line 156.
+(pdftex.def)             Requested size: 234.73524pt x 140.02547pt.
+
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_002_10000_40.png, id=998,
+ 415.5525pt x 247.52475pt>
+File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_002_10000_40.png Gra
+phic file (type png)
+
+<use D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_002_10000_40.png>
+Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_0
+02_10000_40.png used on input line 157.
+(pdftex.def)             Requested size: 234.73524pt x 139.82152pt.
+
+<D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_validos_002_10000_40.png, id=9
+99, 414.95026pt x 247.52475pt>
+File: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_validos_002_10000_40.png 
+Graphic file (type png)
+
+<use D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_validos_002_10000_40.png>
+Package pdftex.def Info: D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_valido
+s_002_10000_40.png used on input line 158.
+(pdftex.def)             Requested size: 234.73524pt x 140.02547pt.
+
+[58 <D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_001_10000_4.png> <D:/
+PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_validos_001_10000_4.png> <D:/PFC/L
+aTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_002_10000_40.png> <D:/PFC/LaTex/So
+ccer-Wizard-LaTeX/figuras/treino_validos_002_10000_40.png>]) [59]
+(D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Conclusao.tex
+Cap\'{\i }tulo 5.
+[60
+
+
+
+]) [61] (D:\PFC\LaTex\Soccer-Wizard-LaTeX\SoccerWizard.bbl [62
+
+
+] [63])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
+
+[64]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
  (D:\PFC\LaTex\Soccer-Wizard-LaTeX\SoccerWizard.aux
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Capa.aux)
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Rosto.aux)
@@ -1210,26 +1322,28 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Simbolos.aux)
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Introducao.aux)
 (D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.FundamentacaoTeorica.aux)
-(D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.MateriaisEMetodos.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 202.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
+(D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.MateriaisEMetodos.aux)
+(D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Resultados.aux)
+(D:\PFC\LaTex\Soccer-Wizard-LaTeX\C.Conclusao.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `SoccerWizard.out' has not changed.
-(rerunfilecheck)             Checksum: 46F692371444A26FD6026BE489AD9B24;3257.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 202.
+(rerunfilecheck)             Checksum: 2E99015642B85816348F65EC9A065E9C;3752.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 9215 strings out of 493921
- 136540 string characters out of 3148860
- 227228 words of memory out of 3000000
- 11906 multiletter control sequences out of 15000+200000
- 65330 words of font info for 50 fonts, out of 3000000 for 9000
+ 9333 strings out of 493921
+ 140797 string characters out of 3148860
+ 278048 words of memory out of 3000000
+ 11975 multiletter control sequences out of 15000+200000
+ 65705 words of font info for 51 fonts, out of 3000000 for 9000
  903 hyphenation exceptions out of 8191
- 37i,10n,43p,1210b,497s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MikTex/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/M
-ikTex/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MikTex/fonts/enc/dvips/lm/
-lm-mathit.enc}{C:/Program Files/MikTex/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Pro
-gram Files/MikTex/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MikTex/fonts/e
-nc/dvips/lm/lm-ts1.enc}<C:/Program Files/MikTex/fonts/type1/public/lm/lmex10.pf
+ 37i,11n,43p,1210b,505s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MikTex/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MikT
+ex/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MikTex/fonts/enc/dvips/lm
+/lm-rm.enc}{C:/Program Files/MikTex/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Progra
+m Files/MikTex/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MikTex/fonts/
+enc/dvips/lm/lm-ec.enc}<C:/Program Files/MikTex/fonts/type1/public/lm/lmex10.pf
 b><C:/Program Files/MikTex/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/M
 ikTex/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MikTex/fonts/type1/publ
 ic/lm/lmr12.pfb><C:/Program Files/MikTex/fonts/type1/public/lm/lmr8.pfb><C:/Pro
@@ -1239,9 +1353,9 @@ lmsso10.pfb><C:/Program Files/MikTex/fonts/type1/public/lm/lmsso12.pfb><C:/Prog
 ram Files/MikTex/fonts/type1/public/lm/lmsso8.pfb><C:/Program Files/MikTex/font
 s/type1/public/lm/lmsy10.pfb><C:/Program Files/MikTex/fonts/type1/public/lm/lms
 y8.pfb>
-Output written on SoccerWizard.pdf (66 pages, 1666771 bytes).
+Output written on SoccerWizard.pdf (76 pages, 2203988 bytes).
 PDF statistics:
- 999 PDF objects out of 1000 (max. 8388607)
- 264 named destinations out of 1000 (max. 500000)
- 455 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1148 PDF objects out of 1200 (max. 8388607)
+ 287 named destinations out of 1000 (max. 500000)
+ 543 words of extra memory for PDF output out of 10000 (max. 10000000)
 

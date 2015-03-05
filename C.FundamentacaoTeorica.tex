@@ -7,13 +7,13 @@
 
 
 
-Este capítulo trata de alguns assuntos importantes para a compreensão do trabalho, tais como: Redes Neurais Artificiais, Perceptrons, Adaline, Madaline, Regra Delta, funções de ativação, camadas intermediárias, algoritmos de treinamento, Backpropagation, programação orientada a objetos e Java.
+Este capítulo trata de alguns assuntos importantes para a compreensão do trabalho, tais como: redes Neurais Artificiais, Perceptrons, Adaline, Madaline, Regra Delta, funções de ativação, camadas intermediárias, algoritmos de treinamento, Backpropagation, programação orientada a objetos e Java.
 
 \vspace{3ex}
 \section{Redes Neurais Artificiais} \label{Fund.Redes.Neurais}
 
 Toda a base para a realização desse trabalho se encontra no uso uma rede neural artificial (RNA), adequada para a realização do reconhecimento de padrões entre condições anteriores às partidas e o resultado das mesmas. 
-Uma RNA é um sistema de processamento de informações que possui algumas características em comum com redes neurais biológicas. O desenvolvimento da teoria de redes neurais artificiais ocorreu a partir de generalizações matemáticas de modelos de percepção humana. LAURENE FAUSETT. Para isso, algumas hipóteses são levadas em conta: Assume-se que o processamento de informações ocorre em vários elementos simples chamados neurônios; Sinais são passados entre neurônios através de uma conexão; Cada conexão possui um peso associado, o qual, em redes neurais artificiais típicas, multiplicam o sinal transmitido; Cada neurônio possui uma função de ativação, a qual determina o sinal de saída com base na soma dos sinais de entrada. Um modelo completo de um neurônio, com base nas hipóteses acima, está mostrado na \autoref{neuronioCompleto}.
+Uma RNA é um sistema de processamento de informações que possui algumas características em comum com redes neurais biológicas. O desenvolvimento da teoria de redes neurais artificiais ocorreu a partir de generalizações matemáticas de modelos de percepção humana. \citep{Fausett94}. Para isso, algumas hipóteses são levadas em conta: assume-se que o processamento de informações ocorre em vários elementos simples chamados neurônios; sinais são passados entre neurônios através de uma conexão; cada conexão possui um peso associado, o qual, em redes neurais artificiais típicas, multiplicam o sinal transmitido; cada neurônio possui uma função de ativação, a qual determina o sinal de saída com base na soma dos sinais de entrada. Um modelo completo de um neurônio, com base nas hipóteses acima, está mostrado na \autoref{neuronioCompleto}.
 
 \begin{figure}[htbp]
 	\centering
@@ -92,7 +92,7 @@ f(y_\textit{in}) = \begin{cases}
 \subsection{Separabilidade Linear} \label{SeparabilidadeLinear}
 
 
-Para uma determinada rede, a resposta está confinada entre dois valores (1 ou 0, sim ou não, -1 ou 1, etc...). Existe uma fronteira, chamada \emph{fronteira de decisão} \autoref{fronteiraDecisaoOU} que delimitada as regiões em que a resposta assume um ou outro valor.
+Para uma determinada rede, a resposta está confinada entre dois valores (1 ou 0, sim ou não, -1 ou 1, etc...). Existe uma fronteira, chamada \emph{fronteira de decisão} \autoref{fronteiraDecisaoOU} que delimitada as regiões em que a resposta assume um ou outro valor \citep{Fausett94}.
 
 \begin{figure}[htbp]
 	\centering
@@ -111,13 +111,13 @@ Diz-se que um problema é linearmente separável caso existam pesos (e bias) sufic
 
 \cite{Minsky69} mostraram que problemas não linearmente separáveis, são impossíveis de serem resolvidos por redes de apenas uma camada. É possível demonstrar também que redes de várias camadas, com funções de ativação lineares, também são incapazes de resolver tais problemas.
 
-A inclusão de um bias pode transformar um problema linearmente inseparável (e portanto incapaz de ser resolvido com os métodos já apresentados) em um problema que pode ser resolvido. Isso é possível graças a adição de uma nova conexão de entrada, que será usada como valor constante para o bias. Essa nova conexão aumenta o conjunto de entradas, fornecendo mais um grau de liberdade para a rede.
+A inclusão de um bias pode transformar um problema linearmente inseparável (e portanto incapaz de ser resolvido com os métodos já apresentados) em um problema que pode ser resolvido \citep{Fausett94}. Isso é possível graças a adição de uma nova conexão de entrada, que será usada como valor constante para o bias. Essa nova conexão aumenta o conjunto de entradas, fornecendo mais um grau de liberdade para a rede.
 
 \vspace{3ex}
 \subsection{Representação dos dados} \label{RepresentaçãoDados}
 
 
-No início dos estudos de redes neurais, a representação de dados se dava na forma binária, ou seja, utilizando 1 para reforço positivo e 0 para reforço negativo. Essa representação inicial não é, de modo geral, recomendada.
+No início dos estudos de redes neurais, a representação de dados se dava na forma binária, ou seja, utilizando 1 para reforço positivo e 0 para reforço negativo. Essa representação inicial não é, de modo geral, recomendada \citep{Fausett94}.
 
 A forma bipolar é uma alternativa bastante eficiente. Essa representação utiliza 1 para reforço positivo e -1 para reforço negativo. Assim como a inclusão de um bias, a simples mudança da representação de dados para a forma bipolar pode transformar um problema sem solução em um problema que pode ser resolvido.
 
@@ -155,12 +155,12 @@ Se utilizarmos a representação binária, essa equação não distingue conexões que 
 
 
 \vspace{3ex}
-\subsubsection{Técnica de aprendizado} \label{TecnicaAprendizado}
+\subsubsection{Técnica de aprendizado}
 
 
 Existem várias técnicas de implementação das regras de aprendizado existentes. A técnica abordada aqui nada mais é do que uma das formas mais simples e genéricas de se aplicar a regra de Hebb. O entendimento dessa técnica é crucial para a posterior compreensão das outras técnicas aplicadas nesse trabalho, que podem ser tomadas como simples variações mais elaboradas desta.
 
-O aprendizado é dado na forma iterativa e segue o seguinte algoritmo:
+O aprendizado é dado na forma iterativa e \cite{Fausett94} nos fornece o seguinte algoritmo:
 
 \begin{enumerate}
 	\item Os pesos de todas conexões são inicializados com o valor 0.
@@ -170,7 +170,7 @@ O aprendizado é dado na forma iterativa e segue o seguinte algoritmo:
 	\item Cada peso é atualizado conforme calculado no passo 3.
 \end{enumerate}
 
-Para esclarecer um pouco mais o algoritmo acima mostrado, segue um exemplo de sua aplicação em uma rede real com representação bipolar, onde usaremos como parâmetros de entrada a função lógica E. Buscaremos com essa rede descobrir os valores dos pesos das conexões que determinam a fronteira de decisão dessa função.
+Para esclarecer um pouco mais o algoritmo acima mostrado, segue um exemplo \citep{Fausett94} de sua aplicação em uma rede real com representação bipolar, onde usa-se como parâmetros de entrada a função lógica E. Busca-se com essa rede descobrir os valores dos pesos das conexões que determinam a fronteira de decisão dessa função.
 
 A função lógica E retorna um valor \say{positivo} apenas se ambas as entradas possuírem também um valor \say{positivo}. Assim sendo, montaremos a tabela verdade dessa função conforme a \autoref{tabverdadeE}. A representação gráfica dessa rede está mostrada na \autoref{redeNeuralE}.
 
@@ -335,7 +335,7 @@ Podemos notar que apesar de os pesos terem sido alterados pelo último loop, a eq
 
 Redes com um modelo de treinamento iterativo e supervisionado foram propostas por Frank Rosenblatt em \citeyear{Rosenblatt62}. Ele as chamou de Perceptrons e elas tiveram um grande impacto nos estudos de redes neurais artificiais. Isso se deve ao fato de que a regra de convergência dos perceptrons é mais poderosa do que sua antecessora, a regra de Hebb. Além disso, sob determinadas condições, é possível provar matematicamente a convergência de seu procedimento de aprendizado iterativo. Basicamente, ela consiste de um simples neurônio com pesos sinápticos e bias ajustáveis.
 
-Um perceptron particularmente simples utilizava valores binários de entrada e saída, contudo a função de ativação do neurônio de saída poderia retornar valores de -1, 0 ou 1 durante o aprendizado. A possibilidade de 3 diferentes valores só ocorre graças ao novo tipo de função de ativação, onde o valor do limiar passou a delimitar uma região intermediária, e não apenas um valor limítrofe entre saídas positivas e negativas. Essa função é descrita pela \autoref{funcaoAtivacaoPerceptron}.
+\cite{Fausett94} cita um perceptron particularmente simples que utilizava valores binários de entrada e saída, contudo a função de ativação do neurônio de saída poderia retornar valores de -1, 0 ou 1 durante o aprendizado. A possibilidade de 3 diferentes valores só ocorre graças ao novo tipo de função de ativação, onde o valor do limiar passou a delimitar uma região intermediária, e não apenas um valor limítrofe entre saídas positivas e negativas. Essa função é descrita pela \autoref{funcaoAtivacaoPerceptron}, calculada com a ajuda da \autoref{entradaPerceptron}.
 
 \begin{equation} \label{entradaPerceptron}
 Y_{in} = \sum_i x_i \cdot w_i
@@ -349,39 +349,39 @@ f(Y_{in}) = \begin{cases}
 \end{cases}
 \end{equation}
 
-Para se atualizar os pesos das ligações durante o treinamento usamos a equação 11. Tal equação apresenta um novo parâmetro, chamado de taxa de aprendizado, que é um valor constante determinado antes do início do treinamento.
+Para se atualizar os pesos das ligações durante o treinamento usamos a \autoref{pesosPerceptron}. Tal equação apresenta um novo parâmetro, chamado de taxa de aprendizado, que é um valor constante determinado antes do início do treinamento.
 
 \begin{equation} \label{pesosPerceptron}
 \Delta w_i = \alpha \cdot x_i \cdot t
 \end{equation}
 
-Observando a função de ativação de saída, que retorna valores de -1, 0 ou 1, e a saída real (Target t) que deve ter valores de -1 ou 1, podemos concluir alguns pontos importantes relacionados a esse perceptron.
+O treinamento do perceptron continua até que os pesos das conexões sejam tais que para todos os padrões de entrada a resposta obtida pela rede seja correta. Segundo o teorema de convergência dos perceptrons, caso tais pesos existam, eles serão encontrados em um número finito de passos do treinamento.
+
+Observando a função de ativação de saída, que retorna valores de -1, 0 ou 1, e a saída real (Target t) que deve ter valores de -1 ou 1, \cite{Fausett94} conclui alguns pontos importantes relacionados a esse perceptron:
 
 \begin{itemize}
-	\item A rede não diferencia situações onde, por exemplo, a saída real é -1 e a saída calculada é 0 ou 1. Em ambos os casos os pesos são atualizados, de maneira igual, e o sinal do erro informa se os mesmos devem aumentar ou diminuir.
+	\item A rede não diferencia situações onde, por exemplo, a saída real é -1 e a saída calculada é 0 ou 1. Em ambos os casos os pesos são atualizados de maneira igual e o sinal do erro informa se os mesmos devem aumentar ou diminuir.
 	\item Apenas conexões de entrada com valores diferentes de 0 possuem seus pesos atualizados.
 	\item Padrões de entrada que não produzem erro na saída também não têm seus pesos atualizados.
 	\item Como o treinamento ocorre até que os pesos sejam tais que a saída seja correta para quaisquer padrões de entrada, e padrões sem erro não resultam em treinamento da rede, quanto mais treinada a rede estiver, menor será o seu aprendizado.
 	\item O valor do limiar não mais fornece uma equação, delimitando uma fronteira de decisão, mas sim uma inequação, fornecendo uma região de \say{indecisão}, separando a região de respostas positivas e a região de respostas negativas. Dessa forma, o valor do limiar se torna mais significativo para o processo de aprendizagem.
 \end{itemize}
 
-O treinamento do perceptron continua até que os pesos das conexões sejam tais que para todos os padrões de entrada a resposta obtida pela rede seja correta. Segundo o teorema de convergência dos perceptrons, caso tais pesos existam, eles serão encontrados em um número finito de passos do treinamento.
-
 Ao contrário das redes mostradas até agora, no perceptron o uso do limiar e do bias não são equivalentes. Como agora eles possuem funções diferentes, ambos são necessários para que o treinamento funcione corretamente.
 
 \vspace{3ex}
 \subsubsection{Técnica de aprendizado} 
 
-O algoritmo de aprendizado do perceptron está apresentado a seguir. Sua estrutura é semelhante à do treinamento de Hebb, porém já mais avançado e mais parecido com o algoritmo utilizado para a realização desse trabalho.
+O algoritmo de aprendizado do perceptron apresentado por \cite{Fausett94} está apresentado a seguir. Sua estrutura é semelhante à do treinamento de Hebb, porém já mais avançado e mais parecido com o algoritmo utilizado para a realização desse trabalho.
 \begin{enumerate}
 	\item Inicializar pesos e bias (podem ser setados em 0, por simplicidade)
 	\item Definir taxa de aprendizado $0<\alpha<1$
-	\item Enquanto a condição de parada não for atingida, repetem-se os passos 4-7
+	\item Enquanto a condição de parada não for atingida repetem-se os passos 4-7
 	\setlength{\itemindent}{+.5in}
-	\item Para todos os conjuntos de entradas e saídas, repetem-se os passos 5-6
+	\item Para todos os conjuntos de entradas e saídas repetem-se os passos 5-6
 	\setlength{\itemindent}{+1in}
 	\item Calcula-se o valor da saída de acordo com a \autoref{entradaPerceptron} e a \autoref{funcaoAtivacaoPerceptron}
-	\item Caso a saída calculada seja diferente da saída correta, atualizam-se os pesos de acordo com a \autoref{pesosPerceptron}
+	\item Caso a saída calculada seja diferente da saída correta atualizam-se os pesos de acordo com a \autoref{pesosPerceptron}
 	\setlength{\itemindent}{+0.5in}
 	\item Caso nenhum peso tenha sido alterado no passo 6, pare. Caso contrário, continue
 \end{enumerate}
@@ -417,14 +417,14 @@ A arquitetura de uma rede Adaline é mostrada na \autoref{Arquiteturaadaline}.
 \subsubsection{Técnica de aprendizado} 
 
 
-O algoritmo de aprendizado do Adaline está apresentado a seguir. Sua estrutura não é muito diferente à do perceptron, contudo, possui uma mudança singela: Os pesos aqui são alterados em todos loops de treinamento e o controle de parada se dá por um limiar máximo de alteração dos pesos. Como pode ser visto abaixo.
+O algoritmo de aprendizado do Adaline conforme mostrado por \cite{Fausett94} está apresentado a seguir. Sua estrutura não é muito diferente à do perceptron, contudo, possui uma mudança singela: os pesos aqui são alterados em todos loops de treinamento e o controle de parada se dá por um limiar máximo de alteração dos pesos. Como pode ser visto abaixo.
 
 \begin{enumerate}
 	\item Inicializar pesos e bias (podem ser setados em 0, por simplicidade)
 	\item Definir taxa de aprendizado $0<\alpha<1$
-	\item Enquanto a condição de parada não for atingida, repetem-se os passos 4-7
+	\item Enquanto a condição de parada não for atingida repetem-se os passos 4-7
 	\setlength{\itemindent}{+.5in}
-	\item Para todos os conjuntos de entradas e saídas, repetem-se os passos 5-6
+	\item Para todos os conjuntos de entradas e saídas repetem-se os passos 5-6
 	\setlength{\itemindent}{+1in}
 	\item Calcula-se o valor da saída de acordo com a \autoref{entradaAdaline}
 	\item Atualizam-se os pesos de acordo com a \autoref{pesosAdaline}
@@ -434,13 +434,13 @@ O algoritmo de aprendizado do Adaline está apresentado a seguir. Sua estrutura n
 
 A taxa de aprendizado deve ser determinada com cuidado. Um valor muito pequeno pode fazer com que a rede seja treinada muito lentamente, e de forma oposta, um valor muito grande pode fazer com que o treinamento não convirja. \cite{Hecht-Nielsen90} chegou a uma equação para limitar o valor da taxa de aprendizado. Porém, é mais comum simplesmente a escolha de um valor inicial pequeno (0,1 por exemplo).
 
-	Um outro ponto importante desse treinamento, se deve ao fato de que a aplicação da rede em situações que a saída deve ser bivalente não pode ser apenas uma repetição de parte do algoritmo de treinamento, pois o mesmo retornaria valores quebrados. Assim, a aplicação do Adaline em tais situações requer uma função de ativação para poder ser usada. Comumente a função degrau é utilizada para tais aplicações.
+	Um outro ponto importante desse treinamento se deve ao fato de que a aplicação da rede em situações que a saída deve ser bivalente não pode ser apenas uma repetição de parte do algoritmo de treinamento, pois o mesmo retornaria valores quebrados. Assim, a aplicação do Adaline em tais situações requer uma função de ativação para poder ser usada. Comumente a função degrau é utilizada para tais aplicações.
 
 
 \vspace{3ex}
 \subsection{Redes Multicamadas}
 
-Muitas vezes, uma rede neural de apenas uma camada, como as mostradas até agora, não é capaz de solucionar o problema proposto. Tais limitações foram um dos fatores que reduziram o interesse nas redes neurais artificiais nos anos 70. Para tentar solucionar esses casos, foram desenvolvidas as redes multicamadas (\autoref{redesMulticamadas}). Nesse trabalho serão expostas as redes Madaline e Multilayer Perceptron com BackPropagation, que são extensões multicamadas das redes Adaline e Perceptron, respectivamente.
+Muitas vezes, uma rede neural de apenas uma camada, como as mostradas até agora, não é capaz de solucionar o problema proposto \citep{Haykin99}. Tais limitações foram um dos fatores que reduziram o interesse nas redes neurais artificiais nos anos 70. Para tentar solucionar esses casos, foram desenvolvidas as redes multicamadas (\autoref{redesMulticamadas}). Nesse trabalho serão expostas as redes Madaline e Multilayer Perceptron com BackPropagation, que são extensões multicamadas das redes Adaline e Perceptron, respectivamente.
 
 \begin{figure}[htbp]
 	\centering
@@ -453,7 +453,7 @@ Muitas vezes, uma rede neural de apenas uma camada, como as mostradas até agora,
 \vspace{3ex}
 \subsection{Madaline}
 
-O uso das redes Adaline em uma configuração multicamadas é possível, e chamado Madaline - Many Adaptive Linear Neurons (Muitos Neurônios Lineares Adaptativos, em tradução livre).
+Segundo \cite{Fausett94} o uso das redes Adaline em uma configuração multicamadas é possível, e chamado Madaline - Many Adaptive Linear Neurons (Muitos Neurônios Lineares Adaptativos, em tradução livre).
 
 Um modelo simples de uma Madaline pode ser visto na \autoref{arquiteturaMadaline}. Nela, temos dois neurônios de entrada (X1 e X2), duas Adalines resultando dois neurônios intermediários (Z1 e Z2) e uma terceira Adaline, que utiliza os neurônios intermediários (aqui chamados NI) como entradas e resulta a saída Y. Podemos ver que cada uma das três Adalines intermediarias precisam de um bias.
 
@@ -472,7 +472,7 @@ Devemos, entretanto, levar em conta que as entradas do sistema são utilizadas ap
 \vspace{3ex}
 \subsection{Backpropagation}
 
-O uso de perceptrons multicamadas, com a regra de treinamento supervisionado de Backpropagation (retro propagação de erros) ou Regra Delta Generalizada, tem sido amplo e eficaz na resolução de problemas, por vezes complexos, em diversas áreas. Apesar de sua importância atual, não se diz que o Backpropagation possui um criador, pois foi desenvolvido simultaneamente por diversos pesquisadores. Esse método visa reduzir o gradiente do erro quadrático total da saída da rede ao longo do treinamento, ou seja, minimizando o erro da saída calculado pelo sistema.
+O uso de perceptrons multicamadas, com a regra de treinamento supervisionado de Backpropagation (retro propagação de erros) ou Regra Delta Generalizada, tem sido amplo e eficaz na resolução de problemas, por vezes complexos, em diversas áreas. Apesar de sua importância atual, não se diz que o Backpropagation possui um criador, pois foi desenvolvido simultaneamente por diversos pesquisadores. Esse método visa reduzir o gradiente do erro quadrático total da saída da rede ao longo do treinamento, ou seja, minimizando o erro da saída calculado pelo sistema \citep{Fausett94}.
 
 O algoritmo utilizado nesse trabalho usa a regra de Backpropagation. O objetivo é treinar a rede para alcançar um balanço entre a habilidade de responder corretamente a padrões de entrada (utilizados para treinamento) e a habilidade de responder bem a entradas similares, mas não necessariamente idênticas, às utilizadas no treinamento.
 
@@ -482,7 +482,7 @@ Podemos dizer que o Backpropagation utiliza o melhor de cada um dos modelos de r
 \begin{figure}[htbp]
 	\centering
 	  \includegraphics[angle=0, width=450pt, height=300pt]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/Backpropagation.jpg}
-		\caption{Arquitetura de uma rede Backpropagation com uma camada intermediária de três neurônios. \citep{Fausett94}}
+		\caption{Arquitetura de uma rede Backpropagation com uma camada intermediária de $P$ neurônios. \citep{Fausett94}}
 	  \label{arquiteturaBackpropagation}
 \end{figure}
 
@@ -490,7 +490,7 @@ Podemos dizer que o Backpropagation utiliza o melhor de cada um dos modelos de r
 \vspace{3ex}
 \subsubsection{Treinamento e Aplicação}
 
-Treinar uma rede com Backpropagation pode ser uma tarefa lenta mas, uma vez treinada, os resultados da rede são produzidos rapidamente. Para realizar o treinamento temos 3 estágios: Feedforward (Alimentação); Backpropagation (Retro Propagação); Ajuste de Pesos.
+Treinar uma rede com Backpropagation pode ser uma tarefa lenta mas, uma vez treinada, os resultados da rede são produzidos rapidamente \citep{Fausett94}. Para realizar o treinamento temos 3 estágios: Feedforward (Alimentação); Backpropagation (Retro Propagação); Ajuste de Pesos.
 
 Na Alimentação, cada neurônio da primeira camada recebe seu valor de entrada e reproduz seu resultado para todos neurônios da camada seguinte, de acordo com sua função de ativação. Os neurônios das camadas intermediárias seguem o mesmo comportamento, e propagam o resultado da rede através de todas camadas existentes até os neurônios de saída.
 
@@ -504,7 +504,7 @@ A aplicação da rede, por sua vez, se torna tarefa simples após o treinamento. Co
 \vspace{3ex}
 \subsubsection{Técnica de Aprendizado}
 
-A técnica de aprendizado Backpropagation está apresentada a seguir. Sua estrutura é a mais complexa e avançada presente nesse trabalho. Também é importante citar que o algoritmo mostrado a seguir foi utilizado para se montar a parte prática desse trabalho.
+A técnica de aprendizado Backpropagation está apresentada a seguir conforme mostrado por \cite{Fausett94}. Sua estrutura é a mais complexa e avançada presente nesse trabalho. Também é importante citar que o algoritmo mostrado a seguir foi utilizado para se montar a parte prática desse trabalho.
 
 As equações utilizadas no algoritmo mostrado abaixo são descritas a seguir. A nomenclatura utilizada por ser vista na \autoref{arquiteturaBackpropagation}, para uma melhor ilustração de sua representação. Uma explicação do que cada equação representa é dada em sequência.
 
@@ -591,37 +591,37 @@ Mais detalhes sobre os parâmetros utilizados e as escolhas que devem ser feitas 
 \vspace{3ex}
 \section{Programação Orientada a Objetos} \label{Fund.POO}
 
-Para a realização desse trabalho, foi necessária a criação de um programa de computador capaz de realizar os cálculos determinados pelo algoritmo de Backpropagation. A Programação Orientada a Objetos (POO) foi escolhida como paradigma para se escrever o código. Nela, nos expressamos no código em termos de objetos, suas propriedades, métodos e estados.
+Para a realização desse trabalho, foi necessária a criação de um programa de computador capaz de realizar os cálculos determinados pelo algoritmo de Backpropagation. A Programação Orientada a Objetos (POO) foi escolhida como paradigma para se escrever o código. Nela nos expressamos no código em termos de objetos, suas propriedades, métodos e estados.
 
 Essa forma ou paradigma de programação foi escolhido por fornecer algumas vantagens essenciais necessárias ao longo do desenvolvimento do projeto. Entre elas podemos citar:
 
 \begin{itemize}
-	\item Possui uma base conceitual no campo de estudo da cognição, ou seja, tenta representar o mundo da forma mais real possível. Da mesma forma, a Inteligência Artificial também busca representar a inteligência humana da forma mais real possível. Criando assim um vínculo conceitual entre ambas, o que facilita o desenvolvimento.
-	\item Suas representações são facilmente visíveis no mundo real. Como todas as representações são feitas em forma de objetos, a compreensão dos mesmos se torna mais clara e perceptível, tanto para o programador quanto para um usuário.
-	\item Fácil manutenção. A POO possui a capacidade de encapsulamento dos objetos, tornando-os entidades únicas, com propriedades e funções únicas. O encapsulamento no código reduz drasticamente a chance de que uma parte do sistema interfira no funcionamento de outra, reduzindo assim uma das mais comuns fontes de erros em programas.
-	\item Facilidade de evolução. O encapsulamento fornece também modularidade, facilitando o desenvolvimento do código através de reuso e extensão de componentes (módulos) já existentes.
+	\item Possui uma base conceitual no campo de estudo da cognição, ou seja, tenta representar o mundo da forma mais real possível. Da mesma forma, a Inteligência Artificial também busca representar a inteligência humana da forma mais real possível, criando assim um vínculo conceitual entre ambas, o que facilita o desenvolvimento.
+	\item Suas representações são facilmente visíveis no mundo real: como todas as representações são feitas em forma de objetos, a compreensão dos mesmos se torna mais clara e perceptível, tanto para o programador quanto para um usuário.
+	\item Fácil manutenção: a POO possui a capacidade de encapsulamento dos objetos, tornando-os entidades únicas, com propriedades e funções únicas. O encapsulamento no código reduz drasticamente a chance de que uma parte do sistema interfira no funcionamento de outra, reduzindo assim uma das mais comuns fontes de erros em programas.
+	\item Facilidade de evolução: o encapsulamento fornece também modularidade, facilitando o desenvolvimento do código através de reuso e extensão de componentes (módulos) já existentes.
 \end{itemize}
 
 
 \vspace{3ex}
 \subsection{Java}
 
-Java é uma linguagem de programação desenvolvida pela Sun Microsystems em 1995. Existem atualmente inúmeras aplicações, em incontáveis plataformas, utilizando essa linguagem, que é definida pela sua desenvolvedora da seguinte forma: \say{Java é uma linguagem simples, orientada a objetos, distribuída, interpretada, robusta, segura, independente de arquitetura, portável, de alto desempenho, suportando multithreads e dinâmica.}
+Java é uma linguagem de programação desenvolvida pela Sun Microsystems em 1995. Existem atualmente inúmeras aplicações, em incontáveis plataformas, utilizando essa linguagem, que é definida pela sua desenvolvedora da seguinte forma: \say{\textit{Java é uma linguagem simples, orientada a objetos, distribuída, interpretada, robusta, segura, independente de arquitetura, portável, de alto desempenho, suportando multithreads e dinâmica.}}
 
 Das características citadas acima, podemos destacar algumas vantagens que foram determinantes para que Java fosse escolhida como a linguagem de programação a ser usada nesse trabalho.
 	
 \begin{itemize}
 	\item Simplicidade: Java é considerada uma linguagem simples, com uma sintaxe baseada em C e C++, porém com diversas vantagens e melhorias em relação a essas. 
-	\item Orientada a Objetos: Utiliza o paradigma da POO, o que encaixa com o objetivo do projeto e permite uma analogia do mundo real muito mais clara e perceptível.
-	\item Robusto: Por ser destinada para escrever programas que devem ser confiáveis numa variedade de maneiras, a linguagem Java coloca muita ênfase na verificação precoce de possíveis problemas, em checagens dinâmicas em tempo de execução e na eliminação de situações que são propensas a erros.
-	\item Multithread: Multithreading é um modo de criação de aplicativos com vários segmentos ou processos em execução simultânea. Tal capacidade melhora a capacidade de resposta interativa do sistema e seu comportamento em tempo real, resultando em uma velocidade de execução aprimorada.
+	\item Orientada a Objetos: utiliza o paradigma da POO, o que encaixa com o objetivo do projeto e permite uma analogia do mundo real muito mais clara e perceptível.
+	\item Robusto: por ser destinada para escrever programas que devem ser confiáveis numa variedade de maneiras, a linguagem Java coloca muita ênfase na verificação precoce de possíveis problemas, em checagens dinâmicas em tempo de execução e na eliminação de situações que são propensas a erros.
+	\item Multithread: multithreading é um modo de criação de aplicativos com vários segmentos ou processos em execução simultânea. Tal capacidade melhora a capacidade de resposta interativa do sistema e seu comportamento em tempo real, resultando em uma velocidade de execução aprimorada.
 \end{itemize}
 
 
 \vspace{3ex}
-\section{Futebol} \label{Futebol}
+\section{Futebol de Campo} \label{Futebol}
 
-O futebol é um esporte de grande popularidade no mundo em geral, e principalmente no Brasil. Trata-se de um esporte coletivo com partidas que duram 90 minutos entre dois times de 11 jogadores cada.
+O futebol de campo é um esporte de grande popularidade no mundo em geral, e principalmente no Brasil. Trata-se de um esporte coletivo com partidas que duram 90 minutos entre dois times de 11 jogadores cada.
 
 Ele foi escolhido como tema desse trabalho por sua popularidade e por se tratar de um esporte considerado imprevisível.
 
@@ -642,12 +642,12 @@ As equipes são classificadas pelo total de pontos, depois pelo saldo de gols e, 
 O Campeonato Brasileiro de Futebol foi escolhido como tema de estudo por algumas de suas características, entre as quais podemos destacar:
 
 \begin{itemize}
-	\item Longa duração. Por se tratar de um campeonato longo, é possível obter uma maior quantidade de informações para serem usadas no treinamento e/ou aplicação da Rede Neural Artificial, resultando em uma aplicação mais eficiente e confiável.
-	\item Pontos corridos. O sistema de classificação em pontos permite uma melhor comparação entre as performances que os times vêm apresentando.
-	\item Duas rodadas. Além de aumentar a quantidade de jogos para análise, a dupla rodada permite adicionarmos mais um parâmetro de entrada, sendo esse a condição de partida \say{em casa} ou \say{fora de casa}.
-	\item Vários Times. A quantidade de times permite diversas opções de confrontos, o que eleva as oportunidades de análise e aprendizado que a Rede Neural realiza.
-	\item Proximidade e familiaridade. Por ser um campeonato de conhecimento geral, com regras simples e conhecidas, e fontes de dados facilmente acessíveis, o Campeonato Brasileiro de Futebol se mostra como um campo de estudo \say{sem mistérios}.
-	\item Sistema de disputa padronizado. Desde 2006 o formato do campeonato é o mesmo, sem previsões de alterações, o que facilita a extensão da abordagem de um ano para o outro e a comparação dos resultados entre anos diferentes.
+	\item Longa duração: por se tratar de um campeonato longo, é possível obter uma maior quantidade de informações para serem usadas no treinamento e/ou aplicação da Rede Neural Artificial, resultando em uma aplicação mais eficiente e confiável.
+	\item Pontos corridos: o sistema de classificação em pontos permite uma melhor comparação entre as performances que os times vêm apresentando.
+	\item Duas rodadas: além de aumentar a quantidade de jogos para análise, a dupla rodada permite adicionarmos mais um parâmetro de entrada, sendo esse a condição de partida \say{em casa} ou \say{fora de casa}.
+	\item Vários Times: a quantidade de times permite diversas opções de confrontos, o que eleva as oportunidades de análise e aprendizado que a Rede Neural realiza.
+	\item Proximidade e familiaridade: por ser um campeonato de conhecimento geral, com regras simples e conhecidas, e fontes de dados facilmente acessíveis, o Campeonato Brasileiro de Futebol se mostra como um campo de estudo \say{sem mistérios}.
+	\item Sistema de disputa padronizado: desde 2006 o formato do campeonato é o mesmo, sem previsões de alterações, o que facilita a extensão da abordagem de um ano para o outro e a comparação dos resultados entre anos diferentes.
 \end{itemize}
 
 %

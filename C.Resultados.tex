@@ -1,0 +1,175 @@
+
+%                                           Resultados
+
+
+\chapter{RESULTADOS} \label{Resultados}
+\thispagestyle{empty} %Oculta o numero da primeira pagina do capitulo
+
+
+Como o objetivo do projeto é prever o resultado de partidas do Campeonato Brasileiro de Futebol, a qualidade do treinamento foi medida na porcentagem de resultados corretos que a RNA retornava dentre os padrões de entrada fornecidos para teste.
+
+\vspace{3ex}
+\section{Parâmetros de treinamento mais assertivos}
+
+Para se determinar os parâmetros de treinamento mais adequados para cada situação, foram feitos inúmeros testes prévios, com variados parâmetros e em diversas combinações.
+
+Esse processo determinou por tentativa e erro os valores que retornavam resultados mais assertivos. Por fim os parâmetros de treinamento mais promissores encontrados estão mostrados na \autoref{parametrosAssertivos}.
+
+\begin{table}[htbp]
+\caption{Parâmetros de treinamento mais assertivos}
+\begin{center}
+\begin{tabular}{lccc}
+Taxa de Aprendizado     & 0,01 & 0,02  & -     \\
+Nº Máximo de rotinas    & 5000 & 10000 & 20000 \\
+Neurônio Intermediários & 4    & 20    & 40   
+\end{tabular}
+\end{center}
+\label{parametrosAssertivos}
+\end{table}
+
+
+\vspace{3ex}
+\section{Taxas de acerto para 50\% dos resultados válidos} \label{taxaAcerto50}
+
+Com esses parâmetros de treinamento definidos, foram testadas todas as combinações entre eles para treinamento, em ambas representações de entrada escolhidas. O resultado está mostrado na \autoref{tabelaTaxa50}.
+
+\begin{table}[htbp]
+\caption{Taxas de acerto com 50\% de resultados válidos}
+\begin{center}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\cline{1-5} \cline{7-10}
+\multicolumn{5}{|c|}{Parâmetros}            &  & \multicolumn{4}{c|}{Taxas}         \\ \cline{1-5} \cline{7-10} 
+Teste & Entrada & Alfa & Iterações & Neurônios &  & Vitória & Empate & Derrota & Total \\ \cline{1-5} \cline{7-10} 
+1    & 1       & 0,01 & 5000   & 4         &  & 94\%    & -      & 97\%    & 96\%  \\ \cline{1-5} \cline{7-10} 
+2    & 1       & 0,02 & 5000   & 4         &  & 98\%    & 45\%   & 100\%   & 95\%  \\ \cline{1-5} \cline{7-10} 
+3    & 1       & 0,01 & 10000  & 4         &  & 94\%    & 0\%    & 100\%   & 95\%  \\ \cline{1-5} \cline{7-10} 
+4    & 1       & 0,02 & 10000  & 4         &  & 98\%    & 0\%    & 97\%    & 93\%  \\ \cline{1-5} \cline{7-10} 
+5    & 1       & 0,01 & 20000  & 4         &  & 97\%    & 54\%   & 100\%   & 95\%  \\ \cline{1-5} \cline{7-10} 
+6    & 1       & 0,02 & 20000  & 4         &  & 100\%   & 47\%   & 97\%    & 92\%  \\ \cline{1-5} \cline{7-10} 
+7    & 1       & 0,01 & 5000   & 20        &  & 93\%    & 42\%   & 99\%    & 89\%  \\ \cline{1-5} \cline{7-10} 
+8    & 1       & 0,02 & 5000   & 20        &  & 96\%    & 64\%   & 96\%    & 92\%  \\ \cline{1-5} \cline{7-10} 
+9    & 1       & 0,01 & 10000  & 20        &  & 99\%    & 5\%    & 95\%    & 91\%  \\ \cline{1-5} \cline{7-10} 
+10    & 1       & 0,02 & 10000  & 20        &  & 92\%    & 51\%   & 98\%    & 90\%  \\ \cline{1-5} \cline{7-10} 
+11    & 1       & 0,01 & 20000  & 20        &  & 97\%    & 50\%   & 91\%    & 91\%  \\ \cline{1-5} \cline{7-10} 
+12    & 1       & 0,02 & 20000  & 20        &  & 79\%    & 62\%   & 99\%    & 85\%  \\ \cline{1-5} \cline{7-10} 
+13    & 1       & 0,01 & 5000   & 40        &  & 81\%    & 47\%   & 100\%   & 85\%  \\ \cline{1-5} \cline{7-10} 
+14    & 1       & 0,02 & 5000   & 40        &  & 96\%    & 49\%   & 98\%    & 90\%  \\ \cline{1-5} \cline{7-10} 
+15    & 1       & 0,01 & 10000  & 40        &  & 92\%    & 5\%    & 100\%   & 84\%  \\ \cline{1-5} \cline{7-10} 
+16    & 1       & 0,02 & 10000  & 40        &  & 99\%    & 42\%   & 83\%    & 86\%  \\ \cline{1-5} \cline{7-10} 
+17    & 1       & 0,01 & 20000  & 40        &  & 82\%    & 17\%   & 100\%   & 86\%  \\ \cline{1-5} \cline{7-10} 
+18    & 1       & 0,02 & 20000  & 40        &  & 81\%    & 17\%   & 100\%   &       \\ \cline{1-5} \cline{7-10} 
+19    & 2       & 0,01 & 5000   & 4         &  & 87\%    & 70\%   & 68\%    & 75\%  \\ \cline{1-5} \cline{7-10} 
+20    & 2       & 0,02 & 5000   & 4         &  & 81\%    & 81\%   & 80\%    & 81\%  \\ \cline{1-5} \cline{7-10} 
+21    & 2       & 0,01 & 10000  & 4         &  & 98\%    & 24\%   & 93\%    & 73\%  \\ \cline{1-5} \cline{7-10} 
+22    & 2       & 0,02 & 10000  & 4         &  & 98\%    & 23\%   & 98\%    & 88\%  \\ \cline{1-5} \cline{7-10} 
+23    & 2       & 0,01 & 20000  & 4         &  & 91\%    & 25\%   & 89\%    & 81\%  \\ \cline{1-5} \cline{7-10} 
+24    & 2       & 0,02 & 20000  & 4         &  & 98\%    & 46\%   & 96\%    & 83\%  \\ \cline{1-5} \cline{7-10} 
+25    & 2       & 0,01 & 5000   & 20        &  & 71\%    & 66\%   & 69\%    & 69\%  \\ \cline{1-5} \cline{7-10} 
+26    & 2       & 0,02 & 5000   & 20        &  & 82\%    & 61\%   & 67\%    & 72\%  \\ \cline{1-5} \cline{7-10} 
+27    & 2       & 0,01 & 10000  & 20        &  & 66\%    & 61\%   & 73\%    & 68\%  \\ \cline{1-5} \cline{7-10} 
+28    & 2       & 0,02 & 10000  & 20        &  & 81\%    & 77\%   & 73\%    & 78\%  \\ \cline{1-5} \cline{7-10} 
+29    & 2       & 0,01 & 20000  & 20        &  & 81\%    & 71\%   & 72\%    & 75\%  \\ \cline{1-5} \cline{7-10} 
+30    & 2       & 0,02 & 20000  & 20        &  & 85\%    & 73\%   & 74\%    & 79\%  \\ \cline{1-5} \cline{7-10} 
+31    & 2       & 0,01 & 5000   & 40        &  & 77\%    & 54\%   & 65\%    & 67\%  \\ \cline{1-5} \cline{7-10} 
+32    & 2       & 0,02 & 5000   & 40        &  & 72\%    & 68\%   & 74\%    & 72\%  \\ \cline{1-5} \cline{7-10} 
+33    & 2       & 0,01 & 10000  & 40        &  & 67\%    & 58\%   & 69\%    & 66\%  \\ \cline{1-5} \cline{7-10} 
+34    & 2       & 0,02 & 10000  & 40        &  & 79\%    & 79\%   & 80\%    & 79\%  \\ \cline{1-5} \cline{7-10} 
+35    & 2       & 0,01 & 20000  & 40        &  & 71\%    & 62\%   & 81\%    & 72\%  \\ \cline{1-5} \cline{7-10} 
+36    & 2       & 0,02 & 20000  & 40        &  & 62\%    & 64\%   & 68\%    & 64\%  \\ \cline{1-5} \cline{7-10} 
+\end{tabular}}
+\end{center}
+\label{tabelaTaxa50}
+\end{table}
+
+Utilizando-se as condições de validação, a rede não retorna resultados válidos para 100\% dos padrões de entrada de teste. Para se obter os resultados foram escolhidos parâmetros de validação de forma que a RNA retornasse 50\% de resultados válidos.
+
+Analisando a \autoref{tabelaTaxa50}, observamos que a taxa de aprendizado de 0,01 é em geral melhor para o treinamento com a primeira representação dos dados de entrada (\autoref{representaçãoSimples}). Já para a segunda representação, percebe-se claramente que a taxa de 0,02 é mais adequada.
+
+Percebe-se também que para a primeira representação, não é clara a diferença entre o número de iterações de treinamento, mostrando a rápida convergência do treinamento e sua demora para perder a capacidade de generalização de entradas diferentes àquelas do treinamento. Já na segunda representação 10000 iterações é a quantidade que retorna os melhores resultados. Isso mostra que a segunda representação é capaz de aprender padrões tão fielmente a ponto de perder parte de sua capacidade de generalizar resultados fora dos padrões de treinamento fornecidos.
+
+Quanto a quantidade de NI, percebemos ótimos resultados com 4, porém, com um problema. Essa configuração retornou poucos resultados confiáveis de empates, e a taxa de acerto desses resultados não se mostrou eficiente. Esse fato é mais crítico na primeira representação dos dados de entrada. Isso demonstra que poucos dados de entrada e poucos NIs resultam em uma rede incapaz de determinar resultados de empate com qualidade.
+
+Quando se usa a segunda representação de dados com outras quantidades de NIs o problema da determinação de empates permanece, apesar de reduzido.
+De modo geral, 20 NIs se mostrou a configuração que retornou o resultado mais consistente, retornando resultados confiáveis em quantidades equilibradas de vitórias, empates e derrotas, assim como uma taxa de acerto total mais elevada.
+
+
+\vspace{3ex}
+\section{Variações da quantidade de resultados válidos} \label{VariacoesQtdValidos}
+
+Para se analisar melhor o comportamento da RNA, dois conjuntos de parâmetros de treinamento foram escolhidos. Com esses conjuntos, realizamos mais variações dos parâmetros de validação para se entender o comportamento da taxa de acerto em função desses.
+
+O primeiro conjunto de parâmetros escolhido usa a primeira representação dos dados (simples), possui 4 NIs e realiza 10000 iterações com taxa de aprendizado de 0,01. A \autoref{taxa_001_10000_4} mostra a taxa de acerto obtida variando-se a Probabilidade Limiar e o Desvio Padrão Limiar. Da mesma forma, a \autoref{validos_001_10000_4} mostra a porcentagem de resultados válidos para os mesmos parâmetros.
+
+\begin{figure}[htbp]
+	\centering
+		\resizebox{\columnwidth}{!}{%
+	  \includegraphics[angle=0]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_001_10000_4.png}}
+		\caption{Taxa de acerto em função da Probabilidade Limiar e do Desvio Padrão Limiar}
+	  \label{taxa_001_10000_4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+		\resizebox{\columnwidth}{!}{%
+	  \includegraphics[angle=0]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_001_10000_4.png}}
+		\caption{Quantidade de resultados válidos em função da Probabilidade Limiar e do Desvio Padrão Limiar}
+	  \label{validos_001_10000_4}
+\end{figure}
+
+Observando esses gráficos fica clara a versatilidade da RNA com tais parâmetros de treinamento. É possível obter uma taxa de acerto de quase 95\%, contudo a quantidade de resultados válidos fica na faixa de 40\%. Por outro lado, também é possível se obter resultados válidos em 100\% dos casos, porém, a taxa de acerto é reduzida para valores próximos de 50\%. Em pontos intermediários, é possível obter 80\% de acerto com 62\% de resultados válidos.
+
+O segundo conjunto de parâmetros escolhido utiliza a segunda representação dos dados (completa), possui 40 NIs e realiza 10000 iterações com taxa de aprendizado de 0,02. A \autoref{taxa_002_10000_40} mostra o resultado obtido variando-se a Probabilidade Limiar e o Desvio Padrão Limiar. Da mesma forma, a \autoref{validos_002_10000_40} mostra a porcentagem de resultados válidos para os mesmos parâmetros.
+
+
+\begin{figure}[htbp]
+	\centering
+		\resizebox{\columnwidth}{!}{%
+	  \includegraphics[angle=0]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/taxa_002_10000_40.png}}
+		\caption{Taxa de acerto em função da Probabilidade Limiar e do Desvio Padrão Limiar}
+	  \label{taxa_002_10000_40}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+		\resizebox{\columnwidth}{!}{%
+	  \includegraphics[angle=0]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/validos_002_10000_40.png}}
+		\caption{Quantidade de resultados válidos em função da Probabilidade Limiar e do Desvio Padrão Limiar}
+	  \label{validos_002_10000_40}
+\end{figure}
+
+Observando os gráficos desse segundo conjunto de parâmetros de treinamento, percebe-se que a RNA não é tão versátil quanto a anterior. É possível obter uma taxa de acerto máxima de 82\%, com 50\% de resultados válidos. Também é possível se obter resultados válidos em 100\% dos casos, porém, a taxa de acerto é reduzida para valores próximos de 40\%. Em pontos intermediários, é possível obter 69\% de acerto com 60\% de resultados válidos.
+
+Comparando os dois conjuntos de resultados, percebe-se apenas uma clara vantagem da segunda rede em relação à primeira. A qualidade e quantidade das predições de empates. A primeira rede, com menos NIs (apenas 4) e com a representação simples de dados (menos neurônios de entrada) é pouco eficiente na predição de empates, enquanto a segunda rede, com 40 NIs e a representação de dados completa (mais neurônios de entrada) consegue um resultado bastante superior.
+
+Considerando apenas a predição de empates, o melhor resultado apresentado pela primeira rede é de 42\% de acerto, com 56\% de resultados válidos. Já na segunda rede, é possível obter até 70\% de acerto, com 51\% de resultados válidos.
+
+
+\vspace{3ex}
+\section{Execução da rede com parâmetros de treino} \label{execucaoTreino}
+
+Para efeito de comparação, foi feito um teste onde duas RNAs, nas mesmas configurações da \autoref{VariacoesQtdValidos}, foram executadas utilizando o próprio campeonato de treino. Ou seja, as redes foram treinadas com os dados do Campeonato Brasileiro de 2012 e testamos sua eficiência de predição desse mesmo campeonato. O resultado está mostrado a seguir na \autoref{treinoTaxaEValidos}.
+
+\begin{figure}[htbp]
+	\centering
+	  \includegraphics[width=0.5\textwidth]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_001_10000_4.png}%
+		\includegraphics[width=0.5\textwidth]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_validos_001_10000_4.png}\\[2em]
+		\includegraphics[width=0.5\textwidth]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_taxa_002_10000_40.png}%
+		\includegraphics[width=0.5\textwidth]{D:/PFC/LaTex/Soccer-Wizard-LaTeX/figuras/treino_validos_002_10000_40.png}
+		\caption{Resultados da execução da rede utilizando o mesmo padrão de treinamento. Esquerda: taxa de acerto. Direita: quantidade de resultados válidos}
+	  \label{treinoTaxaEValidos}
+\end{figure}
+
+A rede mais simples, utilizando a primeira representação dos dados, taxa de aprendizado de 0,01, 10000 iterações de treinamento e 4 NIs, teve um leve incremento geral de sua eficiência e taxa de acerto em comparação com a execução da \autoref{VariacoesQtdValidos}. Isso demonstra que a RNA foi treinada de forma que fosse capaz de fazer uma boa generalização dos dados, pois a diferença do resultado com dados já conhecidos (2012) e com dados novos (2013) foi pequena.
+
+A rede mais completa, utilizando a segunda representação dos dados, taxa de aprendizado de 0,02, 10000 iterações de treinamento e 40 NIs, teve um incremento bastante significativo de sua eficiência geral. A menor taxa de acerto ficou em 87\% com 100\% dos resultados válidos. Na outra ponta, a taxa de acerto ficou em 97\% com 89\% dos resultados válidos. Esse resultado demonstra claramente que essa configuração da RNA aprendeu os padrões de entrada a ponto de perder sua capacidade de generalização. Ou seja, apresenta resultados muito bons para conjuntos de entrada conhecidos durante o treinamento, mas não é tão eficiente com conjuntos de entrada desconhecidos.
+
+Por fim, a capacidade de predição de empates se mostrou coerente com os testes da \autoref{VariacoesQtdValidos}. A RNA mais simples apresentou resultados ruins, com poucos resultados válidos e taxas de acerto de no máximo 17\%. A RNA mais completa, por sua vez, apresentou resultados ótimos, com taxas de acerto de até 96\%. Isso demonstra mais uma vez que a predição de empates é mais difícil que vitórias e derrotas, e que bons resultados são conseguidos principalmente por redes pouco generalistas.
+
+%
+%
+%
+%
+%
+%
+%
